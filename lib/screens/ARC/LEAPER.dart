@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class LeaperScreen extends StatelessWidget {
   const LeaperScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class LeaperScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Прыгун",
+                    s.leaper,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,34 +52,34 @@ class LeaperScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Критический",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.bastion2,
                   valueColor: Colors.pink,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Тяжелый",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.bastion4,
                   valueColor: Colors.blueAccent,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Прыжки",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.leaper1,
                 ),
-                const ArcStatRow(
-                  title: "Способности",
-                  value: "Электрическая волна",
+                ArcStatRow(
+                  title: s.bastion7,
+                  value: s.bombardier2,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Суставы ног, Колленные чашечки",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.leaper2,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +500 Опыта\nПоиск +500 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.leaper3,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "1100",
                 ),
                 const SizedBox(height: 20),

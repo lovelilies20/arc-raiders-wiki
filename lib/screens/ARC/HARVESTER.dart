@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class HarvesterScreen extends StatelessWidget {
   const HarvesterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -35,9 +39,9 @@ class HarvesterScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Сборщик ARC",
+                    s.harvester1,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -47,27 +51,27 @@ class HarvesterScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Тип добычи",
+                ArcStatRow(
+                  title: s.probe1,
                   value: "ARC",
                 ),
-                const ArcStatRow(
-                  title: "Должно быть взломано",
-                  value: "Да",
+                ArcStatRow(
+                  title: s.probe2,
+                  value: s.probeYes,
                 ),
-                const ArcStatRow(
-                  title: "Раздел(ы)",
+                ArcStatRow(
+                  title: s.probe4,
                   value: "19",
                 ),
-                const ArcStatRow(
-                  title: "Только для событий",
-                  value: "Да (Сборщик)",
+                ArcStatRow(
+                  title: s.probe5,
+                  value: s.harvester,
                 ),
-                const ArcStatRow(
-                  title: "Присутствие в событиях",
-                  value: "Да (Сборщик)",
+                ArcStatRow(
+                  title: s.probe7,
+                  value: s.harvester,
                 ),
-                const ArcStatRow(
+                ArcStatRow(
                   title: "XP",
                   value: "200",
                 ),

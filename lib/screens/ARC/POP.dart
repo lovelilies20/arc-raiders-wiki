@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class PopScreen extends StatelessWidget {
   const PopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class PopScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Взрывобот",
+                    s.pop,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,26 +52,26 @@ class PopScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Умеренный",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.pop1,
                   valueColor: Colors.green,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.probeNo,
                   valueColor: Colors.white,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Взрыв",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.pop2,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +50 Опыта\nПоиск +100 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.pop3,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "20",
                 ),
                 const SizedBox(height: 20),

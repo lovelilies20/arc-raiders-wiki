@@ -491,10 +491,84 @@ String get bastion9 => isRussian ? 'Задние пластины\nШарниц�
 String get bastion10 => isRussian ? 'Полученный опыт' : 'XP Gained';
 String get bastion11 => isRussian ? 'Уничтожение: +500 XP\nЯдро: +250 XP\nПанцирь: +250 XP\nНога +250 XP' : 'Destroy: +500 XP\nScavenging Core: +50 XP\nScavenging Shell: +250 XP\nScavenging Leg: +250 XP';
 String get bastion12 => isRussian ? 'Здоровье' : 'Health';
+
 String get bombardier => isRussian ? 'Бомбардир' : 'Bombardier';
 String get bombardier1 => isRussian ? 'Миномётный огонь' : 'Mortar Fire';
 String get bombardier2 => isRussian ? 'Электрическая волна' : 'Shockwave';
 
+String get courier => isRussian ? 'Доставщик ARC' : 'ARC Courier';
+
+String get fireball => isRussian ? 'Огнешар' : 'Fireball';
+String get fireball1 => isRussian ? 'Умеренный' : 'Moderate';
+String get fireball2 => isRussian ? 'Огнемёт' : 'flamethrower';
+String get fireball3 => isRussian ? 'Ядро' : 'Core';
+String get fireball4 => isRussian ? 'Уничтожение: +100\nЯдро: +200 XP' : 'Destroy: +100 XP\nScavenging Core: +200 XP';
+
+String get harvester => isRussian ? 'Да (Сборщик)' : 'Yes (Harvester)';
+String get harvester1 => isRussian ? 'Сборщик ARC' : 'ARC Harvester';
+
+String get hornet => isRussian ? 'Шершень' : 'Hornet';
+String get hornet1 => isRussian ? 'Высокий' : 'high';
+String get hornet2 => isRussian ? 'Средний' : 'Medium';
+String get hornet3 => isRussian ? 'Электричество' : 'Electricity';
+String get hornet4 => isRussian ? 'Задние двигатели' : 'Rear thrusters';
+String get hornet5 => isRussian ? 'Уничтожение: +150 Опыта\nПоиск +250 XP' : 'Destruction: +150 XP\nSearch +250 XP';
+
+String get leaper => isRussian ? 'Прыгун' : 'Leaper';
+String get leaper1 => isRussian ? 'Прыжки' : 'Jumping';
+String get leaper2 => isRussian ? 'Суставы ног, Колленные чашечки' : 'Leg joints, kneecaps';
+String get leaper3 => isRussian ? 'Уничтожение: +500 Опыта\nПоиск +500 XP' : 'Destruction: +500 XP\nSearch +500 XP';
+
+String get matriarch => isRussian ? 'Матриарх' : 'Matriarch';
+String get matriarch1 => isRussian ? 'Экстремальный' : 'Extreme';
+String get matriarch2 => isRussian ? 'Ракетный бой' : 'Missile Swarm';
+String get matriarch3 => isRussian ? 'Газовые гранаты,  светошумовые\nгранаты,\nэнергетический щит,призыв ARC' : 'Gas Grenades\nFlashbangs\nEnergy Shield\nSummons ARC';
+String get matriarch4 => isRussian ? 'Суставы ног, Ядро' : 'Core\nLeg Joints';
+String get matriarch5 => isRussian ? 'Уничтожение: +1000 Опыта\nПоиск +500 XP' : 'Destruction: +1000 XP\nSearch +500 XP';
+
+String get pop => isRussian ? 'Взрывобот' : 'Pop';
+String get pop1 => isRussian ? 'Умеренный' : 'Moderate';
+String get pop2 => isRussian ? 'Взрыв' : 'Explosion';
+String get pop3 => isRussian ? 'Уничтожение: +50 Опыта\nПоиск +100 XP' : 'Destruction: +50 XP\nSearch +100 XP';
+
+String get rocketeer => isRussian ? 'Ракетчик' : 'Rocketeer';
+String get rocketeer1 => isRussian ? 'Ракеты' : 'Rockets';
+String get rocketeer2 => isRussian ? 'Двигатели' : 'Engines';
+String get rocketeer3 => isRussian ? 'Уничтожение: +600 Опыта\nПоиск +500 XP' : 'Destruction: +600 XP\nSearch +500 XP';
+
+String get sentinel => isRussian ? 'Часовой' : 'Sentinel';
+String get sentinel1 => isRussian ? 'Снайперский выстрел' : 'Sniper shot';
+String get sentinel2 => isRussian ? 'Уничтожение: +200 XP\nПоиск +300 XP' : 'Destruction: +200 XP\nSearch: +300 XP';
+
+String get shredder => isRussian ? 'Шредер' : 'Shredder';
+String get shredder1 => isRussian ? 'Атака по радиусу' : 'Attack by radius';
+String get shredder2 => isRussian ? 'Уничтожение: +200 XP\nПоиск +250 XP' : 'Destruction: +200 XP\nSearch: +250 XP';
+
+String get snitch => isRussian ? 'Стукач' : 'Snitch';
+String get snitch1 => isRussian ? 'Призыв ARC' : 'ARC Appeal';
+String get snitch2 => isRussian ? 'Уничтожение: +100 XP\nЯдро: +200 XP' : 'Destruction: +100 XP\nCore: +200 XP';
+
+String get spotter => isRussian ? 'Наводчик' : 'Spotter';
+String get spotter1 => isRussian ? 'Раскрывает Рейдеров' : 'Reveals the Raiders';
+String get spotter2 => isRussian ? 'Уничтожение: +200 XP\nПоиск +250 XP' : 'Destruction: +200 XP\nSearch: +250 XP';
+
+String get surveyor => isRussian ? 'Наблюдатель' : 'Surveyor';
+String get surveyor1 => isRussian ? 'Таран' : 'Ramming';
+String get surveyor2 => isRussian ? 'Ядро' : 'Core';
+String get surveyor3 => isRussian ? 'Низкий' : 'Low';
+String get surveyor4 => isRussian ? 'Уничтожение: +200 XP\nПоиск +300 XP' : 'Destruction: +200 XP\nSearch: +300 XP';
+
+String get queen => isRussian ? 'Королева' : 'Queen';
+String get queen1 => isRussian ? 'Лазеры из глаз\nУдар о землю\nЭлектромагнитный импульс' : 'Lasers from the eyes\nImpact on the ground\nElectromagnetic pulse';
+
+String get tick => isRussian ? 'Клещ' : 'Tick';
+String get tick1 => isRussian ? 'Передвижение по любой поверхности' : 'Movement on any surface';
+
+String get turret => isRussian ? 'Турель' : 'Turret';
+String get turret1 => isRussian ? 'Уничтожение: +100 XP\nПоиск +200 XP' : 'Destruction: +100 XP\nSearch: +200 XP';
+
+String get wasp => isRussian ? 'Оса' : 'Wasp';
+String get wasp1 => isRussian ? 'Уничтожение: +100 XP\nПоиск +200 XP' : 'Destruction: +100 XP\nSearch: +200 XP';
 
 
 

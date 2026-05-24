@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class ShredderScreen extends StatelessWidget {
   const ShredderScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class ShredderScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Шредер",
+                    s.shredder,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,34 +52,34 @@ class ShredderScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Высокий",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.hornet1,
                   valueColor: Colors.blueAccent,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Тяжелый",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.bastion4,
                   valueColor: Colors.blueAccent,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Атака по радиусу",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.shredder1,
                 ),
-                const ArcStatRow(
-                  title: "Способности",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion7,
+                  value: s.probeNo,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Двигатели",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.rocketeer2,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +200 Опыта\nПоиск +250 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.shredder2,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "480",
                 ),
                 const SizedBox(height: 20),

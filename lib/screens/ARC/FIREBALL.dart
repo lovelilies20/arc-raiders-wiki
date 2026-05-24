@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class FireballScreen extends StatelessWidget {
   const FireballScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class FireballScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Огнешар",
+                    s.fireball,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,30 +52,30 @@ class FireballScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Умеренный",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.fireball1,
                   valueColor: Colors.green,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Тяжёлый",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.bastion4,
                   valueColor: Colors.blueAccent,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Огнемёт",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.fireball2,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Ядро",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.fireball3,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +100\nЯдро: +200 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.fireball4,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "20",
                 ),
                 const SizedBox(height: 20),

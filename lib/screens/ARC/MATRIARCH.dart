@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class MatriarchScreen extends StatelessWidget {
   const MatriarchScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class MatriarchScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Матриарх",
+                    s.matriarch,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,34 +52,34 @@ class MatriarchScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Экстремальный",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.matriarch1,
                   valueColor: Colors.yellowAccent,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Тяжелый",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.bastion4,
                   valueColor: Colors.blueAccent,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Ракетный бой",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.matriarch2,
                 ),
-                const ArcStatRow(
-                  title: "Способности",
-                  value: "Газовые гранаты,  светошумовые\nгранаты,\nэнергетический щит,призыв ARC",
+                ArcStatRow(
+                  title: s.bastion7,
+                  value: s.matriarch3,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Суставы ног, Ядро",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.matriarch4,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +1000 Опыта\nПоиск +500 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.matriarch5,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "27000",
                 ),
                 const SizedBox(height: 20),

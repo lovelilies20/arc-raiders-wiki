@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class WaspScreen extends StatelessWidget {
   const WaspScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class WaspScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Оса",
+                    s.wasp,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,34 +52,34 @@ class WaspScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Умеренный",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.pop1,
                   valueColor: Colors.green,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.probeNo,
                   valueColor: Colors.white,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Залп снарядов",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.bastion6,
                 ),
-                const ArcStatRow(
-                  title: "Способности",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion7,
+                  value: s.probeNo,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Двигатели",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.rocketeer2,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +100 Опыта\nПоиск +200 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.wasp1,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "110",
                 ),
                 const SizedBox(height: 20),

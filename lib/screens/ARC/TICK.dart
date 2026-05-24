@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'SNITCH.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class TickScreen extends StatelessWidget {
   const TickScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
@@ -36,9 +40,9 @@ class TickScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Клещ",
+                    s.tick,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -48,34 +52,34 @@ class TickScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const ArcStatRow(
-                  title: "Уровень угрозы",
-                  value: "Низкий",
+                ArcStatRow(
+                  title: s.bastion1,
+                  value: s.surveyor3,
                   valueColor: Colors.white,
                 ),
-                const ArcStatRow(
-                  title: "Броня",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion3,
+                  value: s.probeNo,
                   valueColor: Colors.white,
                 ),
-                const ArcStatRow(
-                  title: "Основная атака",
-                  value: "Прыжок",
+                ArcStatRow(
+                  title: s.bastion5,
+                  value: s.leaper1,
                 ),
-                const ArcStatRow(
-                  title: "Способности",
-                  value: "Передвижение по любой поверхности",
+                ArcStatRow(
+                  title: s.bastion7,
+                  value: s.tick1,
                 ),
-                const ArcStatRow(
-                  title: "Слабость",
-                  value: "Нет",
+                ArcStatRow(
+                  title: s.bastion8,
+                  value: s.probeNo,
                 ),
-                const ArcStatRow(
-                  title: "Полученный опыт",
-                  value: "Уничтожение: +50 Опыта\nПоиск +100 XP",
+                ArcStatRow(
+                  title: s.bastion10,
+                  value: s.pop3,
                 ),
-                const ArcStatRow(
-                  title: "Здоровье",
+                ArcStatRow(
+                  title: s.bastion12,
                   value: "10",
                 ),
                 const SizedBox(height: 20),
