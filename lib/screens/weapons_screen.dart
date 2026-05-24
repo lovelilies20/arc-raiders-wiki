@@ -217,7 +217,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
               // РЕДКОЕ
               if (selectedIndex == 2) ...[
                 WeaponButton(
-                  title: "Бунтарь",
+                  title: s.buntar,
                   imagePath: "assets/images/renegade.jpg",
                   onTap: () {
                     Navigator.push(
@@ -230,7 +230,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Охотник",
+                  title: s.venator,
                   imagePath: "assets/images/venator.jpg",
                   onTap: () {
                     Navigator.push(
@@ -243,7 +243,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Торренте",
+                  title: s.torrente,
                   imagePath: "assets/images/torrente.jpg",
                   onTap: () {
                     Navigator.push(
@@ -256,7 +256,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Ястреб",
+                  title: s.ospray,
                   imagePath: "assets/images/osprey.jpg",
                   onTap: () {
                     Navigator.push(
@@ -269,7 +269,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Канто",
+                  title: s.canto,
                   imagePath: "assets/images/canto.jpg",
                   onTap: () {
                     Navigator.push(
@@ -284,7 +284,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
               // ЭПИЧЕСКОЕ
               if (selectedIndex == 3) ...[
                 WeaponButton(
-                  title: "Бетина",
+                  title: s.bettina,
                   imagePath: "assets/images/bettina.jpg",
                   onTap: () {
                     Navigator.push(
@@ -297,7 +297,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Буря",
+                  title: s.tempest,
                   imagePath: "assets/images/tempest.jpg",
                   onTap: () {
                     Navigator.push(
@@ -310,7 +310,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Вулкан",
+                  title: s.vulcan,
                   imagePath: "assets/images/vulcano.jpg",
                   onTap: () {
                     Navigator.push(
@@ -323,7 +323,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Рысь",
+                  title: s.bobcat,
                   imagePath: "assets/images/bobcat.jpg",
                   onTap: () {
                     Navigator.push(
@@ -336,7 +336,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Взломщик корпусов",
+                  title: s.hullcracker,
                   imagePath: "assets/images/hullcracker.jpg",
                   onTap: () {
                     Navigator.push(
@@ -352,7 +352,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
               /// ЛЕГЕНДАРНОЕ
               if (selectedIndex == 4) ...[
                 WeaponButton(
-                  title: "Афелий",
+                  title: s.afeliy,
                   imagePath: "assets/images/aphelion.jpg",
                   onTap: () {
                     Navigator.push(
@@ -365,7 +365,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Долабра",
+                  title: s.dolabra,
                   imagePath: "assets/images/dolabra.jpg",
                   onTap: () {
                     Navigator.push(
@@ -378,7 +378,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Юпитер",
+                  title: s.jupiter,
                   imagePath: "assets/images/jupiter.jpg",
                   onTap: () {
                     Navigator.push(
@@ -391,7 +391,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Эквалайзер",
+                  title: s.equa,
                   imagePath: "assets/images/equa.jpg",
                   onTap: () {
                     Navigator.push(

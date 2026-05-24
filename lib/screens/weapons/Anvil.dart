@@ -12,15 +12,13 @@ class AnvilScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text("Оружие"),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // КАРТИНКА СВЕРХУ
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -40,11 +38,9 @@ class AnvilScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  // ТЕГИ
                   Row(
                     children: [
-                      _tag("Ручная пушка"),
+                      _tag(s.ruchnaya),
                       const SizedBox(width: 8),
                       _tag("Необычное"),
                     ],
@@ -52,8 +48,7 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 12),
 
-                  // НАЗВАНИЕ
-                  const Text(
+                  Text(
                     "Наковальня",
                     style: TextStyle(
                       color: Colors.white,
@@ -64,8 +59,7 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // ОПИСАНИЕ
-                  const Text(
+                  Text(
                     "Высокий урон в тело и от выстрелов в голову, но неудобное управление.",
                     style: TextStyle(
                       color: Colors.white70,
@@ -75,7 +69,6 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // ХАРАКТЕРИСТИКИ
                   _stat("Тип боеприпасов", "Тяжёлые боеприпасы"),
                   _stat("Размер магазина", "6"),
                   _stat("Долговечность", "151 | 167 | 193 | 215"),
@@ -91,8 +84,7 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // ОБЩИЕ ДАННЫЕ
-                  const Center(
+                  Center(
                     child: Text(
                     "Общие данные",
                     style: TextStyle(
@@ -119,8 +111,6 @@ class AnvilScreen extends StatelessWidget {
     );
   }
 }
-
-// ТЕГ (зелёная кнопка)
 Widget _tag(String text) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -137,7 +127,6 @@ Widget _tag(String text) {
     ),
   );
 }
-// СТРОКА ХАРАКТЕРИСТИК
 Widget _stat(String title, String value) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 6),

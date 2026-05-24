@@ -649,6 +649,31 @@ String get anvil => isRussian ? 'Наковальня' : 'Anvil';
 String get arped => isRussian ? 'Арпеджио' : 'Arpedgio';
 String get iltoro => isRussian ? 'Эль-Торо' : 'Il_toro';
 
+String get buntar => isRussian ? 'Бунтарь' : 'Renegade';
+String get venator => isRussian ? 'Охотник' : 'Venator';
+String get torrente => isRussian ? 'Торренте' : 'Torrente';
+String get ospray => isRussian ? 'Ястреб' : 'Osprey';
+String get canto => isRussian ? 'Канто' : 'Canto';
+
+String get bettina => isRussian ? 'Бетина' : 'Bettina';
+String get tempest => isRussian ? 'Буря' : 'Tempest';
+String get vulcan => isRussian ? 'Вулкан' : 'Vulcano';
+String get bobcat => isRussian ? 'Рысь' : 'Bobcat';
+String get hullcracker => isRussian ? 'Взломщик корпусов' : 'Hullcracker';
+
+String get afeliy => isRussian ? 'Афелий' : 'Aphelion';
+String get dolabra => isRussian ? 'Долабра' : 'Dolabra';
+String get jupiter => isRussian ? 'Юпитер' : 'Jupiter';
+String get equa => isRussian ? 'Эквалайзер' : 'Equalizer';
+
+String get boevaya => isRussian ? 'Боевая винтовка' : 'Bobcat';
+String get shturmovaya => isRussian ? 'Штурмовая винтовка' : 'Bobcat';
+String get sniperskaya => isRussian ? 'Снайперская винтовка' : 'Bobcat';
+String get pistolet => isRussian ? 'Пистолет' : 'Bobcat';
+String get ruchnaya => isRussian ? 'Ручная пушка' : 'Bobcat';
+String get drobovik => isRussian ? 'Дробовик' : 'Bobcat';
+String get special => isRussian ? 'Специальное' : 'Bobcat';
+
 
 
 
