@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class UncoveredcachesScreen extends StatelessWidget {
   const UncoveredcachesScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class UncoveredcachesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Обнаруженные тайники",
+                    s.uncoveredcaches,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,22 +50,21 @@ class UncoveredcachesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Штормы обнаружили несколько старых\n тайников Рейдеров, но они настроены на взрыв,\n если будут слишком долго открыты. Поторопись\n и найди их всех.\n\n"
-                    " * Взрывающиеся тайники",
+                    s.caches,
                     style: TextStyle(
                       color: Colors.grey,
-                      fontSize: 16,
+                      fontSize: 19,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 const SizedBox(height: 10),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -71,28 +74,28 @@ class UncoveredcachesScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "2/5",
                   valueColor: Colors.green,
                 ),
-                const EveStatRow(
-                  title: "Погребенный город",
+                EveStatRow(
+                  title: s.buriedCity,
                   value: "3/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "3/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Затонувшее побережье",
+                EveStatRow(
+                  title: s.riventides,
                   value: "2/5",
                 ),
                 const SizedBox(height: 10),

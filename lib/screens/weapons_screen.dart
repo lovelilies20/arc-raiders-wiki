@@ -23,6 +23,9 @@ import 'package:flutter/material.dart';
 import 'package:arc_raiders/main.dart';
 import 'package:arc_raiders/screens/weapons/Stitcher.dart';
 import 'package:arc_raiders/widgets/weapon_button.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class WeaponsScreen extends StatefulWidget {
   const WeaponsScreen({super.key});
@@ -34,20 +37,20 @@ class WeaponsScreen extends StatefulWidget {
 class _WeaponsScreenState extends State<WeaponsScreen> {
   int selectedIndex = 0;
 
-  final rarities = [
-    "ОБЫЧНОЕ",
-    "НЕОБЫЧНОЕ",
-    "РЕДКОЕ",
-    "ЭПИЧЕСКОЕ",
-    "ЛЕГЕНДАРНОЕ",
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
+    final rarities = [
+    s.obich,
+    s.neobich,
+    s.redkoe,
+    s.epic,
+    s.legendary,
+  ];
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -55,8 +58,6 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-
-              /// КНОПКИ РЕДКОСТИ
               SizedBox(
                 height: 50,
                 child: ListView.builder(
@@ -108,20 +109,20 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
 
               if (selectedIndex == 0) ...[
                 WeaponButton(
-                  title: "Сшиватель",
+                  title: s.stitcher,
                   imagePath: "assets/images/stitcher.jpg",
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const StitcherScreen(),
+                        builder: (_) => StitcherScreen(),
                       ),
                     );
                   },
                 ),
                 const SizedBox(height: 12),
                   WeaponButton(
-                  title: "Трещотка",
+                  title: s.rattler,
                   imagePath: "assets/images/rattler.jpg",
                   onTap: () {
                     Navigator.push(
@@ -134,7 +135,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Ферро",
+                  title: s.ferro,
                   imagePath: "assets/images/ferro.jpg",
                   onTap: () {
                     Navigator.push(
@@ -147,7 +148,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Чайник",
+                  title: s.kettle,
                   imagePath: "assets/images/Kettle.jpg",
                   onTap: () {
                     Navigator.push(
@@ -161,7 +162,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
               ],
               if (selectedIndex == 1) ...[
                 WeaponButton(
-                  title: "Бурлетта",
+                  title: s.brulleta,
                   imagePath: "assets/images/brulleta.jpg",
                   onTap: () {
                     Navigator.push(
@@ -174,7 +175,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Наковальня",
+                  title: s.anvil,
                   imagePath: "assets/images/anvil.jpg",
                   onTap: () {
                     Navigator.push(
@@ -187,7 +188,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Арпеджио",
+                  title: s.arped,
                   imagePath: "assets/images/arpedgio.jpg",
                   onTap: () {
                     Navigator.push(
@@ -200,7 +201,7 @@ class _WeaponsScreenState extends State<WeaponsScreen> {
                 ),
                 const SizedBox(height: 12),
                 WeaponButton(
-                  title: "Эль-Торо",
+                  title: s.iltoro,
                   imagePath: "assets/images/il_toro.jpg",
                   onTap: () {
                     Navigator.push(

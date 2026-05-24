@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class ColdsnapScreen extends StatelessWidget {
   const ColdsnapScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -46,12 +50,9 @@ class ColdsnapScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Морозная погода убьёт вашего Рейдера за\n считанные минуты, если только вы не зайдёте\n внутрь или не восстановитесь быстро.\n Имейте это в виду, когда вступаете в бой с\n другими рейдерами - быть прижатым на\n открытом месте - это смертный приговор\n зимой в Ржавом поясе.\n\n"
-                    " * Урожай Кэндлберри\n"
-                    " * Повышенная стоимость добычи\n"
-                    " * Разрушительный холод",
+                    s.coldSnapStory,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -59,11 +60,21 @@ class ColdsnapScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                Center(
+                  child: Text(
+                    s.coldSnapDiff,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 10),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -73,23 +84,23 @@ class ColdsnapScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Погребенный город",
+                EveStatRow(
+                  title: s.buriedCity,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),

@@ -10,16 +10,20 @@ import 'package:arc_raiders/screens/events/NightRaid.dart';
 import 'package:arc_raiders/screens/events/ProspectingProbes.dart';
 import 'package:arc_raiders/screens/events/UncoveredCaches.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class DamBattlegroundsScreen extends StatelessWidget {
   const DamBattlegroundsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("Поле битвы у дамбы"),
+        title: Text(s.battleDamb),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -45,9 +49,9 @@ class DamBattlegroundsScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Поле битвы у дамбы",
+                    s.battleDamb,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -58,26 +62,14 @@ class DamBattlegroundsScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const SizedBox(height: 20),
 
-                const MapsStatRow(
-                  title: "Событие:",
-                  value: "Сложность",
+                MapsStatRow(
+                  title: s.event,
+                  value: s.difficulty,
                   valueColor: Colors.grey,
                 ),
 
-                // const Center(
-                //   child: Text(
-                //     "Сложность",
-                //     style: TextStyle(
-                //       color: Colors.yellow,
-                //       fontSize: 20,
-                //       fontWeight: FontWeight.bold,
-                //     ),
-                //   ),
-                // ),
-                // const SizedBox(height: 20),
-
-                const MapsStatRow(
-                  title: "Без событий",
+                MapsStatRow(
+                  title: s.inevent,
                   value: "2/5",
                   valueColor: Colors.green,
                 ),
@@ -86,78 +78,78 @@ class DamBattlegroundsScreen extends StatelessWidget {
                   children: [
                     _buildDifficultyLink(
                       context,
-                      "Пышные цветы",
-                      const LushbloomsScreen(),
+                      s.lushblooms,
+                      LushbloomsScreen(),
                       "2/5",
                     Colors.green,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Обнаруженные тайники",
-                      const UncoveredcachesScreen(),
+                      s.uncoveredcaches,
+                      UncoveredcachesScreen(),
                       "2/5",
                     Colors.green,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Разведка зондов",
-                      const ProspectingprobesScreen(),
+                      s.searchProbe,
+                      ProspectingprobesScreen(),
                       "3/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Сборщик ARC",
-                      const HarvesteRScreen(),
+                      s.harvesteR,
+                      HarvesteRScreen(),
                       "3/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Кладбище Хаск",
-                      const HuskgraveyardScreen(),
+                      s.huskgraveyard,
+                      HuskgraveyardScreen(),
                       "3/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Матриарх",
-                      const MatriarcHScreen(),
+                      s.matriarcH,
+                      MatriarcHScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Электромагнитная буря",
-                      const ElectromagneticstormScreen(),
+                      s.electromagneticstorm,
+                      ElectromagneticstormScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ночной рейд",
-                      const NightraidScreen(),
+                      s.nightraid,
+                      NightraidScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Cold Snap",
-                      const ColdsnapScreen(),
+                      s.coldsnap,
+                      ColdsnapScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ураган",
-                      const HurricaneScreen(),
+                      s.hurricane,
+                      HurricaneScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Тщательный анализ",
-                      const ClosescrutinyScreen(),
+                      s.closescrutiny,
+                      ClosescrutinyScreen(),
                       "5/5",
                     Colors.pink,
                     ),

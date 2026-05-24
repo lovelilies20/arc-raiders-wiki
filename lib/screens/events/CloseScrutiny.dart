@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class ClosescrutinyScreen extends StatelessWidget {
   const ClosescrutinyScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class ClosescrutinyScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Тщательный анализ",
+                    s.closescrutiny,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,9 +50,9 @@ class ClosescrutinyScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Тщательный анализ - это условие карты, при\n котором появляются Геодезисты, защищённые\n Вапорайзерами, которые вызывают ARC-\n Оценщиков после того, как они заканчивают\n поиск ценных материалов. Рейдеры могут\n взломать ARC-оценщиков, чтобы получить \nдоступ к добыче.",
+                    s.closeSecurityStory,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -58,11 +62,9 @@ class ClosescrutinyScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const Center(
+                Center(
                   child: Text(
-                    " * Нет активных запертых дверей\n"
-                    " * Уменьшение общей стоимости лута\n"
-                    " * Увеличение количества ARC лута",
+                    s.closeSecurityDiff,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 20,

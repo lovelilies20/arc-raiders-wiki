@@ -9,16 +9,21 @@ import 'package:arc_raiders/screens/events/NightRaid.dart';
 import 'package:arc_raiders/screens/events/UncoveredCaches.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/maps/Dam_Battlegrounds.dart';
+import 'package:arc_raiders/screens/events/Electromagneticstorm.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class BlueGateScreen extends StatelessWidget {
   const BlueGateScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("Синие ворота"),
+        title: Text(s.bluegate),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -44,9 +49,9 @@ class BlueGateScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Синие ворота",
+                    s.bluegate,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -57,14 +62,14 @@ class BlueGateScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const SizedBox(height: 20),
 
-                const MapsStatRow(
-                  title: "Событие:",
-                  value: "Сложность",
+                MapsStatRow(
+                  title: s.event,
+                  value: s.difficulty,
                   valueColor: Colors.grey,
                 ),
 
-                const MapsStatRow(
-                  title: "Без событий",
+                MapsStatRow(
+                  title: s.inevent,
                   value: "4/5",
                   valueColor: Colors.white,
                 ),
@@ -73,64 +78,71 @@ class BlueGateScreen extends StatelessWidget {
                   children: [
                     _buildDifficultyLink(
                       context,
-                      "Пышные цветы",
-                      const LushbloomsScreen(),
+                      s.lushblooms,
+                      LushbloomsScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Обнаруженные тайники",
-                      const UncoveredcachesScreen(),
+                      s.uncoveredcaches,
+                      UncoveredcachesScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Сборщик ARC",
-                      const HarvesteRScreen(),
+                      s.harvesteR,
+                      HarvesteRScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Кладбище Хаск",
-                      const HuskgraveyardScreen(),
+                      s.huskgraveyard,
+                      HuskgraveyardScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Матриарх",
-                      const MatriarcHScreen(),
+                      s.electromagneticstorm,
+                      ElectromagneticstormScreen(),
+                      "4/5",
+                    Colors.white,
+                    ),
+                    _buildDifficultyLink(
+                      context,
+                      s.matriarcH,
+                      MatriarcHScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ночной рейд",
-                      const NightraidScreen(),
+                      s.nightraid,
+                      NightraidScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Cold Snap",
-                      const ColdsnapScreen(),
+                      s.coldsnap,
+                      ColdsnapScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ураган",
-                      const HurricaneScreen(),
+                      s.hurricane,
+                      HurricaneScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Тщательный анализ",
-                      const ClosescrutinyScreen(),
+                      s.closescrutiny,
+                      ClosescrutinyScreen(),
                       "5/5",
                     Colors.pink,
                     ),

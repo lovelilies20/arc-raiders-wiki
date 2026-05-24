@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class ElectromagneticstormScreen extends StatelessWidget {
   const ElectromagneticstormScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class ElectromagneticstormScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Электромагнитная буря",
+                    s.electromagneticstorm,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,13 +50,19 @@ class ElectromagneticstormScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Электромагнитная буря - это условие карты,\n которое покрывает поражённую карту в\n интенсивном шторме, поражающем поверхность\n молнией. Любые ARC и Рейдеры, поражённые\n молнией, получают повреждения и оглушают на\n короткое время. Разбившихся зондов и курьеров\n можно встретить в большем количестве.\n\n"
-                    " * Меньше активных точек возврата\n"
-                    " * Нет активных Рейдерских люков\n"
-                    " * Повышенная стоимость добычи\n"
-                    " * Удары молнии",
+                    s.electromagneticstormStory,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    s.electromagneticstormDiff,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -62,9 +72,9 @@ class ElectromagneticstormScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -74,18 +84,18 @@ class ElectromagneticstormScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "5/5",
                   valueColor: Colors.pink
                 ),

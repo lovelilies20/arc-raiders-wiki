@@ -3,16 +3,20 @@ import 'package:arc_raiders/screens/events/NightRaid.dart';
 import 'package:arc_raiders/screens/events/UncoveredCaches.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/maps/Dam_Battlegrounds.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class RivenTidesScreen extends StatelessWidget {
   const RivenTidesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("Затонувшее побережье"),
+        title: Text(s.riventides),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -38,9 +42,9 @@ class RivenTidesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Затонувшее побережье",
+                    s.riventides,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -51,14 +55,14 @@ class RivenTidesScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const SizedBox(height: 20),
 
-                const MapsStatRow(
-                  title: "Событие:",
-                  value: "Сложность",
+                MapsStatRow(
+                  title: s.event,
+                  value: s.difficulty,
                   valueColor: Colors.grey,
                 ),
 
-                const MapsStatRow(
-                  title: "Без событий",
+                MapsStatRow(
+                  title: s.inevent,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
@@ -67,22 +71,22 @@ class RivenTidesScreen extends StatelessWidget {
                   children: [
                     _buildDifficultyLink(
                       context,
-                      "Пышные цветы",
-                      const LushbloomsScreen(),
+                      s.lushblooms,
+                      LushbloomsScreen(),
                       "2/5",
                     Colors.green,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Обнаруженные тайники",
-                      const UncoveredcachesScreen(),
+                      s.uncoveredcaches,
+                      UncoveredcachesScreen(),
                       "2/5",
                     Colors.green,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ночной рейд",
-                      const NightraidScreen(),
+                      s.nightraid,
+                      NightraidScreen(),
                       "4/5",
                     Colors.white,
                     ),

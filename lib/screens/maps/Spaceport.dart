@@ -10,16 +10,20 @@ import 'package:arc_raiders/screens/events/ProspectingProbes.dart';
 import 'package:arc_raiders/screens/events/UncoveredCaches.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/maps/Dam_Battlegrounds.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class SpaceportScreen extends StatelessWidget {
   const SpaceportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("Космопорт"),
+        title: Text(s.spaceport),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -45,9 +49,9 @@ class SpaceportScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Космопорт",
+                    s.spaceport,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -58,26 +62,14 @@ class SpaceportScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const SizedBox(height: 20),
 
-                const MapsStatRow(
-                  title: "Событие:",
-                  value: "Сложность",
+                MapsStatRow(
+                  title: s.event,
+                  value: s.difficulty,
                   valueColor: Colors.grey,
                 ),
 
-                // const Center(
-                //   child: Text(
-                //     "Сложность",
-                //     style: TextStyle(
-                //       color: Colors.yellow,
-                //       fontSize: 20,
-                //       fontWeight: FontWeight.bold,
-                //     ),
-                //   ),
-                // ),
-                // const SizedBox(height: 20),
-
-                const MapsStatRow(
-                  title: "Без событий",
+                MapsStatRow(
+                  title: s.inevent,
                   value: "3/5",
                   valueColor: Colors.white,
                 ),
@@ -86,71 +78,71 @@ class SpaceportScreen extends StatelessWidget {
                   children: [
                     _buildDifficultyLink(
                       context,
-                      "Обнаруженные тайники",
-                      const UncoveredcachesScreen(),
+                      s.uncoveredcaches,
+                      UncoveredcachesScreen(),
                       "3/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Разведка зондов",
-                      const ProspectingprobesScreen(),
+                      s.searchProbe,
+                      ProspectingprobesScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Сборщик ARC",
-                      const HarvesteRScreen(),
+                      s.harvesteR,
+                      HarvesteRScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Кладбище Хаск",
-                      const HuskgraveyardScreen(),
+                      s.huskgraveyard,
+                      HuskgraveyardScreen(),
                       "4/5",
                     Colors.white,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Матриарх",
-                      const MatriarcHScreen(),
+                      s.matriarcH,
+                      MatriarcHScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Электромагнитная буря",
-                      const ElectromagneticstormScreen(),
+                      s.electromagneticstorm,
+                      ElectromagneticstormScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ночной рейд",
-                      const NightraidScreen(),
+                      s.nightraid,
+                      NightraidScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Cold Snap",
-                      const ColdsnapScreen(),
+                      s.coldsnap,
+                      ColdsnapScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Ураган",
-                      const HurricaneScreen(),
+                      s.hurricane,
+                      HurricaneScreen(),
                       "5/5",
                     Colors.pink,
                     ),
                     _buildDifficultyLink(
                       context,
-                      "Тщательный анализ",
-                      const ClosescrutinyScreen(),
+                      s.closescrutiny,
+                      ClosescrutinyScreen(),
                       "5/5",
                     Colors.pink,
                     ),

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class HuskgraveyardScreen extends StatelessWidget {
   const HuskgraveyardScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class HuskgraveyardScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Кладбище Хаск",
+                    s.huskgraveyard,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,10 +50,9 @@ class HuskgraveyardScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Кладбище Хаска — это условие карты, которое\n значительно увеличивает количество\n разбросанных ARC-оболочек. Кроме того,\n оболочки могут электрифицироваться при\n прорыве, нанося шокирующее урона любому\n ничего не подозревающему рейдеру.\n\n"
-                    " * Электрифицированные оболочки первой волны",
+                    s.husk,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -57,11 +60,20 @@ class HuskgraveyardScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
-
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.husk1,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+                Center(
+                  child: Text(
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -71,23 +83,23 @@ class HuskgraveyardScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "3/5",
                   valueColor: Colors.green,
                 ),
-                const EveStatRow(
-                  title: "Погребенный город",
+                EveStatRow(
+                  title: s.buriedCity,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),

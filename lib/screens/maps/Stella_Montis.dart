@@ -2,16 +2,20 @@
 import 'package:arc_raiders/screens/events/NightRaid.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/maps/Dam_Battlegrounds.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class StellaMontisScreen extends StatelessWidget {
   const StellaMontisScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("Стелла Монтис"),
+        title: Text(s.stellamontis),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -37,9 +41,9 @@ class StellaMontisScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Стелла Монтис",
+                    s.stellamontis,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -50,14 +54,14 @@ class StellaMontisScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const SizedBox(height: 20),
 
-                const MapsStatRow(
-                  title: "Событие:",
-                  value: "Сложность",
+                MapsStatRow(
+                  title: s.event,
+                  value: s.difficulty,
                   valueColor: Colors.grey,
                 ),
 
-                const MapsStatRow(
-                  title: "Без событий",
+                MapsStatRow(
+                  title: s.inevent,
                   value: "4/5",
                   valueColor: Colors.white,
                 ),
@@ -66,8 +70,8 @@ class StellaMontisScreen extends StatelessWidget {
                   children: [
                     _buildDifficultyLink(
                       context,
-                      "Ночной рейд",
-                      const NightraidScreen(),
+                      s.nightraid,
+                      NightraidScreen(),
                       "4/5",
                     Colors.white,
                     ),

@@ -7,16 +7,20 @@ import 'package:arc_raiders/screens/maps/Stella_Montis.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/main.dart';
 import 'package:arc_raiders/widgets/animated_border.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class MapsScreen extends StatelessWidget {
   const MapsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 235, 206, 43),
       ),
       body: SingleChildScrollView(
@@ -31,10 +35,10 @@ class MapsScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                "Карты",
+                s.mapss,
                 style: TextStyle(
                   color: Colors.yellow,
                   fontSize: 22,
@@ -45,10 +49,10 @@ class MapsScreen extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                "Играйте в одиночку или в группах до трёх человек, собирайте материалы из тайников по всей карте, охотитесь на ARC и пытайтесь пройти через точку эвакуации до того, как придёт другой рейдер за вашей добычей. Динамичная погода, время суток и события поддерживают свежесть.",
+                s.mapss1,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -58,17 +62,17 @@ class MapsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            MenuButton(title: "Поле битвы у дамбы", imagePath:"assets/images/Dam_Battlegrounds.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const DamBattlegroundsScreen(),),);},),
+            MenuButton(title: s.battleDamb, imagePath:"assets/images/Dam_Battlegrounds.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const DamBattlegroundsScreen(),),);},),
             const SizedBox(height: 12),
-            MenuButton(title: "Погребенный город",imagePath: "assets/images/Buried_City.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const BuriedCityScreen(),),);},),
+            MenuButton(title: s.buriedCity,imagePath: "assets/images/Buried_City.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const BuriedCityScreen(),),);},),
             const SizedBox(height: 12),
-            MenuButton(title: "Космопорт",imagePath: "assets/images/Spaceport.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const SpaceportScreen(),),);},),
+            MenuButton(title: s.spaceport,imagePath: "assets/images/Spaceport.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const SpaceportScreen(),),);},),
             const SizedBox(height: 12),
-            MenuButton(title: "Синие ворота",imagePath: "assets/images/Blue_Gate.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const BlueGateScreen(),),);},),
+            MenuButton(title: s.bluegate,imagePath: "assets/images/Blue_Gate.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const BlueGateScreen(),),);},),
             const SizedBox(height: 12),
-            MenuButton(title: "Затонувшее побережье",imagePath: "assets/images/Riven_Tides.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const RivenTidesScreen(),),);},),
+            MenuButton(title: s.riventides,imagePath: "assets/images/Riven_Tides.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const RivenTidesScreen(),),);},),
             const SizedBox(height: 12),
-            MenuButton(title: "Стелла Монтис",imagePath: "assets/images/Stella_Montis.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const StellaMontisScreen(),),);},),
+            MenuButton(title: s.stellamontis,imagePath: "assets/images/Stella_Montis.png",onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const StellaMontisScreen(),),);},),
           ],
         ),
       ),

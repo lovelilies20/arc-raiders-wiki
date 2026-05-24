@@ -570,6 +570,85 @@ String get turret1 => isRussian ? 'Уничтожение: +100 XP\nПоиск +
 String get wasp => isRussian ? 'Оса' : 'Wasp';
 String get wasp1 => isRussian ? 'Уничтожение: +100 XP\nПоиск +200 XP' : 'Destruction: +100 XP\nSearch: +200 XP';
 
+String get speranz => isRussian ? 'Сперанца' : 'Speranza';
+String get speranzStory => isRussian ? 'Сперанса - самый старый район Толедо, и это ваш новый дом. Это обзор различных действий, активностей и людей, которых вы можете встретить в Сперансе.\n' : 'Speranza is the oldest neighborhood in Toledo, and it is your new home. This is an overview of the various activities and people you may encounter in Speranza.\n';
+String get hub => isRussian ? 'Главный хаб' : 'The main Hub';
+String get hubStory => isRussian ? 'Главный Хаб - это место, где вы можете выбрать, какую карту развернуть на Верхней части и где можно набрать других рейдеров, чтобы быть вместе во время рейдов.\n' : 'The Main Hub is where you can choose which map to deploy on the Upper Part and where you can recruit other raiders to be together during raids.\n';
+
+String get mapss => isRussian ? 'Карты' : 'Maps';
+String get mapss1 => isRussian ? 'Играйте в одиночку или в группах до трёх человек, собирайте материалы из тайников по всей карте, охотитесь на ARC и пытайтесь пройти через точку эвакуации до того, как придёт другой рейдер за вашей добычей. Динамичная погода, время суток и события поддерживают свежесть.' : 'Play solo or in groups of up to three, collect materials from caches across the map, hunt the ARC and try to get through the evac point before another raider comes for your loot. Dynamic weather, time of day and events keep things fresh.';
+String get battleDamb => isRussian ? 'Поле битвы у дамбы' : 'Dam Battlegrounds';
+String get buriedCity => isRussian ? 'Погребенный город' : 'Buried City';
+String get spaceport => isRussian ? 'Космопорт' : 'Spaceport';
+String get bluegate => isRussian ? 'Синие ворота' : 'The Blue Gate';
+String get riventides => isRussian ? 'Затонувшее побережье' : 'Riven Tides';
+String get stellamontis => isRussian ? 'Стелла Монтис' : 'Stella Montis';
+String get event => isRussian ? 'Событие:' : 'Event:';
+String get difficulty => isRussian ? 'Сложность' : 'Difficult';
+String get inevent => isRussian ? 'Без событий' : 'Without event';
+
+String get lushblooms => isRussian ? 'Пышные цветы' : 'Lush Blooms';
+String get uncoveredcaches => isRussian ? 'Обнаруженные тайники' : 'Uncovered Caches';
+String get harvesteR => isRussian ? 'Сборщик ARC' : 'Harvester';
+String get huskgraveyard => isRussian ? 'Кладбище Хаск' : 'Husk Graveyard';
+String get matriarcH => isRussian ? 'Матриарх' : 'Matriarch';
+String get nightraid => isRussian ? 'Ночной рейд' : 'Night Raid';
+String get coldsnap => isRussian ? 'Cold Snap' : 'Cold Snap';
+String get hurricane => isRussian ? 'Ураган' : 'Hurricane';
+String get closescrutiny => isRussian ? 'Тщательный анализ' : 'Close Scrutiny';
+String get searchProbe => isRussian ? 'Разведка зондов' : 'Prospecting Probes';
+String get electromagneticstorm => isRussian ? 'Электромагнитная буря' : 'Electromagnetic Storm';
+
+String get closeSecurityStory => isRussian ? ' Тщательный анализ - это условие карты, при\n котором появляются Геодезисты, защищённые\n Вапорайзерами, которые вызывают ARC-\n Оценщиков после того, как они заканчивают\n поиск ценных материалов. Рейдеры могут\n взломать ARC-оценщиков, чтобы получить \nдоступ к добыче.' : 'Thorough analysis is a map condition that\n spawns Surveyors protected by Vaporizers, who\n summon ARC-Assessors after they finish\n searching for valuable materials. Raiders can\n hack ARC-Assessors to gain access to the loot.';
+String get closeSecurityDiff => isRussian ? ' * Нет активных запертых дверей\n * Уменьшение общей стоимости лута\n * Увеличение количества ARC лута' : '* No active locked doors\n * Decreased total loot value\n * Increased ARC loot';
+
+String get coldSnapStory => isRussian ? ' Морозная погода убьёт вашего Рейдера за\n считанные минуты, если только вы не зайдёте\n внутрь или не восстановитесь быстро.\n Имейте это в виду, когда вступаете в бой с\n другими рейдерами - быть прижатым на\n открытом месте - это смертный приговор\n зимой в Ржавом поясе.\n\n' : 'Frosty weather will kill your Raider in\n a matter of minutes, unless you go\n inside or recover quickly.\n Keep this in mind when you engage\n other Raiders - being pinned down in\n an open area is a death sentence\n in the winter in the Rust Belt.\n\n';
+String get coldSnapDiff => isRussian ? ' * Урожай Кэндлберри\n * Повышенная стоимость добычи\n * Разрушительный холод' : '* Candleberry Harvest\n * Increased Mining Cost\n * Destructive Cold';
+
+String get electromagneticstormStory => isRussian ? ' Электромагнитная буря - это условие карты,\n которое покрывает поражённую карту в\n интенсивном шторме, поражающем поверхность\n молнией. Любые ARC и Рейдеры, поражённые\n молнией, получают повреждения и оглушают на\n короткое время. Разбившихся зондов и курьеров\n можно встретить в большем количестве.\n\n' : 'An electromagnetic storm is a map condition that covers the affected map in an intense storm that strikes the surface with lightning. Any ARC and Raiders that are struck by lightning take damage and are stunned for a short time. Broken probes and couriers can be found in greater numbers.\n\n';
+String get electromagneticstormDiff => isRussian ? ' * Меньше активных точек возврата\n * Нет активных Рейдерских люков\n * Повышенная стоимость добычи\n * Удары молнии' : '* Less active return points\n * No active Raider hatches\n * Increased mining cost\n * Lightning strikes';
+
+String get harvesterStory => isRussian ? ' Сборщик ARC - это условие карты, при котором\n на каждой карте появляется сооружение Жнеца,\n защищённое королевой. Рейдеры могут\n завершить последовательность активации ядра\n внутри комбайна, чтобы обнаружить\n специальные контейнеры с добычей, что даёт\n легендарные чертежи Эквалайзера и Юпитера.\n\n' : 'The ARC Collector is a map condition that causes a Reaper structure to appear on each map, protected by a Queen. Raiders can complete the core activation sequence inside the harvester to discover special loot containers, which yield legendary blueprints for the Equalizer and Jupiter.\n\n';
+String get harvesterDiff => isRussian ? ' * Появление Королевы' : '* The appearance of the Queen';
+
+String get hurricaneStory => isRussian ? ' Сильные ветры проносятся по поверхности,\n затрагивая значительные части района.\n Видимость и слух могут быть снижены, так что\n будьте начеку.\n\n' : 'Strong winds are blowing across the surface,\n affecting large parts of the area.\n Visibility and hearing may be reduced, so\n stay alert.\n\n';
+String get hurricaneDiff => isRussian ? ' * Повышенная стоимость добычи\n * Обломки ломают на щиты\n * ARC с повышенной угрозой' : '* Increased mining cost\n * Debris breaks into shields\n * ARC with increased threat';
+
+String get husk => isRussian ? ' Кладбище Хаска - это условие карты, которое\n значительно увеличивает количество\n разбросанных ARC-оболочек. Кроме того,\n оболочки могут электрифицироваться при\n прорыве, нанося шокирующее урона любому\n ничего не подозревающему рейдеру.\n\n' : 'Husk Graveyard is a map condition that\n significantly increases the number of\n scattered ARC shells. Additionally,\n the shells can become electrified upon\n breaking through, dealing shocking damage to any\n unsuspecting raider.\n\n';
+String get husk1 => isRussian ? ' * Электрифицированные оболочки первой волны' : '* Electrified shells of the first wave';
+
+String get lush => isRussian ? ' Погода в последнее время была необычайно\n приятной, и жизненно важные растения и\n плоды процветали. Выходите и собирайте еду,\n пока она не закончилась.\n\n' : 'The weather has been unusually pleasant lately, and vital plants and fruits have been flourishing. Go out and gather food before it runs out.';
+String get lush1 => isRussian ? ' * Увеличение количества добычи природы' : '* Increasing the amount of nature mining';
+
+String get matri => isRussian ? ' Матриарх - это условие на карте, которое\n порождает - смертоносного Матриарха - на этой\n карте.\n\n Матриарх - одна из крупнейших и самых опасных\n машин ARC, обнаруженных на сегодняшний день.\n Её можно найти только в условиях карты\n Матриарха.' : 'The Matriarch is a condition on the map that\n spawns the deadly Matriarch on this\n map.\n\n The Matriarch is one of the largest and most dangerous\n ARC machines discovered to date.\n It can only be found on the Matriarch map.';
+
+String get night => isRussian ? ' Ночной рейд — это условие карты, которое\n увеличивает вероятность того, что Рейдеры\n найдут более ценную добычу, особенно за\n запертыми дверями, где ключи появляются\n чаще.\n\n * Меньше активных точек возврата\n * Нет активных Рейдерских люков\n * Повышенная стоимость добычи' : 'Night Raid is a map condition that\n increases the likelihood that Raiders\n will find more valuable loot, especially behind\n locked doors where keys appear more often.\n\n * Fewer active return points\n * No active Raider hatches\n * Increased loot value';
+
+String get probeSpecting => isRussian ? ' Разведка зондов - это условие карты,\n которое значительно увеличивает количество\n зондов, разбросанных на карте. Зонды также\n могут быть лучше защищены летающими ARC-\n аппаратами, такими как Оса.\n\n * Увеличение количества зондов' : 'Probe Exploration is a map condition that significantly increases the number of probes scattered on the map. Probes can also be better protected by flying ARC vehicles such as the Wasp.\n\n * Increase the number of probes';
+
+String get caches => isRussian ? ' Штормы обнаружили несколько старых\n тайников Рейдеров, но они настроены на взрыв,\n если будут слишком долго открыты. Поторопись\n и найди их всех.\n\n * Взрывающиеся тайники' : 'Storms has discovered several old Raider caches, but they are set to explode if they are left open for too long. Hurry up and find them all.\n\n * Exploding caches';
+
+String get weapon => isRussian ? 'Оружие' : 'Weapon';
+String get weaponStory => isRussian ? 'Оружие - стреляющее боеприпасами, основанными на снарядах или энергии. Рейдеры используют оружие для атаки и защиты от ARC и друг друга.' : 'Weapons - firing ammunition based on projectiles or energy. Raiders use weapons to attack and defend against ARC and each other.';
+String get granades => isRussian ? 'Гранаты' : 'Granades';
+String get gears => isRussian ? 'Снаряжение' : 'Gear';
+
+String get obich => isRussian ? 'ОБЫЧНОЕ' : 'Usual';
+String get neobich => isRussian ? 'НЕОБЫЧНОЕ' : 'Unusual';
+String get redkoe => isRussian ? 'РЕДКОЕ' : 'Rare';
+String get epic => isRussian ? 'ЭПИЧЕСКОЕ' : 'Epic';
+String get legendary => isRussian ? 'ЛЕГЕНДАРНОЕ' : 'Legendary';
+
+String get stitcher => isRussian ? 'Сшиватель' : 'Stitcher';
+String get rattler => isRussian ? 'Трещотка' : 'Rattler';
+String get ferro => isRussian ? 'Ферро' : 'Ferro';
+String get kettle => isRussian ? 'Чайник' : 'Kettle';
+
+String get brulleta => isRussian ? 'Бурлетта' : 'Burlleta';
+String get anvil => isRussian ? 'Наковальня' : 'Anvil';
+String get arped => isRussian ? 'Арпеджио' : 'Arpedgio';
+String get iltoro => isRussian ? 'Эль-Торо' : 'Il_toro';
+
 
 
 

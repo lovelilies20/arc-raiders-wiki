@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class HarvesteRScreen extends StatelessWidget {
   const HarvesteRScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class HarvesteRScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Сборщик ARC",
+                    s.harvesteR,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,10 +50,9 @@ class HarvesteRScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Сборщик ARC - это условие карты, при котором\n на каждой карте появляется сооружение Жнеца,\n защищённое королевой. Рейдеры могут\n завершить последовательность активации ядра\n внутри комбайна, чтобы обнаружить\n специальные контейнеры с добычей, что даёт\n легендарные чертежи Эквалайзера и Юпитера.\n\n"
-                    " * Появление Королевы",
+                    s.harvesterStory,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -57,11 +60,20 @@ class HarvesteRScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
-
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.harvesterDiff,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  child: Text(
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -71,18 +83,18 @@ class HarvesteRScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "3/5",
                   valueColor: Colors.green,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),

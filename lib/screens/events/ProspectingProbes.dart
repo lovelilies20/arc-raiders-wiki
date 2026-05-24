@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class ProspectingprobesScreen extends StatelessWidget {
   const ProspectingprobesScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class ProspectingprobesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Разведка зондов",
+                    s.searchProbe,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,10 +50,9 @@ class ProspectingprobesScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Разведка зондов - это условие карты,\n которое значительно увеличивает количество\n зондов, разбросанных на карте. Зонды также\n могут быть лучше защищены летающими ARC-\n аппаратами, такими как Оса.\n\n"
-                    " * Увеличение количества зондов",
+                    s.probeSpecting,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -59,9 +62,9 @@ class ProspectingprobesScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -71,23 +74,23 @@ class ProspectingprobesScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "3/5",
                   valueColor: Colors.green,
                 ),
-                const EveStatRow(
-                  title: "Погребенный город",
+                EveStatRow(
+                  title: s.buriedCity,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "4/5",
                   valueColor: Colors.blue,
                 ),

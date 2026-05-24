@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/screens/events/LushBlooms.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class HurricaneScreen extends StatelessWidget {
   const HurricaneScreen({super.key});
 
 @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C3D),
       appBar: AppBar(
-        title: const Text("КАРТЫ/СОБЫТИЯ"),
+        title: Text(s.maps),
         backgroundColor: const Color.fromARGB(255, 234, 247, 60),
       ),
       body: SingleChildScrollView(
@@ -35,9 +39,9 @@ class HurricaneScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    "Ураган",
+                    s.hurricane,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
@@ -46,12 +50,9 @@ class HurricaneScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Center(
+                Center(
                   child: Text(
-                    " Сильные ветры проносятся по поверхности,\n затрагивая значительные части района.\n Видимость и слух могут быть снижены, так что\n будьте начеку.\n\n"
-                    " * Повышенная стоимость добычи\n"
-                    " * Обломки ломают на щиты\n"
-                    " * ARC с повышенной угрозой",
+                    s.hurricaneStory,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -59,11 +60,20 @@ class HurricaneScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-
-                const Center(
+                Center(
                   child: Text(
-                    "Сложность",
+                    s.hurricaneDiff,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  child: Text(
+                    s.difficulty,
                     style: TextStyle(
                       color: Colors.yellow,
                       fontSize: 20,
@@ -73,23 +83,23 @@ class HurricaneScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
 
-                const EveStatRow(
-                  title: "Поле битвы у дамбы",
+                EveStatRow(
+                  title: s.battleDamb,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Погребенный город",
+                EveStatRow(
+                  title: s.buriedCity,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Космопорт",
+                EveStatRow(
+                  title: s.spaceport,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
-                const EveStatRow(
-                  title: "Синие ворота",
+                EveStatRow(
+                  title: s.bluegate,
                   value: "5/5",
                   valueColor: Colors.pink,
                 ),
