@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class DeadlineScreen extends StatelessWidget {
   const DeadlineScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -38,9 +42,9 @@ class DeadlineScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.granade3),
                     ],
                   ),
 
@@ -57,8 +61,8 @@ class DeadlineScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Мина, которая наносит урон всему, что находится в её радиусе, когда таймер истекает.",
+                   Text(
+                    s.etopizda1,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,10 +71,10 @@ class DeadlineScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Повреждения", "1,000"),
-                  _stat("Радиус", "10 м"),
-                  _stat("Длительность таймера", "6 с"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat1, "1,000"),
+                  _stat(s.stat3, "10 м"),
+                  _stat(s.stat2, "6 с"),
+                 
 
                   const SizedBox(height: 20),
 
@@ -87,10 +91,10 @@ class DeadlineScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "1.0"),
-                  _stat("Стоимость", "18,000"),
-                  _stat("Продажа", "6,000"),
-                  _stat("Размер стопки", "1"),
+                  _stat(s.stat4, "1.0"),
+                  _stat(s.stat5, "18,000"),
+                  _stat(s.stat7, "6,000"),
+                  _stat(s.stat6, "1"),
 
                   const SizedBox(height: 30),
                 ],

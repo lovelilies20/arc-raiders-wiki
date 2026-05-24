@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class BlazeGrenadeScreen extends StatelessWidget {
   const BlazeGrenadeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -38,16 +42,16 @@ class BlazeGrenadeScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag("Редко"),
+                      _tag(s.granade2),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Пламенная граната",
+                  Text(
+                    s.granade10,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +61,8 @@ class BlazeGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Граната, которая взрывается при ударе, покрывая огонь и наносящая урон со временем.",
+                  Text(
+                    s.etopizda,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,10 +71,10 @@ class BlazeGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Повреждения", "5/с"),
-                  _stat("Продолжительность", "10 с"),
-                  _stat("Радиус", "10 м"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat1, "5/с"),
+                  _stat(s.stat2, "10 с"),
+                  _stat(s.stat3, "10 м"),
+                
 
                   const SizedBox(height: 20),
 
@@ -87,9 +91,9 @@ class BlazeGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0.2"),
-                  _stat("Стоимость", "1,600"),
-                  _stat("Размер стопки", "5"),
+                  _stat(s.stat4, "0.2"),
+                  _stat(s.stat5, "1,600"),
+                  _stat(s.stat6, "5"),
 
                   const SizedBox(height: 30),
                 ],

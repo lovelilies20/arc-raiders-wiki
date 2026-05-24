@@ -674,10 +674,38 @@ String get ruchnaya => isRussian ? 'Ручная пушка' : 'Bobcat';
 String get drobovik => isRussian ? 'Дробовик' : 'Bobcat';
 String get special => isRussian ? 'Специальное' : 'Bobcat';
 
+String get granade => isRussian ? 'ОБЫЧНОЕ' : 'USUAL';
+String get granade1 => isRussian ? 'НЕОБЫЧНОЕ' : 'UNUSUAL';
+String get granade2 => isRussian ? 'РЕДКОЕ' : 'RARE';
+String get granade3 => isRussian ? 'ЭПИЧЕСКОЕ' : 'EPIC';
 
+String get granade4 => isRussian ? 'Легкая ударная граната' : 'Light attack granade';
+String get granade5 => isRussian ? 'Фейерверкер' : 'Firework';
+String get granade6 => isRussian ? 'Газовая граната' : 'Gas granade';
 
+String get granade7 => isRussian ? 'Приманочная граната' : 'Decoy granade';
+String get granade8 => isRussian ? 'Граната Seeker' : 'Seeker Granade';
+String get granade9 => isRussian ? 'Гранатомета Snap Blast' : 'Granade Snap Blast';
 
+String get granade10 => isRussian ? 'Пламенная Граната' : 'Blaze granade';
+String get granade11 => isRussian ? 'Тяжелая взрывательная граната' : 'Heavy granade';
+String get granade12 => isRussian ? 'Электрическая граната' : 'Stuned granade';
+String get granade13 => isRussian ? 'Дымовая граната' : 'Smoke granade';
+String get granade14 => isRussian ? 'Маркировочная граната' : 'Mark granade';
+String get granade15 => isRussian ? 'Первопроходец' : 'Trailblazer granade';
+String get granade16 => isRussian ? 'Триггер граната' : 'Trigger Granade';
 
+String get granade17 => isRussian ? 'Дедлайн' : 'Deadline';
+String get granade18 => isRussian ? 'Волчья стая' : 'Wolf pack';
+
+String get fastslots => isRussian ? 'Быстрое использование' : 'Faster slots';
+String get etopizda => isRussian ? '"Граната, которая взрывается при ударе, покрывая огонь и наносящая урон со временем."' : '"A grenade that explodes on impact, covering the fire and dealing damage over time."';
+String get stat1 => isRussian ? 'Повреждения' : 'Damage';
+String get stat2 => isRussian ? 'Продолжительность' : 'Duration';
+String get stat3 => isRussian ? 'Радиус' : 'Radius';
+String get stat4 => isRussian ? 'Вес' : 'Weight';
+String get stat5 => isRussian ? 'Стоимость' : 'Cost'; 
+String get stat6 => isRussian ? 'Размер стопки' : 'stack size'; 
 
 
 

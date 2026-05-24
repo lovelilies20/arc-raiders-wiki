@@ -17,6 +17,9 @@ import 'package:flutter/material.dart';
 import 'package:arc_raiders/main.dart';
 import 'package:arc_raiders/widgets/weapon_button.dart';
 import 'package:arc_raiders/widgets/granade_button.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class GranadeScreen extends StatefulWidget {
   const GranadeScreen({super.key});
@@ -28,19 +31,19 @@ class GranadeScreen extends StatefulWidget {
 class _GranadeScreenState extends State<GranadeScreen> {
   int selectedIndex = 0;
 
-  final rarities = [
-    "ОБЫЧНОЕ",
-    "НЕОБЫЧНОЕ",
-    "РЕДКОЕ",
-    "ЭПИЧЕСКОЕ",
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
+    final rarities = [
+    s.granade,
+    s.granade1,
+    s.granade2,
+    s.granade3,
+  ];
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -101,7 +104,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
 
               if (selectedIndex == 0) ...[
                 GranadeButton(
-                  title: "Лёгкая ударная граната",
+                  title: s.granade4,
                   imagePath: "assets/images/granade.png",
                   onTap: () {
                     Navigator.push(
@@ -114,7 +117,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Фейерверкер",
+                  title: s.granade5,
                   imagePath: "assets/images/firecracker.png",
                   onTap: () {
                     Navigator.push(
@@ -127,7 +130,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Газовая граната",
+                  title: s.granade6,
                   imagePath: "assets/images/GasGranade.png",
                   onTap: () {
                     Navigator.push(
@@ -141,7 +144,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
               ],
               if (selectedIndex == 1) ...[
                 GranadeButton(
-                  title: "Приманочная граната",
+                  title: s.granade7,
                   imagePath: "assets/images/Lure_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -154,7 +157,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Граната Seeker",
+                  title: s.granade8,
                   imagePath: "assets/images/Seeker_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -167,7 +170,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Гранатомета Snap Blast",
+                  title: s.granade9,
                   imagePath: "assets/images/Snap_Blast_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -183,7 +186,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
               // РЕДКОЕ
               if (selectedIndex == 2) ...[
                 GranadeButton(
-                  title: "Пламенная граната",
+                  title: s.granade10,
                   imagePath: "assets/images/Blaze_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -196,7 +199,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Тяжёлая взрывательная граната",
+                  title: s.granade11,
                   imagePath: "assets/images/Heavy_Fuze_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -209,7 +212,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Электрическая граната",
+                  title: s.granade12,
                   imagePath: "assets/images/Showstopper.png",
                   onTap: () {
                     Navigator.push(
@@ -222,7 +225,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Дымовая граната",
+                  title: s.granade13,
                   imagePath: "assets/images/Smoke_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -235,7 +238,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Маркировочная граната",
+                  title: s.granade14,
                   imagePath: "assets/images/Tagging_Grenade.png",
                   onTap: () {
                     Navigator.push(
@@ -248,7 +251,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Первопроходец",
+                  title: s.granade15,
                   imagePath: "assets/images/Trailblazer.png",
                   onTap: () {
                     Navigator.push(
@@ -261,7 +264,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Триггер граната",
+                  title: s.granade16,
                   imagePath: "assets/images/TriggerNade.png",
                   onTap: () {
                     Navigator.push(
@@ -276,7 +279,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
               // ЭПИЧЕСКОЕ
               if (selectedIndex == 3) ...[
                 GranadeButton(
-                  title: "Дедлайн",
+                  title: s.granade17,
                   imagePath: "assets/images/Deadline.png",
                   onTap: () {
                     Navigator.push(
@@ -289,7 +292,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Волчья стая",
+                  title: s.granade18,
                   imagePath: "assets/images/Wolfpack.png",
                   onTap: () {
                     Navigator.push(
