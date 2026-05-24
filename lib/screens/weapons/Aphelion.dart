@@ -12,15 +12,13 @@ class AphelionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // КАРТИНКА СВЕРХУ
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -40,21 +38,18 @@ class AphelionScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  // ТЕГИ
                   Row(
                     children: [
-                      _tag("Боевая винтовка"),
+                      _tag(s.boevaya),
                       const SizedBox(width: 8),
-                      _tag("Легендарная"),
+                      _tag(s.legendary),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  // НАЗВАНИЕ
-                  const Text(
-                    "Афелий",
+                  Text(
+                    s.afeliy,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -64,9 +59,8 @@ class AphelionScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // ОПИСАНИЕ
-                  const Text(
-                    "Стреляет высокоскоростными энергетическими снарядами.",
+                  Text(
+                    s.aphelionStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -75,10 +69,9 @@ class AphelionScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // ХАРАКТЕРИСТИКИ
-                  _stat("Тип боеприпасов", "Энергетический заряд"),
-                  _stat("Размер магазина", "10"),
-                  _stat("Долговечность", "1130 выстрелов"),
+                  _stat(s.typ, s.enerBoep),
+                  _stat(s.magazine, "10"),
+                  _stat(s.dolgo, "1130 выстрелов"),
                   _stat("Режим стрельбы", "2-ой выстрел"),
                   _stat("Пробитие брони ARC", "Сильное"),
                   _stat("Особая черта", "Экспериментальные"),
