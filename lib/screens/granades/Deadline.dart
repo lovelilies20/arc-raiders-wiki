@@ -50,8 +50,8 @@ class DeadlineScreen extends StatelessWidget {
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Дедлайн",
+                  Text(
+                    s.granade17,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -78,9 +78,9 @@ class DeadlineScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

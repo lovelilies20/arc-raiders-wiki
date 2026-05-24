@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class GasgranadeScreen extends StatelessWidget {
   const GasgranadeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
@@ -38,16 +42,16 @@ class GasgranadeScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.granade),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Газовая граната",
+                  Text(
+                    s.granade6,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +61,8 @@ class GasgranadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Граната, которая при попадании создаёт затяжное токсичное облако, истощая выносливость любого рейдера в зоне поражения.",
+                  Text(
+                    s.etopizda4,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,16 +71,16 @@ class GasgranadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Продолжительность", "20 с"),
-                  _stat("Радиус", "7,5 м"),
-                  _stat("Истощение выносливости", "25/с"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat2, "20 с"),
+                  _stat(s.stat3, "7,5 м"),
+                  _stat(s.stat1, "25/с"),
+                
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -87,9 +91,9 @@ class GasgranadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0.2"),
-                  _stat("Стоимость", "270"),
-                  _stat("Размер стопки", "3"),
+                  _stat(s.stat4, "0.2"),
+                  _stat(s.stat5, "270"),
+                  _stat(s.stat6, "3"),
 
                   const SizedBox(height: 30),
                 ],

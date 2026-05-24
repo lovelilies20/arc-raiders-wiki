@@ -676,12 +676,12 @@ String get ruchnaya => isRussian ? 'Ручная пушка' : 'Hand cannon';
 String get drobovik => isRussian ? 'Дробовик' : 'The shotgun';
 String get special => isRussian ? 'Специальное' : 'Bobcat';
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 String get granade => isRussian ? 'ОБЫЧНОЕ' : 'USUAL';
 String get granade1 => isRussian ? 'НЕОБЫЧНОЕ' : 'UNUSUAL';
 String get granade2 => isRussian ? 'РЕДКОЕ' : 'RARE';
 String get granade3 => isRussian ? 'ЭПИЧЕСКОЕ' : 'EPIC';
-=======
+//=======
 String get anvilStory => isRussian ? 'Высокий урон в тело и от выстрелов в голову, но неудобное управление.' : 'High body and head damage, but awkward controls.';
 String get typ => isRussian ? 'Тип боеприпасов' : 'Ammo Type';
 String get magazine => isRussian ? 'Размер магазина' : 'Magazine Size';
@@ -717,7 +717,7 @@ String get aphelionStory => isRussian ? 'Стреляет высокоскоро
 
 
 
->>>>>>> 38a312ca544b7a30406bfc0d359ffe0f2c2a456a
+//>>>>>>> 38a312ca544b7a30406bfc0d359ffe0f2c2a456a
 
 String get granade4 => isRussian ? 'Легкая ударная граната' : 'Light attack granade';
 String get granade5 => isRussian ? 'Фейерверкер' : 'Firework';
@@ -740,12 +740,30 @@ String get granade18 => isRussian ? 'Волчья стая' : 'Wolf pack';
 
 String get fastslots => isRussian ? 'Быстрое использование' : 'Faster slots';
 String get etopizda => isRussian ? '"Граната, которая взрывается при ударе, покрывая огонь и наносящая урон со временем."' : '"A grenade that explodes on impact, covering the fire and dealing damage over time."';
+String get etopizda1 => isRussian ? '"Мина, которая наносит урон всему, что находится в её радиусе, когда таймер истекает."' : '"A mine that deals damage to everything within its radius when the timer expires."';
 String get stat1 => isRussian ? 'Повреждения' : 'Damage';
 String get stat2 => isRussian ? 'Продолжительность' : 'Duration';
 String get stat3 => isRussian ? 'Радиус' : 'Radius';
 String get stat4 => isRussian ? 'Вес' : 'Weight';
 String get stat5 => isRussian ? 'Стоимость' : 'Cost'; 
 String get stat6 => isRussian ? 'Размер стопки' : 'stack size'; 
+String get stat7 => isRussian ? 'Продажа' : 'Sell cost';
+
+String get etopizda2 => isRussian ? '"Устройство, которое приятно искрится и щёлкает."' : '"A device that sparkles and clicks pleasantly."'; 
+String get etopizda3 => isRussian ? '"Общие данные"' : '"General data"'; 
+String get etopizda4 => isRussian ? '"Граната, которая при попадании создаёт затяжное токсичное облако, истощая выносливость любого рейдера в зоне поражения."' : '"A grenade that creates a lingering toxic cloud upon impact, draining the stamina of any raider within its range."'; 
+String get etopizda5 => isRussian ? '"Граната, которая взрывается при ударе, нанося взрывной урон в небольшом радиусе."' : '"A grenade that explodes on impact, dealing explosive damage in a small radius."'; 
+String get etopizda6 => isRussian ? '"Граната, которая взрывается с задержкой, нанося взрывной урон в радиусе действия."' : '"A grenade that detonates after a delay, dealing explosive damage within its range."'; 
+String get etopizda7 => isRussian ? '"Шумное устройство, которое прилипает к поверхностям, отвлекая ближайшие ARC-машины и привлекая их огонь."' : '"A noisy device that sticks to surfaces, distracting nearby ARC vehicles and attracting their fire."'; 
+String get etopizda8 => isRussian ? '"Самонаводящаяся граната, поражающая один ближайший ARC, наносящая взрывной урон при попадании."' : '"A homing grenade that targets one nearby ARC, dealing explosive damage on impact."'; 
+String get etopizda9 => isRussian ? '"Граната, которая взрывается после задержки, оглушая врагов в радиусе своего действия."' : '"A grenade that explodes after a delay, stunning enemies within its range."'; 
+String get etopizda10 => isRussian ? '"Граната, которая при попадании создаёт затяжное облако дыма, блокирующее обзор для ARC и других рейдеров."' : '"A grenade that creates a long-lasting cloud of smoke upon impact, blocking the view for ARC and other raiders."'; 
+String get etopizda11 => isRussian ? '"Граната, которая при попадании создаёт затяжное облако дыма, блокирующее обзор для ARC и других рейдеров.""Граната, которая цепляется за поверхности и наносит взрывной урон после короткой задержки."' : '"A grenade that creates a lingering cloud of smoke upon impact, blocking vision for ARC and other raiders.""A grenade that clings to surfaces and deals explosive damage after a short delay."'; 
+String get etopizda12 => isRussian ? '"Граната, которая взрывается после задержки, помечая Рейдеров и ARC в определённой зоне, позволяя кратковременно отслеживать их местоположение."' : '"A grenade that explodes after a delay, marking Raiders and ARC in a specific area, allowing you to briefly track their location."'; 
+String get etopizda13 => isRussian ? '"Граната, которая выбрасывает след горючих газов вдоль своего пути, вызывая взрывную цепную реакцию при воспламенении."' : '"A grenade that emits a trail of combustible gases along its path, causing an explosive chain reaction upon ignition."'; 
+String get etopizda14 => isRussian ? '"Граната, детонируемая дистанционно, которая может прилипать к поверхностям и ARC, нанося взрывной урон при срабатывании."' : '"A remotely detonated grenade that can stick to surfaces and ARC, dealing explosive damage when triggered."'; 
+String get etopizda15 => isRussian ? '"Граната, которая разлетается на несколько самонаводящихся ракет, каждая из которых нацеливается на ARC и наносит взрывной урон при попадании."' : '"A grenade that splits into several homing missiles, each of which targets an ARC and deals explosive damage on impact."'; 
+
 
 
 

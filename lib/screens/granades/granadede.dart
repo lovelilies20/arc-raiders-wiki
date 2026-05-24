@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class LeleScreen extends StatelessWidget {
   const LeleScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -38,16 +42,16 @@ class LeleScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
-                      const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.fastslots),
+                      SizedBox(width: 8),
+                      _tag(s.granade),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Лёгкая ударная граната",
+                  Text(
+                    s.granade4,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +61,8 @@ class LeleScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Граната, которая взрывается при ударе, нанося взрывной урон в небольшом радиусе.",
+                  Text(
+                    s.etopizda5,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,15 +71,15 @@ class LeleScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Повреждения", "30"),
-                  _stat("Радиус", "2,5 м"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat1, "30"),
+                  _stat(s.stat3, "2,5 м"),
+                  
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -86,9 +90,9 @@ class LeleScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0,1"),
-                  _stat("Стоимость", "270"),
-                  _stat("Размер стопки", "5"),
+                  _stat(s.ves, "0,1"),
+                  _stat(s.stat5, "270"),
+                  _stat(s.stat6, "5"),
 
                   const SizedBox(height: 30),
                 ],

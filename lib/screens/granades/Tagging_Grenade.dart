@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class TaggingGrenadeScreen extends StatelessWidget {
   const TaggingGrenadeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -38,16 +42,16 @@ class TaggingGrenadeScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag("Редко"),
+                      _tag(s.granade2),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Маркировочная граната",
+                  Text(
+                    s.granade14,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +61,8 @@ class TaggingGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Граната, которая взрывается после задержки, помечая Рейдеров и ARC в определённой зоне, позволяя кратковременно отслеживать их местоположение.",
+                  Text(
+                    s.etopizda12,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,15 +71,15 @@ class TaggingGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Продолжительность", "30 с"),
-                  _stat("Радиус", "6 м"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat2, "30 с"),
+                  _stat(s.stat3, "6 м"),
+                  
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -86,9 +90,9 @@ class TaggingGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0.4"),
-                  _stat("Стоимость", "1,000"),
-                  _stat("Размер стопки", "3"),
+                  _stat(s.ves, "0.4"),
+                  _stat(s.stat5, "1,000"),
+                  _stat(s.stat6, "3"),
 
                   const SizedBox(height: 30),
                 ],

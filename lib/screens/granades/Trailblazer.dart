@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class TrailblazerScreen extends StatelessWidget {
   const TrailblazerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -38,16 +42,16 @@ class TrailblazerScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag("Редко"),
+                      _tag(s.granade2),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Первопроходец",
+                  Text(
+                    s.granade15,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +61,8 @@ class TrailblazerScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Граната, которая выбрасывает след горючих газов вдоль своего пути, вызывая взрывную цепную реакцию при воспламенении.",
+                  Text(
+                    s.etopizda13,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,15 +71,15 @@ class TrailblazerScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Повреждения", "20"),
-                  _stat("Радиус", "2 м"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.stat1, "20"),
+                  _stat(s.stat3, "2 м"),
+                 
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -86,9 +90,9 @@ class TrailblazerScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "1.0"),
-                  _stat("Стоимость", "2,200"),
-                  _stat("Размер стопки", "3"),
+                  _stat(s.ves, "1.0"),
+                  _stat(s.stat5, "2,200"),
+                  _stat(s.stat6, "3"),
 
                   const SizedBox(height: 30),
                 ],
