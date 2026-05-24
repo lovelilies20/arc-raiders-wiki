@@ -12,7 +12,7 @@ class AnvilScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -42,14 +42,14 @@ class AnvilScreen extends StatelessWidget {
                     children: [
                       _tag(s.ruchnaya),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
                   Text(
-                    "Наковальня",
+                    s.anvil,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -60,7 +60,7 @@ class AnvilScreen extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   Text(
-                    "Высокий урон в тело и от выстрелов в голову, но неудобное управление.",
+                    s.anvilStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -69,24 +69,24 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Тяжёлые боеприпасы"),
-                  _stat("Размер магазина", "6"),
-                  _stat("Долговечность", "151 | 167 | 193 | 215"),
-                  _stat("Режим стрельбы", "Одиночный"),
-                  _stat("Пробитие брони ARC", "Сильное"),
-                  _stat("Повреждения", "40"),
-                  _stat("Скорострельность", "16.3"),
-                  _stat("Множитель в голову", "2.5x"),
-                  _stat("Дальность", "50.2"),
-                  _stat("Стабильность", "75.2"),
-                  _stat("Скорость", "69.1"),
-                  _stat("Скрытность", "10"),
+                  _stat(s.typ, s.heavyBoep),
+                  _stat(s.magazine, "6"),
+                  _stat(s.dolgo, "151 | 167 | 193 | 215"),
+                  _stat(s.rejim, s.strelba),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.pov, "40"),
+                  _stat(s.skorostrel, "16.3"),
+                  _stat(s.head, "2.5x"),
+                  _stat(s.range, "50.2"),
+                  _stat(s.stab, "75.2"),
+                  _stat(s.skor, "69.1"),
+                  _stat(s.skrit, "10"),
 
                   const SizedBox(height: 20),
 
                   Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -97,9 +97,9 @@ class AnvilScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "5.0"),
-                  _stat("Цена продажи", "5,000"),
-                  _stat("Цена покупки", "7,000"),
+                  _stat(s.ves, "5.0"),
+                  _stat(s.prodaja, "5,000"),
+                  _stat(s.pokupka, "7,000"),
 
                   const SizedBox(height: 30),
                 ],

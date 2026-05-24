@@ -1,3 +1,5 @@
+import 'package:arc_raiders/screens/weapons/Aphelion.dart';
+
 import 'app_language.dart';
 
 class AppStrings {
@@ -633,11 +635,11 @@ String get weaponStory => isRussian ? 'Оружие - стреляющее бо�
 String get granades => isRussian ? 'Гранаты' : 'Granades';
 String get gears => isRussian ? 'Снаряжение' : 'Gear';
 
-String get obich => isRussian ? 'ОБЫЧНОЕ' : 'Usual';
-String get neobich => isRussian ? 'НЕОБЫЧНОЕ' : 'Unusual';
-String get redkoe => isRussian ? 'РЕДКОЕ' : 'Rare';
-String get epic => isRussian ? 'ЭПИЧЕСКОЕ' : 'Epic';
-String get legendary => isRussian ? 'ЛЕГЕНДАРНОЕ' : 'Legendary';
+String get obich => isRussian ? 'ОБЫЧНОЕ' : 'USUAL';
+String get neobich => isRussian ? 'НЕОБЫЧНОЕ' : 'UNUSUAL';
+String get redkoe => isRussian ? 'РЕДКОЕ' : 'RARE';
+String get epic => isRussian ? 'ЭПИЧЕСКОЕ' : 'EPIC';
+String get legendary => isRussian ? 'ЛЕГЕНДАРНОЕ' : 'LEGENDARY';
 
 String get stitcher => isRussian ? 'Сшиватель' : 'Stitcher';
 String get rattler => isRussian ? 'Трещотка' : 'Rattler';
@@ -666,13 +668,48 @@ String get dolabra => isRussian ? 'Долабра' : 'Dolabra';
 String get jupiter => isRussian ? 'Юпитер' : 'Jupiter';
 String get equa => isRussian ? 'Эквалайзер' : 'Equalizer';
 
-String get boevaya => isRussian ? 'Боевая винтовка' : 'Bobcat';
-String get shturmovaya => isRussian ? 'Штурмовая винтовка' : 'Bobcat';
-String get sniperskaya => isRussian ? 'Снайперская винтовка' : 'Bobcat';
-String get pistolet => isRussian ? 'Пистолет' : 'Bobcat';
-String get ruchnaya => isRussian ? 'Ручная пушка' : 'Bobcat';
-String get drobovik => isRussian ? 'Дробовик' : 'Bobcat';
+String get boevaya => isRussian ? 'Боевая винтовка' : 'Combat rifle';
+String get shturmovaya => isRussian ? 'Штурмовая винтовка' : 'Assault rifle';
+String get sniperskaya => isRussian ? 'Снайперская винтовка' : 'Sniper Rifle';
+String get pistolet => isRussian ? 'Пистолет' : 'pistol';
+String get ruchnaya => isRussian ? 'Ручная пушка' : 'Hand cannon';
+String get drobovik => isRussian ? 'Дробовик' : 'The shotgun';
 String get special => isRussian ? 'Специальное' : 'Bobcat';
+
+String get anvilStory => isRussian ? 'Высокий урон в тело и от выстрелов в голову, но неудобное управление.' : 'High body and head damage, but awkward controls.';
+String get typ => isRussian ? 'Тип боеприпасов' : 'Ammo Type';
+String get magazine => isRussian ? 'Размер магазина' : 'Magazine Size';
+String get dolgo => isRussian ? 'Долговечность' : 'Durability';
+String get rejim => isRussian ? 'Режим стрельбы' : 'Firing Mode';
+String get bronyaArc => isRussian ? 'Пробитие брони ARC' : 'ARC Armor Penetration';
+String get pov => isRussian ? 'Повреждения' : 'Damage';
+String get skorostrel => isRussian ? 'Скорострельность' : 'Fire Rate';
+String get head => isRussian ? 'Множитель в голову' : 'Headshot Multiplier';
+String get range => isRussian ? 'Дальность' : 'Range';
+String get stab => isRussian ? 'Стабильность' : 'Stability';
+String get skor => isRussian ? 'Скорость' : 'Agility';
+String get skrit => isRussian ? 'Скрытность' : 'Stealth';
+String get strelba => isRussian ? 'Одиночный' : 'Single';
+String get bronyaArcSil => isRussian ? 'Сильное' : 'Strong';
+String get bronyaArcSlab => isRussian ? 'Слабое' : 'Very Weak';
+String get bronyaArcSred => isRussian ? 'Умеренное' : 'Moderate';
+String get shots => isRussian ? 'выстрелов' : 'Shots fired';
+
+String get obshie => isRussian ? 'Общие данные' : 'General Data';
+String get ves => isRussian ? 'Вес' : 'Weight';
+String get prodaja => isRussian ? 'Цена продажи' : 'Sell Price';
+String get pokupka => isRussian ? 'Цена покупки' : 'Buy Price';
+
+String get heavyBoep => isRussian ? 'Тяжёлые боеприпасы' : 'Heavy Ammo';
+String get sredBoep => isRussian ? 'Средние боеприпасы' : 'Medium Ammo';
+String get lightBoep => isRussian ? 'Легкие боеприпасы' : 'Light Ammo';
+String get enerBoep => isRussian ? 'Энергетический заряд' : 'Energy Clip';
+
+String get aphelionStory => isRussian ? 'Стреляет высокоскоростными энергетическими снарядами.' : 'It fires high-velocity energy projectiles.';
+
+
+
+
 
 
 
