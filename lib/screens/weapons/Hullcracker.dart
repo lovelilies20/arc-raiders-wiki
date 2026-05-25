@@ -12,14 +12,13 @@ class HullcrackerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class HullcrackerScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Специальное"),
+                      _tag(s.special),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Взломщик корпусов",
+                  Text(
+                    s.hullcracker,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class HullcrackerScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Стреляет взрывными снарядами, которые взрываются только при попадании в ARC.",
+                  Text(
+                    s.hullStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,24 +69,24 @@ class HullcrackerScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Боеприпасы для пусковой установки"),
-                  _stat("Размер магазина", "5"),
-                  _stat("Долговечность", "205 | 250 | 278 | 308"),
-                  _stat("Режим стрельбы", "Помповый"),
-                  _stat("Пробитие брони ARC", "Очень сильное"),
-                  _stat("Повреждения", "100"),
-                  _stat("Скорострельность", "20.3"),
-                  _stat("Время перезарядки","4,5"),
-                  _stat("Дальность", "38.9"),
-                  _stat("Стабильность", "97.2"),
-                  _stat("Скорость", "67.9"),
-                  _stat("Скрытность", "1"),
+                  _stat(s.typ, s.hullShots),
+                  _stat(s.magazine, "5"),
+                  _stat(s.dolgo, "205 | 250 | 278 | 308"),
+                  _stat(s.rejim, s.pompovi),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.pov, "100"),
+                  _stat(s.skorostrel, "20.3"),
+                  _stat(s.reload,"4,5"),
+                  _stat(s.range, "38.9"),
+                  _stat(s.stab, "97.2"),
+                  _stat(s.skor, "67.9"),
+                  _stat(s.skrit, "1"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -99,8 +97,8 @@ class HullcrackerScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "7.0"),
-                  _stat("Цена продажи", "17,000"),
+                  _stat(s.ves, "7.0"),
+                  _stat(s.prodaja, "17,000"),
 
                   const SizedBox(height: 30),
                 ],

@@ -12,14 +12,13 @@ class IlToroScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class IlToroScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Дробовик"),
+                      _tag(s.drobovik),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Эль-Торо",
+                  Text(
+                    s.iltoro,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class IlToroScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "У него большой разброс пуль, резкий спад и высокий урон.",
+                  Text(
+                    s.iltoroStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,24 +69,24 @@ class IlToroScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Патроны для дробовика"),
-                  _stat("Размер магазина", "5 | 6 | 7 | 8"),
-                  _stat("Долговечность", "76 | 96 | 123 | 150"),
-                  _stat("Режим стрельбы", "Помповое"),
-                  _stat("Пробитие брони ARC", "Слабое"),
-                  _stat("Повреждения", "7×9 (63)"),
-                  _stat("Скорострельность", "14"),
-                  _stat("Время перезарядки","3,9"),
-                  _stat("Дальность", "20"),
-                  _stat("Стабильность", "80.6"),
-                  _stat("Скорость", "61.1"),
-                  _stat("Скрытность", "18"),
+                  _stat(s.typ, s.patronDrobovik),
+                  _stat(s.magazine, "5 | 6 | 7 | 8"),
+                  _stat(s.dolgo, "76 | 96 | 123 | 150"),
+                  _stat(s.rejim, s.pompovi),
+                  _stat(s.bronyaArc, s.bronyaArcSlab),
+                  _stat(s.pov, "7×9 (63)"),
+                  _stat(s.skorostrel, "14"),
+                  _stat(s.reload,"3,9"),
+                  _stat(s.range, "20"),
+                  _stat(s.stab, "80.6"),
+                  _stat(s.skor, "61.1"),
+                  _stat(s.skrit, "18"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -99,8 +97,8 @@ class IlToroScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "8.0"),
-                  _stat("Цена продажи", "7,000"),
+                  _stat(s.ves, "8.0"),
+                  _stat(s.prodaja, "7,000"),
 
                   const SizedBox(height: 30),
                 ],

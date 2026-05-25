@@ -12,14 +12,13 @@ class OspreyScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class OspreyScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Снайперская винтовка"),
+                      _tag(s.sniperskaya),
                       const SizedBox(width: 8),
-                      _tag("Редкое"),
+                      _tag(s.redkoe),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Ястреб",
+                  Text(
+                    s.ospray,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class OspreyScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "У него надёжный урон и точность.",
+                  Text(
+                    s.arpedStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,26 +69,26 @@ class OspreyScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "8"),
-                  _stat("Долговечность", "86 | 101 | 126 | 154"),
-                  _stat("Режим стрельбы", "Одиночный"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Особая черта","Скоп (5,66x зум)"),
-                  _stat("Повреждения", "45"),
-                  _stat("Скорострельность", "17.7"),
-                  _stat("Время перезарядки","2.5"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "80.3"),
-                  _stat("Стабильность", "89.4"),
-                  _stat("Скорость", "45.9"),
-                  _stat("Скрытность", "12"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "8"),
+                  _stat(s.dolgo, "86 | 101 | 126 | 154"),
+                  _stat(s.rejim, s.single),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.osobayaCherta, s.zum),
+                  _stat(s.pov, "45"),
+                  _stat(s.skorostrel, "17.7"),
+                  _stat(s.reload,"2.5"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "80.3"),
+                  _stat(s.stab, "89.4"),
+                  _stat(s.skor, "45.9"),
+                  _stat(s.skrit, "12"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -101,8 +99,8 @@ class OspreyScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "7.0"),
-                  _stat("Цена продажи", "10,000"),
+                  _stat(s.ves, "7.0"),
+                  _stat(s.prodaja, "10,000"),
 
                   const SizedBox(height: 30),
                 ],

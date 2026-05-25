@@ -12,14 +12,13 @@ class VulcanoScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text("Оружие"),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,7 +38,6 @@ class VulcanoScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
                       _tag("Дробовик"),
@@ -50,7 +48,7 @@ class VulcanoScreen extends StatelessWidget {
 
                   const SizedBox(height: 12),
 
-                  const Text(
+                  Text(
                     "Вулкан",
                     style: TextStyle(
                       color: Colors.white,
@@ -61,7 +59,7 @@ class VulcanoScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
+                  Text(
                     "У него хороший разброс пуль, но резкий спад.",
                     style: TextStyle(
                       color: Colors.white70,
@@ -87,7 +85,7 @@ class VulcanoScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
                     "Общие данные",
                     style: TextStyle(

@@ -12,15 +12,13 @@ class EqualizerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // КАРТИНКА СВЕРХУ
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -40,21 +38,18 @@ class EqualizerScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  // ТЕГИ
                   Row(
                     children: [
-                      _tag("Специальное"),
+                      _tag(s.special),
                       const SizedBox(width: 8),
-                      _tag("Легендарная"),
+                      _tag(s.legendary),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  // НАЗВАНИЕ
-                  const Text(
-                    "Эквалайзер",
+                  Text(
+                    s.equa,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -64,9 +59,8 @@ class EqualizerScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // ОПИСАНИЕ
-                  const Text(
-                    "Экспериментальная лучевая винтовка с большой ёмкостью.",
+                  Text(
+                    s.equaStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -75,28 +69,26 @@ class EqualizerScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // ХАРАКТЕРИСТИКИ
-                  _stat("Тип боеприпасов", "Энергетический заряд"),
-                  _stat("Размер магазина", "50"),
-                  _stat("Долговечность", "3450 выстрелов"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Очень сильное"),
-                  _stat("Особая черта", "Экспериментальные"),
-                  _stat("Повреждения", "8"),
-                  _stat("Скорострельность", "33.33"),
-                  _stat("Время перезарядки","3.3"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "76"),
-                  _stat("Стабильность", "84.6"),
-                  _stat("Скорость", "44.6"),
-                  _stat("Скрытность", "1"),
+                  _stat(s.typ, s.enerBoep),
+                  _stat(s.magazine, "50"),
+                  _stat(s.dolgo, s.shots3450),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.osobayaCherta, s.experiment),
+                  _stat(s.pov, "8"),
+                  _stat(s.skorostrel, "33.33"),
+                  _stat(s.reload,"3.3"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "76"),
+                  _stat(s.stab, "84.6"),
+                  _stat(s.skor, "44.6"),
+                  _stat(s.skrit, "1"),
 
                   const SizedBox(height: 20),
 
-                  // ОБЩИЕ ДАННЫЕ
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -107,8 +99,8 @@ class EqualizerScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "14.0"),
-                  _stat("Цена продажи", "27,500"),
+                  _stat(s.ves, "14.0"),
+                  _stat(s.prodaja, "27,500"),
 
                   const SizedBox(height: 30),
                 ],

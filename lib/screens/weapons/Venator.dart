@@ -12,14 +12,13 @@ class VenatorScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class VenatorScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Пистолет"),
+                      _tag(s.pistolet),
                       const SizedBox(width: 8),
-                      _tag("Редкое"),
+                      _tag(s.redkoe),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Охотник",
+                  Text(
+                    s.venator,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class VenatorScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Полуавтоматический пистолет. Стреляет по два выстрела одновременно.",
+                  Text(
+                    s.venatorStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,26 +69,26 @@ class VenatorScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "10"),
-                  _stat("Долговечность", "729"),
-                  _stat("Режим стрельбы", "Полуавтоматический"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Особая черта","Двойной выстрел"),
-                  _stat("Повреждения", "16 (2x8)"),
-                  _stat("Скорострельность", "36.7"),
-                  _stat("Время перезарядки","4,6"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "48.4"),
-                  _stat("Стабильность", "61.3"),
-                  _stat("Скорость", "76.4"),
-                  _stat("Скрытность", "12"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "10"),
+                  _stat(s.dolgo, "729"),
+                  _stat(s.rejim, s.poluAvtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.osobayaCherta, s.doubleShot),
+                  _stat(s.pov, "16 (2x8)"),
+                  _stat(s.skorostrel, "36.7"),
+                  _stat(s.reload,"4,6"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "48.4"),
+                  _stat(s.stab, "61.3"),
+                  _stat(s.skor, "76.4"),
+                  _stat(s.skrit, "12"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -101,8 +99,8 @@ class VenatorScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "5.0"),
-                  _stat("Цена продажи", "10,000"),
+                  _stat(s.ves, "5.0"),
+                  _stat(s.prodaja, "10,000"),
 
                   const SizedBox(height: 30),
                 ],

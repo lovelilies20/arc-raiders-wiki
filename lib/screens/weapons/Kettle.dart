@@ -12,14 +12,13 @@ class KettleScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class KettleScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Штурмовая винтовка"),
+                      _tag(s.shturmovaya),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Чайник",
+                  Text(
+                    s.kettle,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class KettleScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Быстрый и точный, но с низкой скоростью пули и долго перезаряжается.",
+                  Text(
+                    s.kettleStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class KettleScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Лёгкие боеприпасы"),
-                  _stat("Размер магазина", "20"),
-                  _stat("Долговечность", "625 | 703 | 783 | 840"),
-                  _stat("Режим стрельбы", "Полуавтоматический"),
-                  _stat("Пробитие брони ARC", "Очень слабое"),
-                  _stat("Повреждения", "8.5"),
-                  _stat("Скорострельность", "30"),
-                  _stat("Время перезарядки","4.8"),
-                  _stat("Множитель в голову", "2,5x"),
-                  _stat("Дальность", "42.8"),
-                  _stat("Стабильность", "69.8"),
-                  _stat("Скорость", "58.5"),
-                  _stat("Скрытность", "26"),
+                  _stat(s.typ, s.lightBoep),
+                  _stat(s.magazine, "20"),
+                  _stat(s.dolgo, "625 | 703 | 783 | 840"),
+                  _stat(s.rejim, s.poluAvtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSlab),
+                  _stat(s.pov, "8.5"),
+                  _stat(s.skorostrel, "30"),
+                  _stat(s.reload,"4.8"),
+                  _stat(s.head, "2,5x"),
+                  _stat(s.range, "42.8"),
+                  _stat(s.stab, "69.8"),
+                  _stat(s.skor, "58.5"),
+                  _stat(s.skrit, "26"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class KettleScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "7.0"),
-                  _stat("Цена продажи", "2,000"),
+                  _stat(s.ves, "7.0"),
+                  _stat(s.prodaja, "2,000"),
 
                   const SizedBox(height: 30),
                 ],

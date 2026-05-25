@@ -12,14 +12,13 @@ class RenegadeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class RenegadeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Боевая винтовка"),
+                      _tag(s.boevaya),
                       const SizedBox(width: 8),
-                      _tag("Редкое"),
+                      _tag(s.redkoe),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Бунтарь",
+                  Text(
+                    s.buntar,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class RenegadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Имеет высокий урон, точность и урон от выстрелов в голову.",
+                  Text(
+                    s.buntarStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class RenegadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "8"),
-                  _stat("Долговечность", "176 | 195 | 227 | 251"),
-                  _stat("Режим стрельбы", "Рычажный механизм"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Повреждения", "35"),
-                  _stat("Скорострельность", "21"),
-                  _stat("Время перезарядки","4,6"),
-                  _stat("Множитель в голову", "2,25x"),
-                  _stat("Дальность", "68.8"),
-                  _stat("Стабильность", "85.7"),
-                  _stat("Скорость", "55.8"),
-                  _stat("Скрытность", "16"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "8"),
+                  _stat(s.dolgo, "176 | 195 | 227 | 251"),
+                  _stat(s.rejim, s.mechanism),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.pov, "35"),
+                  _stat(s.skorostrel, "21"),
+                  _stat(s.reload,"4,6"),
+                  _stat(s.head, "2,25x"),
+                  _stat(s.range, "68.8"),
+                  _stat(s.stab, "85.7"),
+                  _stat(s.skor, "55.8"),
+                  _stat(s.skrit, "16"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class RenegadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "10.0"),
-                  _stat("Цена продажи", "10,000"),
+                  _stat(s.ves, "10.0"),
+                  _stat(s.prodaja, "10,000"),
 
                   const SizedBox(height: 30),
                 ],

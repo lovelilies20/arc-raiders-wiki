@@ -12,14 +12,13 @@ class RattlerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class RattlerScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Штурмовая винтовка"),
+                      _tag(s.shturmovaya),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Трещотка",
+                  Text(
+                    s.rattler,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class RattlerScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Дешёвый наступательный вариант, но его нужно перезаряжать по 2 пули за раз.",
+                  Text(
+                    s.rattlerStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class RattlerScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "16"),
-                  _stat("Долговечность", "625 | 703 | 783 | 840"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Повреждения", "9"),
-                  _stat("Скорострельность", "33.3"),
-                  _stat("Время перезарядки","5,2"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "56.2"),
-                  _stat("Стабильность", "72.2"),
-                  _stat("Скорость", "54.8"),
-                  _stat("Скрытность", "14"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "16"),
+                  _stat(s.dolgo, "625 | 703 | 783 | 840"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.pov, "9"),
+                  _stat(s.skorostrel, "33.3"),
+                  _stat(s.reload,"5,2"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "56.2"),
+                  _stat(s.stab, "72.2"),
+                  _stat(s.skor, "54.8"),
+                  _stat(s.skrit, "14"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class RattlerScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "6.0"),
-                  _stat("Цена продажи", "3,000"),
+                  _stat(s.ves, "6.0"),
+                  _stat(s.prodaja, "3,000"),
 
                   const SizedBox(height: 30),
                 ],

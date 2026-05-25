@@ -12,14 +12,13 @@ class FerroScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class FerroScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Снайперская винтовка"),
+                      _tag(s.sniperskaya),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Ферро",
+                  Text(
+                    s.ferro,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class FerroScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Наносит мощный урон, но его нужно перезаряжать между каждым выстрелом.",
+                  Text(
+                    s.ferroStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class FerroScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Тяжёлые боеприпасы"),
-                  _stat("Размер магазина", "1"),
-                  _stat("Долговечность", "129 | 156 | 173 | 197"),
-                  _stat("Режим стрельбы", "Одиночный"),
-                  _stat("Пробитие брони ARC", "Сильный"),
-                  _stat("Повреждения", "40"),
-                  _stat("Скорострельность", "6.6"),
-                  _stat("Время перезарядки","3,4"),
-                  _stat("Множитель в голову", "2,5x"),
-                  _stat("Дальность", "53.1"),
-                  _stat("Стабильность", "78.1"),
-                  _stat("Скорость", "32.1"),
-                  _stat("Скрытность", "8"),
+                  _stat(s.typ, s.heavyBoep),
+                  _stat(s.magazine, "1"),
+                  _stat(s.dolgo, "129 | 156 | 173 | 197"),
+                  _stat(s.rejim, s.single),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.pov, "40"),
+                  _stat(s.skorostrel, "6.6"),
+                  _stat(s.reload,"3,4"),
+                  _stat(s.head, "2,5x"),
+                  _stat(s.range, "53.1"),
+                  _stat(s.stab, "78.1"),
+                  _stat(s.skor, "32.1"),
+                  _stat(s.skrit, "8"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class FerroScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "8.0"),
-                  _stat("Цена продажи", "1,000"),
+                  _stat(s.ves, "8.0"),
+                  _stat(s.prodaja, "1,000"),
 
                   const SizedBox(height: 30),
                 ],

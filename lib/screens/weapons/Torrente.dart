@@ -12,14 +12,13 @@ class TorrenteScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class TorrenteScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
                       _tag("LMG"),
                       const SizedBox(width: 8),
-                      _tag("Редкое"),
+                      _tag(s.redkoe),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Торренте",
+                  Text(
+                    s.torrente,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class TorrenteScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Имеет большой запас патронов, но точен только в приседе.",
+                  Text(
+                    s.torrenreStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class TorrenteScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "60 | 70 | 80 | 90"),
-                  _stat("Долговечность", "898 | 1020 | 1130 | 1285"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Повреждения", "8"),
-                  _stat("Скорострельность", "58.3"),
-                  _stat("Время перезарядки","4,6"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "49.9"),
-                  _stat("Стабильность", "74.2"),
-                  _stat("Скорость", "37.7"),
-                  _stat("Скрытность", "1"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "60 | 70 | 80 | 90"),
+                  _stat(s.dolgo, "898 | 1020 | 1130 | 1285"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.pov, "8"),
+                  _stat(s.skorostrel, "58.3"),
+                  _stat(s.reload,"4,6"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "49.9"),
+                  _stat(s.stab, "74.2"),
+                  _stat(s.skor, "37.7"),
+                  _stat(s.skrit, "1"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class TorrenteScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "12.0"),
-                  _stat("Цена продажи", "13,000"),
+                  _stat(s.ves, "12.0"),
+                  _stat(s.prodaja, "13,000"),
 
                   const SizedBox(height: 30),
                 ],

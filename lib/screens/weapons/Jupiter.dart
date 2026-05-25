@@ -12,15 +12,13 @@ class JupiterScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // КАРТИНКА СВЕРХУ
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -40,21 +38,18 @@ class JupiterScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  // ТЕГИ
                   Row(
                     children: [
-                      _tag("Снайперская винтовка"),
+                      _tag(s.sniperskaya),
                       const SizedBox(width: 8),
-                      _tag("Легендарная"),
+                      _tag(s.legendary),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  // НАЗВАНИЕ
-                  const Text(
-                    "Юпитер",
+                  Text(
+                    s.jupiter,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -64,9 +59,8 @@ class JupiterScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // ОПИСАНИЕ
-                  const Text(
-                    "Снайперская винтовка с затвором с исключительным уроном и точностью, но медленным управлением.",
+                  Text(
+                    s.jupiterStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -75,28 +69,26 @@ class JupiterScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // ХАРАКТЕРИСТИКИ
-                  _stat("Тип боеприпасов", "Энергетический заряд"),
-                  _stat("Размер магазина", "5"),
-                  _stat("Долговечность", "167 выстрелов"),
-                  _stat("Режим стрельбы", "Скользящий затвор"),
-                  _stat("Пробитие брони ARC", "Очень сильное"),
-                  _stat("Особая черта", "Экспериментальные"),
-                  _stat("Повреждения", "60"),
-                  _stat("Скорострельность", "7.67"),
-                  _stat("Время перезарядки","3.3"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "71.7"),
-                  _stat("Стабильность", "73.5"),
-                  _stat("Скорость", "39.2"),
-                  _stat("Скрытность", "5"),
+                  _stat(s.typ, s.enerBoep),
+                  _stat(s.magazine, "5"),
+                  _stat(s.dolgo, s.shots167),
+                  _stat(s.rejim, s.zatvor),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.osobayaCherta, s.experiment),
+                  _stat(s.pov, "60"),
+                  _stat(s.skorostrel, "7.67"),
+                  _stat(s.reload,"3.3"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "71.7"),
+                  _stat(s.stab, "73.5"),
+                  _stat(s.skor, "39.2"),
+                  _stat(s.skrit, "5"),
 
                   const SizedBox(height: 20),
 
-                  // ОБЩИЕ ДАННЫЕ
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -107,8 +99,8 @@ class JupiterScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "9.0"),
-                  _stat("Цена продажи", "27,500"),
+                  _stat(s.ves, "9.0"),
+                  _stat(s.prodaja, "27,500"),
 
                   const SizedBox(height: 30),
                 ],
@@ -121,7 +113,6 @@ class JupiterScreen extends StatelessWidget {
   }
 }
 
-// ТЕГ (зелёная кнопка)
 Widget _tag(String text) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -138,7 +129,6 @@ Widget _tag(String text) {
     ),
   );
 }
-// СТРОКА ХАРАКТЕРИСТИК
 Widget _stat(String title, String value) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 6),

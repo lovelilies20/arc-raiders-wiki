@@ -12,14 +12,13 @@ class StitcherScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -39,19 +38,18 @@ class StitcherScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
                       _tag("SMG"),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Сшиватель",
+                  Text(
+                    s.stitcher,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +59,8 @@ class StitcherScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Наносит хороший урон, но имеет довольно низкую скорострельность и может быть трудно контролируемым.",
+                  Text(
+                    s.stitcherStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +69,25 @@ class StitcherScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Лёгкие боеприпасы"),
-                  _stat("Размер магазина", "20"),
-                  _stat("Долговечность", "625 | 703 | 783 | 840"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Очень слабое"),
-                  _stat("Повреждения", "6.5"),
-                  _stat("Скорострельность", "45,3"),
-                  _stat("Время перезарядки","5,2"),
-                  _stat("Множитель в голову", "1,75x"),
-                  _stat("Дальность", "42.1"),
-                  _stat("Стабильность", "45.3"),
-                  _stat("Скорость", "73.8"),
-                  _stat("Скрытность", "19"),
+                  _stat(s.typ, s.lightBoep),
+                  _stat(s.magazine, "20"),
+                  _stat(s.dolgo, "625 | 703 | 783 | 840"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSlab),
+                  _stat(s.pov, "6.5"),
+                  _stat(s.skorostrel, "45,3"),
+                  _stat(s.reload,"5,2"),
+                  _stat(s.head, "1,75x"),
+                  _stat(s.range, "42.1"),
+                  _stat(s.stab, "45.3"),
+                  _stat(s.skor, "73.8"),
+                  _stat(s.skrit, "19"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +98,8 @@ class StitcherScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "5.0"),
-                  _stat("Цена продажи", "2,000"),
+                  _stat(s.ves, "5.0"),
+                  _stat(s.prodaja, "2,000"),
 
                   const SizedBox(height: 30),
                 ],
