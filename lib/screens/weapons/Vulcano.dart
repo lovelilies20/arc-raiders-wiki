@@ -12,7 +12,7 @@ class VulcanoScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -40,16 +40,16 @@ class VulcanoScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      _tag("Дробовик"),
+                      _tag(s.drobovik),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
                   Text(
-                    "Вулкан",
+                    s.vulcan,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -60,7 +60,7 @@ class VulcanoScreen extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   Text(
-                    "У него хороший разброс пуль, но резкий спад.",
+                    s.vulcanoStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -69,25 +69,25 @@ class VulcanoScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Патроны для дробовика"),
-                  _stat("Размер магазина", "6"),
-                  _stat("Долговечность", "257"),
-                  _stat("Режим стрельбы", "Полуавтоматический"),
-                  _stat("Пробитие брони ARC", "Слабое"),
-                  _stat("Повреждения", "49.5"),
-                  _stat("Скорострельность", "26.3"),
-                  _stat("Время перезарядки","2,4"),
-                  _stat("Множитель в голову", "1,5x"),
-                  _stat("Дальность", "26"),
-                  _stat("Стабильность", "68.6"),
-                  _stat("Скорость", "70.3"),
-                  _stat("Скрытность", "15"),
+                  _stat(s.typ, s.patronDrobovik),
+                  _stat(s.magazine, "6"),
+                  _stat(s.dolgo, "257"),
+                  _stat(s.rejim, s.poluAvtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSlab),
+                  _stat(s.pov, "49.5"),
+                  _stat(s.skorostrel, "26.3"),
+                  _stat(s.reload,"2,4"),
+                  _stat(s.head, "1,5x"),
+                  _stat(s.range, "26"),
+                  _stat(s.stab, "68.6"),
+                  _stat(s.skor, "70.3"),
+                  _stat(s.skrit, "15"),
 
                   const SizedBox(height: 20),
 
                   Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -98,8 +98,8 @@ class VulcanoScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "8.0"),
-                  _stat("Цена продажи", "17,000"),
+                  _stat(s.ves, "8.0"),
+                  _stat(s.prodaja, "17,000"),
 
                   const SizedBox(height: 30),
                 ],

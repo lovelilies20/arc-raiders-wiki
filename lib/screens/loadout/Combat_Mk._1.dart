@@ -8,14 +8,13 @@ class CombatMk1Screen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text("Снаряжение"),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,7 +34,6 @@ class CombatMk1Screen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
                       _tag("Аугмент"),
@@ -46,7 +44,7 @@ class CombatMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 12),
 
-                  const Text(
+                  Text(
                     "Combat Mk. 1",
                     style: TextStyle(
                       color: Colors.white,
@@ -57,7 +55,7 @@ class CombatMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
+                  Text(
                     "Базовое боевое усиление. Поддерживает более сильные щиты, но с ограниченной вместимостью рюкзака и слотами быстрого использования.",
                     style: TextStyle(
                       color: Colors.white70,
@@ -74,7 +72,7 @@ class CombatMk1Screen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
+                        Text(
                           "Совместимость со щитом",
                         style: TextStyle(
                           color: Colors.white70,
@@ -82,7 +80,7 @@ class CombatMk1Screen extends StatelessWidget {
                         ),
                       ),
                       RichText(
-                        text: const TextSpan(
+                        text: TextSpan(
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
@@ -121,7 +119,7 @@ class CombatMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
                     "Общие данные",
                     style: TextStyle(
