@@ -72,8 +72,8 @@ class HeavyFuzeGrenadeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "80"),
-                  _stat(s.stat3, "7,5 м"),
-                  _stat(s.stat2, "3 с"),
+                  _stat(s.stat3, s.metri1),
+                  _stat(s.stat2, s.secundi4),
                 
 
                   const SizedBox(height: 20),

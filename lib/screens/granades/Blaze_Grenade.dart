@@ -71,16 +71,16 @@ class BlazeGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat1, "5/с"),
-                  _stat(s.stat2, "10 с"),
-                  _stat(s.stat3, "10 м"),
+                  _stat(s.stat1, s.secundi5_1),
+                  _stat(s.stat2, s.secundi5),
+                  _stat(s.stat3, s.metri5),
                 
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.etopizda3,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

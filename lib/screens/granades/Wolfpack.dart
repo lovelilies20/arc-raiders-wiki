@@ -72,7 +72,7 @@ class WolfpackScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "166 x12"),
-                  _stat(s.stat3, "100 м"),
+                  _stat(s.stat3, s.metri8),
                 
 
                   const SizedBox(height: 20),

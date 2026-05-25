@@ -44,7 +44,7 @@ class SeekerGrenadeScreen extends StatelessWidget {
                     children: [
                       _tag(s.fastslots),
                       const SizedBox(width: 8),
-                      _tag(s.granade2),
+                      _tag(s.granade1),
                     ],
                   ),
 
@@ -72,7 +72,7 @@ class SeekerGrenadeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "50"),
-                  _stat(s.stat3, "20 м"),
+                  _stat(s.stat3, s.metri3),
                  
 
                   const SizedBox(height: 20),

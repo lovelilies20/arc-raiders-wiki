@@ -72,7 +72,7 @@ class LeleScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "30"),
-                  _stat(s.stat3, "2,5 м"),
+                  _stat(s.stat3, s.metri),
                   
 
                   const SizedBox(height: 20),

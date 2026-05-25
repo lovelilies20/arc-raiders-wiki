@@ -71,9 +71,9 @@ class ShowstopperScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat1, "7 с"),
-                  _stat(s.stat1, "2 с"),
-                  _stat(s.stat3, "6м"),
+                  _stat(s.stunned, s.secundi6),
+                  _stat(s.stunned, s.secundi6_1),
+                  _stat(s.stat3, s.metri6),
                  
 
                   const SizedBox(height: 20),

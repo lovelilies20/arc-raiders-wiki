@@ -72,8 +72,8 @@ class DeadlineScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "1,000"),
-                  _stat(s.stat3, "10 м"),
-                  _stat(s.stat2, "6 с"),
+                  _stat(s.stat3, s.metri5),
+                  _stat(s.stat2, s.secundi9),
                  
 
                   const SizedBox(height: 20),

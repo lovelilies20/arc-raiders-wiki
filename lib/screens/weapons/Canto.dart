@@ -12,7 +12,7 @@ class CantoScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -44,14 +44,14 @@ class CantoScreen extends StatelessWidget {
                     children: [
                       _tag("SMG"),
                       const SizedBox(width: 8),
-                      _tag("Редкое"),
+                      _tag(s.redkoe),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Канто",
+                  Text(
+                    s.canto,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +61,8 @@ class CantoScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Полностью автоматический пистолет-пулемёт с большим калибром.",
+                  Text(
+                    s.cantoStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +71,25 @@ class CantoScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "18"),
-                  _stat("Долговечность", "692 | 770 | 852 | 937"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Умеренное"),
-                  _stat("Повреждения", "6.5"),
-                  _stat("Скорострельность", "56.7"),
-                  _stat("Время перезарядки","2.5"),
-                  _stat("Множитель в голову", "1,75x"),
-                  _stat("Дальность", "51"),
-                  _stat("Стабильность", "39.4"),
-                  _stat("Скорость", "78.3"),
-                  _stat("Скрытность", "24"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "18"),
+                  _stat(s.dolgo, "692 | 770 | 852 | 937"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.pov, "6.5"),
+                  _stat(s.skorostrel, "56.7"),
+                  _stat(s.reload,"2.5"),
+                  _stat(s.head, "1,75x"),
+                  _stat(s.range, "51"),
+                  _stat(s.stab, "39.4"),
+                  _stat(s.skor, "78.3"),
+                  _stat(s.skrit, "24"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +100,8 @@ class CantoScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "4.0"),
-                  _stat("Цена продажи", "7,000"),
+                  _stat(s.ves, "4.0"),
+                  _stat(s.prodaja, "7,000"),
 
                   const SizedBox(height: 30),
                 ],

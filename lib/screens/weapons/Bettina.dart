@@ -12,7 +12,7 @@ class BettinaScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -42,16 +42,16 @@ class BettinaScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Штурмовая винтовка"),
+                      _tag(s.shturmovaya),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Бетина",
+                  Text(
+                    s.bettina,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +61,8 @@ class BettinaScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Низкая скорострельность и высокий урон.",
+                  Text(
+                    s.bettinaStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +71,25 @@ class BettinaScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Тяжёлые боеприпасы"),
-                  _stat("Размер магазина", "22"),
-                  _stat("Долговечность", "597 | 648 | 752 | 874"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Сильное"),
-                  _stat("Повреждения", "16"),
-                  _stat("Скорострельность", "28,7"),
-                  _stat("Время перезарядки","4,5"),
-                  _stat("Множитель в голову", "1,5x"),
-                  _stat("Дальность", "52.3"),
-                  _stat("Стабильность", "79.7"),
-                  _stat("Скорость", "49.4"),
-                  _stat("Скрытность", "14"),
+                  _stat(s.typ, s.heavyBoep),
+                  _stat(s.magazine, "22"),
+                  _stat(s.dolgo, "597 | 648 | 752 | 874"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.pov, "16"),
+                  _stat(s.skorostrel, "28,7"),
+                  _stat(s.reload,"4,5"),
+                  _stat(s.head, "1,5x"),
+                  _stat(s.range, "52.3"),
+                  _stat(s.stab, "79.7"),
+                  _stat(s.skor, "49.4"),
+                  _stat(s.skrit, "14"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +100,8 @@ class BettinaScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "11.0"),
-                  _stat("Цена продажи", "14,000"),
+                  _stat(s.ves, "11.0"),
+                  _stat(s.prodaja, "14,000"),
 
                   const SizedBox(height: 30),
                 ],

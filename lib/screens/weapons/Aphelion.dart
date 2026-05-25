@@ -71,25 +71,24 @@ class AphelionScreen extends StatelessWidget {
 
                   _stat(s.typ, s.enerBoep),
                   _stat(s.magazine, "10"),
-                  _stat(s.dolgo, "1130 выстрелов"),
-                  _stat("Режим стрельбы", "2-ой выстрел"),
-                  _stat("Пробитие брони ARC", "Сильное"),
-                  _stat("Особая черта", "Экспериментальные"),
-                  _stat("Повреждения", "25"),
-                  _stat("Скорострельность", "9"),
-                  _stat("Время перезарядки","3,5 с"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "76"),
-                  _stat("Стабильность", "88"),
-                  _stat("Скорость", "39"),
-                  _stat("Скрытность", "16"),
+                  _stat(s.dolgo, s.shots1130),
+                  _stat(s.rejim, s.da),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.osobayaCherta, s.experiment),
+                  _stat(s.pov, "25"),
+                  _stat(s.skorostrel, "9"),
+                  _stat(s.reload, s.secundi10),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "76"),
+                  _stat(s.stab, "88"),
+                  _stat(s.skor, "39"),
+                  _stat(s.skrit, "16"),
 
                   const SizedBox(height: 20),
 
-                  // ОБЩИЕ ДАННЫЕ
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +99,8 @@ class AphelionScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "10"),
-                  _stat("Цена продажи", "27,500"),
+                  _stat(s.ves, "10"),
+                  _stat(s.prodaja, "27,500"),
 
                   const SizedBox(height: 30),
                 ],
@@ -114,7 +113,6 @@ class AphelionScreen extends StatelessWidget {
   }
 }
 
-// ТЕГ (зелёная кнопка)
 Widget _tag(String text) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -131,7 +129,6 @@ Widget _tag(String text) {
     ),
   );
 }
-// СТРОКА ХАРАКТЕРИСТИК
 Widget _stat(String title, String value) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 6),

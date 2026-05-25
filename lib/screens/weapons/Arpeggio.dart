@@ -12,7 +12,7 @@ class ArpeggioScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -42,16 +42,16 @@ class ArpeggioScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      _tag("Штурмовая винтовка"),
+                      _tag(s.shturmovaya),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Арпеджио",
+                  Text(
+                    s.arped,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +61,8 @@ class ArpeggioScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "У него хороший урон и точность.",
+                  Text(
+                    s.arpedStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +71,25 @@ class ArpeggioScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Средние боеприпасы"),
-                  _stat("Размер магазина", "24"),
-                  _stat("Долговечность", "301 | 397 | 452 | 506"),
-                  _stat("Режим стрельбы", "3-ой выстрел"),
-                  _stat("Пробитие брони ARC", "Умеренный"),
-                  _stat("Повреждения", "9.5"),
-                  _stat("Скорострельность", "18.3"),
-                  _stat("Время перезарядки","4,5"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "55.9"),
-                  _stat("Стабильность", "84"),
-                  _stat("Скорость", "57.3"),
-                  _stat("Скрытность", "14"),
+                  _stat(s.typ, s.sredBoep),
+                  _stat(s.magazine, "24"),
+                  _stat(s.dolgo, "301 | 397 | 452 | 506"),
+                  _stat(s.rejim, s.da1),
+                  _stat(s.bronyaArc, s.bronyaArcSred),
+                  _stat(s.pov, "9.5"),
+                  _stat(s.skorostrel, "18.3"),
+                  _stat(s.reload,"4,5"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "55.9"),
+                  _stat(s.stab, "84"),
+                  _stat(s.skor, "57.3"),
+                  _stat(s.skrit, "14"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +100,8 @@ class ArpeggioScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "7.0"),
-                  _stat("Цена продажи", "8,000"),
+                  _stat(s.ves, "7.0"),
+                  _stat(s.prodaja, "8,000"),
 
                   const SizedBox(height: 30),
                 ],

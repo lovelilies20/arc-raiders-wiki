@@ -72,8 +72,8 @@ class TriggernadeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "90"),
-                  _stat(s.stat3, "7,5 м"),
-                  _stat(s.stat2, "1,5 с"),
+                  _stat(s.stat3, s.metri1),
+                  _stat(s.stat2, s.secundi8),
                  
 
                   const SizedBox(height: 20),

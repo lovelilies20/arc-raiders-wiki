@@ -12,7 +12,7 @@ class GasgranadeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Гранаты"),
+        title: Text(s.granades),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -71,9 +71,9 @@ class GasgranadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat2, "20 с"),
-                  _stat(s.stat3, "7,5 м"),
-                  _stat(s.stat1, "25/с"),
+                  _stat(s.stat2, s.secundi1),
+                  _stat(s.stat3, s.metri1),
+                  _stat(s.stat1, s.secundi2),
                 
 
                   const SizedBox(height: 20),

@@ -72,7 +72,7 @@ class TrailblazerScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   _stat(s.stat1, "20"),
-                  _stat(s.stat3, "2 м"),
+                  _stat(s.stat3, s.metri7),
                  
 
                   const SizedBox(height: 20),

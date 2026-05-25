@@ -71,8 +71,8 @@ class TaggingGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat2, "30 с"),
-                  _stat(s.stat3, "6 м"),
+                  _stat(s.stat2, s.secundi7),
+                  _stat(s.stat3, s.metri6),
                   
 
                   const SizedBox(height: 20),

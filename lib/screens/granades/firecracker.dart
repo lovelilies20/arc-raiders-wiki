@@ -70,7 +70,7 @@ class FirecrackerScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat2, "7,5 с"),
+                  _stat(s.stat2, s.secundi),
                  
 
                   const SizedBox(height: 20),

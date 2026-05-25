@@ -12,7 +12,7 @@ class BobcatScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -39,19 +39,18 @@ class BobcatScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
                       _tag("SMG"),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Рысь",
+                  Text(
+                    s.bobcat,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -61,8 +60,8 @@ class BobcatScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Высокая скорострельность, но низкая точность.",
+                  Text(
+                    s.bobcatStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -71,25 +70,25 @@ class BobcatScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Тип боеприпасов", "Лёгкие боеприпасы"),
-                  _stat("Размер магазина", "20"),
-                  _stat("Долговечность", "1525 | 1754 | 1960 | 2185"),
-                  _stat("Режим стрельбы", "Полностью автоматический"),
-                  _stat("Пробитие брони ARC", "Очень слабое"),
-                  _stat("Повреждения", "6"),
-                  _stat("Скорострельность", "66.7"),
-                  _stat("Время перезарядки","2,6"),
-                  _stat("Множитель в голову", "2.0x"),
-                  _stat("Дальность", "44"),
-                  _stat("Стабильность", "45.9"),
-                  _stat("Скорость", "73.1"),
-                  _stat("Скрытность", "21"),
+                  _stat(s.typ, s.lightBoep),
+                  _stat(s.magazine, "20"),
+                  _stat(s.dolgo, "1525 | 1754 | 1960 | 2185"),
+                  _stat(s.rejim, s.avtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSlab),
+                  _stat(s.pov, "6"),
+                  _stat(s.skorostrel, "66.7"),
+                  _stat(s.reload,"2,6"),
+                  _stat(s.head, "2.0x"),
+                  _stat(s.range, "44"),
+                  _stat(s.stab, "45.9"),
+                  _stat(s.skor, "73.1"),
+                  _stat(s.skrit, "21"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -100,8 +99,8 @@ class BobcatScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "7.0"),
-                  _stat("Цена продажи", "17,000"),
+                  _stat(s.ves, "7.0"),
+                  _stat(s.prodaja, "17,000"),
 
                   const SizedBox(height: 30),
                 ],

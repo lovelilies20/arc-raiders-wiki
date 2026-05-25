@@ -12,15 +12,13 @@ class DolabraScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Оружие"),
+        title: Text(s.weapon),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // КАРТИНКА СВЕРХУ
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -40,21 +38,18 @@ class DolabraScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  // ТЕГИ
                   Row(
                     children: [
-                      _tag("Дробовик"),
+                      _tag(s.drobovik),
                       const SizedBox(width: 8),
-                      _tag("Легендарная"),
+                      _tag(s.legendary),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  // НАЗВАНИЕ
-                  const Text(
-                    "Долабра",
+                  Text(
+                    s.dolabra,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -64,9 +59,8 @@ class DolabraScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // ОПИСАНИЕ
-                  const Text(
-                    "Экспериментальное оружие, способное либо стрелять на короткую дальность, либо быть сфокусированным для стрельбы узким лучом тепла средней дальности.",
+                  Text(
+                    s.dolabraStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -74,29 +68,26 @@ class DolabraScreen extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 20),
-
-                  // ХАРАКТЕРИСТИКИ
-                  _stat("Тип боеприпасов", "Энергетический заряд"),
-                  _stat("Размер магазина", "8"),
-                  _stat("Долговечность", "125 выстрелов"),
-                  _stat("Режим стрельбы", "Полуавтоматический"),
-                  _stat("Пробитие брони ARC", "Сильное"),
-                  _stat("Особая черта", "Экспериментальные"),
-                  _stat("Повреждения", "25"),
-                  _stat("Скорострельность", "50"),
-                  _stat("Время перезарядки","3.3"),
-                  _stat("Множитель в голову", "1.5x"),
-                  _stat("Дальность", "76"),
-                  _stat("Стабильность", "88"),
-                  _stat("Скорость", "39"),
-                  _stat("Скрытность", "1"),
+                  _stat(s.typ, s.enerBoep),
+                  _stat(s.magazine, "8"),
+                  _stat(s.dolgo, s.shots125),
+                  _stat(s.rejim, s.poluAvtomaticheskiy),
+                  _stat(s.bronyaArc, s.bronyaArcSil),
+                  _stat(s.osobayaCherta, s.experiment),
+                  _stat(s.pov, "25"),
+                  _stat(s.skorostrel, "50"),
+                  _stat(s.reload,"3.3"),
+                  _stat(s.head, "1.5x"),
+                  _stat(s.range, "76"),
+                  _stat(s.stab, "88"),
+                  _stat(s.skor, "39"),
+                  _stat(s.skrit, "1"),
 
                   const SizedBox(height: 20),
 
-                  // ОБЩИЕ ДАННЫЕ
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -107,8 +98,8 @@ class DolabraScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "8.0"),
-                  _stat("Цена продажи", "27,500"),
+                  _stat(s.ves, "8.0"),
+                  _stat(s.prodaja, "27,500"),
 
                   const SizedBox(height: 30),
                 ],

@@ -71,8 +71,8 @@ class LureGrenadeScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat(s.stat2, "15 с"),
-                  _stat(s.stat3, "50 м"),
+                  _stat(s.stat2, s.secundi3),
+                  _stat(s.stat3, s.metri2),
                   
 
                   const SizedBox(height: 20),
