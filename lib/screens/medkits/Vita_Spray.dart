@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class VitaSprayScreen extends StatelessWidget {
   const VitaSprayScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class VitaSprayScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.using),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Спрей Vita",
+                  Text(
+                    s.vitaSpray,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class VitaSprayScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Медицинское средство, которое постоянно восстанавливает здоровье во время использования. Можно использовать на себе или союзниках.",
+                  Text(
+                    s.vitaSprayStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,15 +69,14 @@ class VitaSprayScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Исцеление", "10/с"),
-                  _stat("Исцеляющая способность", "150"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.pup1, s.secundi510),
+                  _stat(s.vremya123, "150"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -86,9 +87,9 @@ class VitaSprayScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "1.0"),
-                  _stat("Продажа", "3,400"),
-                  _stat("Размер стопки", "1"),
+                  _stat(s.ves, "1.0"),
+                  _stat(s.prodaja, "3,400"),
+                  _stat(s.stat6, "1"),
 
                   const SizedBox(height: 30),
                 ],

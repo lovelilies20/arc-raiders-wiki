@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class TacticalMk3HScreen extends StatelessWidget {
   const TacticalMk3HScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class TacticalMk3HScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Аугмент"),
+                      _tag(s.augmentt),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Tactical Mk. 3 (Лечение)",
+                  Text(
+                    "Tactical Mk. 3 (Healing)",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class TacticalMk3HScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Аугмент, ориентированный на лечение, добавляющий дополнительные слоты для лечебных предметов.",
+                  Text(
+                    s.tact3HealStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -78,7 +80,6 @@ class TacticalMk3HScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
                         Image.asset(
                         "assets/images/Tactical_Mk3_Defensive_Ability_Icon.png",
                         width: 46,
@@ -89,8 +90,7 @@ class TacticalMk3HScreen extends StatelessWidget {
 
                       Expanded(
                         child: Text(
-                          "Когда Рейдера оживляют после падения, он выпускает облако исцеления, которое мгновенно восстанавливает 20 здоровья. Перезарядка - 30 секунд.",
-
+                          s.v10,
                           style: const TextStyle(
                             color: Colors.black87,
                             fontSize: 16,
@@ -105,7 +105,7 @@ class TacticalMk3HScreen extends StatelessWidget {
 
                 const SizedBox(height: 16,),
 
-                  _stat("Максимальный вес снаряжения", "55.0"),
+                  _stat(s.auves, "55.0"),
 
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
@@ -113,22 +113,22 @@ class TacticalMk3HScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          "Совместимость со щитом",
+                        Text(
+                             s.shiti,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18,
                         ),
                       ),
                       RichText(
-                        text: const TextSpan(
+                        text: TextSpan(
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
                           children: [
                              TextSpan(
-                              text: "    Лёгкий",
+                              text: s.lightShield,
                               style: TextStyle(
                                 color: Colors.greenAccent,
                               ),
@@ -142,7 +142,7 @@ class TacticalMk3HScreen extends StatelessWidget {
                             ),
 
                             TextSpan(
-                              text: " Средний",
+                              text: s.mediumShield,
                               style: TextStyle(
                                 color: Colors.cyanAccent,
                               ),
@@ -154,17 +154,16 @@ class TacticalMk3HScreen extends StatelessWidget {
                   ),
                   ),
                   
-                  _stat("Вместимость", "16"),
-                  _stat("Слоты быстрого использования", "4"),
-                  _stat("Слоты под аптечки", "3"),
-                  _stat("Потайных карманов", "3"),
-                  _stat("Переработка в", " -"),
+                  _stat(s.vmes, "16"),
+                  _stat(s.bistro, "4"),
+                  _stat(s.v11, "3"),
+                  _stat(s.karman, "3"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                      s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -175,8 +174,8 @@ class TacticalMk3HScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "4,0"),
-                  _stat("Продажа", "5000"),
+                  _stat(s.ves, "4,0"),
+                  _stat(s.prodaja, "5000"),
 
                   const SizedBox(height: 30),
                 ],

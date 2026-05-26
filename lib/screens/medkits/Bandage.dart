@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class BandageScreen extends StatelessWidget {
   const BandageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class BandageScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.using),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Бинт",
+                  Text(
+                    s.band,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class BandageScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Медицинский продукт, который постепенно восстанавливает здоровье со временем.",
+                  Text(
+                    s.bandStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,16 +69,15 @@ class BandageScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Исцеление", "2/с"),
-                  _stat("Продолжительность", "10 с"),
-                  _stat("Время использования", "1,5 с"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.pup1, s.secundi6_11),
+                  _stat(s.prodol, s.secundi5),
+                  _stat(s.vremya, s.secundi8),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -87,9 +88,9 @@ class BandageScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0,1"),
-                  _stat("Продажа", "640"),
-                  _stat("Размер стопки", "5"),
+                  _stat(s.ves, "0,1"),
+                  _stat(s.prodaja, "640"),
+                  _stat(s.stat6, "5"),
 
                   const SizedBox(height: 30),
                 ],

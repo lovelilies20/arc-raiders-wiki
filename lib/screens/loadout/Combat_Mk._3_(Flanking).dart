@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class CombatMk3FScreen extends StatelessWidget {
   const CombatMk3FScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class CombatMk3FScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Аугмент"),
+                      _tag(s.augmentt),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Combat Mk. 3 (фланг)",
+                  Text(
+                    "Combat Mk. 3 (Flanking)",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class CombatMk3FScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Боевое усиление, больше ориентированное на манёвренность, чем на поглощение урона.",
+                  Text(
+                    s.mk3FlakStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -78,7 +80,6 @@ class CombatMk3FScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
                         Image.asset(
                         "assets/images/Combat_Mk3_Flanking_Ability_Icon.png",
                         width: 46,
@@ -89,8 +90,7 @@ class CombatMk3FScreen extends StatelessWidget {
 
                       Expanded(
                         child: Text(
-                          "Спрятанные или неэкипированные пистолеты и ручные пушки экипируются на 33% быстрее.",
-
+                          s.v3,
                           style: const TextStyle(
                             color: Colors.black87,
                             fontSize: 16,
@@ -105,7 +105,7 @@ class CombatMk3FScreen extends StatelessWidget {
 
                 const SizedBox(height: 16,),
 
-                  _stat("Максимальный вес снаряжения", "60.0"),
+                  _stat(s.auves, "60.0"),
 
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
@@ -113,22 +113,22 @@ class CombatMk3FScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          "Совместимость со щитом",
+                        Text(
+                           s.shiti,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18,
                         ),
                       ),
                       RichText(
-                        text: const TextSpan(
+                        text: TextSpan(
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
                           children: [
                              TextSpan(
-                              text: "    Лёгкий",
+                              text:  s.lightShield,
                               style: TextStyle(
                                 color: Colors.greenAccent,
                               ),
@@ -140,17 +140,16 @@ class CombatMk3FScreen extends StatelessWidget {
                   ),
                   ),
                   
-                  _stat("Вместимость", "20"),
-                  _stat("Слоты быстрого использования", "5"),
-                  _stat("Слоты под инструменты", "3"),
-                  _stat("Потайных карманов", "2"),
-                  _stat("Переработка в", " -"),
+                  _stat(s.vmes, "20"),
+                  _stat(s.bistro, "5"),
+                  _stat(s.v16, "3"),
+                  _stat(s.karman, "2"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                     s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -161,8 +160,8 @@ class CombatMk3FScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "3,0"),
-                  _stat("Продажа", "5000"),
+                  _stat(s.ves, "3,0"),
+                  _stat(s.prodaja, "5000"),
 
                   const SizedBox(height: 30),
                 ],

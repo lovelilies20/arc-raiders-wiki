@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class HeavyShieldScreen extends StatelessWidget {
   const HeavyShieldScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class HeavyShieldScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Щит"),
+                      _tag(s.v17),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Тяжелый щит",
+                  Text(
+                    s.heavyShield1,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class HeavyShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Тяжёлый щит, блокирующий большую часть входящего урона, но снижающий мобильность.",
+                  Text(
+                    s.heavyShieldStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,16 +69,15 @@ class HeavyShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Урон", "80"),
-                  _stat("Снижение урона", "52.5%"),
-                  _stat("Сниженная скорость передвижения", "15%"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.v20, "80"),
+                  _stat(s.v21, "52.5%"),
+                  _stat(s.v22, "15%"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -87,8 +88,8 @@ class HeavyShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "9,0"),
-                  _stat("Продажа", "5,500"),
+                  _stat(s.ves,  "9,0"),
+                  _stat(s.prodaja, "5,500"),
 
                   const SizedBox(height: 30),
                 ],

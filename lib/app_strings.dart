@@ -789,6 +789,7 @@ String get secundi7 => isRussian ? '30 с' : '30 s';
 String get secundi8 => isRussian ? '1,5 с' : '1,5 s';
 String get secundi9 => isRussian ? '6 с' : '6 s';
 String get secundi10 => isRussian ? '3,5 с' : '3,5 s';
+String get secundi11 => isRussian ? '1 с' : '1 s';
 
 String get osobayaCherta => isRussian ? 'Особая черта' : 'A special feature';
 String get experiment => isRussian ? 'Экспериментальные' : 'Experimental';
@@ -826,6 +827,268 @@ String get torrenreStory => isRussian ? 'Имеет большой запас п
 String get venatorStory => isRussian ? 'Полуавтоматический пистолет. Стреляет по два выстрела одновременно.' : 'Semi-automatic pistol. Fires two shots at a time.';
 String get doubleShot => isRussian ? 'Двойной выстрел' : 'Double shot';
 String get vulcanoStory => isRussian ? 'У него хороший разброс пуль, но резкий спад.' : 'He has a good spread of bullets, but a sharp decline.';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String get augmentt => isRussian ? 'Аугмент' : 'Augment';
+String get mk_1Story => isRussian ? 'Базовое боевое усиление. Поддерживает более сильные щиты, но с ограниченной вместимостью рюкзака и слотами быстрого использования.' : 'Basic combat enhancement. Supports stronger shields, but with limited backpack capacity and quick-use slots.';
+String get auves => isRussian ? 'Максимальный вес снаряжения' : 'Maximum weight of equipment';
+String get shiti => isRussian ? 'Совместимость со щитом' : 'Shield compatibility';
+String get vmes => isRussian ? 'Вместимость' : 'Capacity';
+String get bistro => isRussian ? 'Слоты быстрого использования' : 'Fast Usage Slots';
+String get karman => isRussian ? 'Потайных карманов' : 'Hidden pockets';
+String get lightShield => isRussian ? '    Лёгкий' : '      Light';
+String get mediumShield => isRussian ? ' Средний' : ' Medium';
+String get heavyShield => isRussian ? 'Тяжёлый' : '    Heavy';
+String get mk2Story => isRussian ? 'Боевое усиление, больше ориентированное на манёвренность, чем на поглощение урона.' : 'A combat boost that focuses more on maneuverability than on damage absorption.';
+String get mk3AgresStory => isRussian ? 'Улучшенная версия аугмента Combat II. Поддерживает больше типов щитов и даёт дополнительное место для гранат.' : 'Improved version of Augment Combat II. Supports more types of shields and provides additional space for grenades.';
+String get mk3FlakStory => isRussian ? 'Боевое усиление, больше ориентированное на манёвренность, чем на поглощение урона.' : 'A combat boost that focuses more on maneuverability than on damage absorption.';
+String get heavyShieldStory => isRussian ? 'Тяжёлый щит, блокирующий большую часть входящего урона, но снижающий мобильность.' : 'A heavy shield that blocks most incoming damage but reduces mobility.';
+String get lightShieldStory => isRussian ? 'Лёгкий щит, блокирующий небольшую часть входящего урона без нарушения мобильности.' : 'A light shield that blocks a small portion of incoming damage without compromising mobility.';
+String get loot1Story => isRussian ? 'Базовое улучшение для добычи. Больше слотов для рюкзаков и вместимости веса, но низкие оборонительные и тактические возможности.' : 'Basic improvement for mining. More backpack slots and weight capacity, but low defensive and tactical capabilities.';
+String get loot2Story => isRussian ? 'Значительно увеличивает потенциал добычи; Добавляет слоты для драгоценностей.' : 'Significantly increases the mining potential; adds slots for jewels.';
+String get loot3CautiStory => isRussian ? 'Аугмент для добычи, который меняет часть грузоспособности для повышения выживаемости.' : 'An augment for mining that changes part of your cargo capacity to increase your survivability.';
+String get loot3SafeStory => isRussian ? 'Аугмент для добычи, который меняет часть грузоспособности для повышения выживаемости.' : 'An augment for mining that changes part of your cargo capacity to increase your survivability.';
+String get loot3SurviveStory => isRussian ? 'Мощный аугмент для вьючных мулов. Большая грузоподъемность и большое место для рюкзака.' : 'Powerful augment for pack mules. Large load capacity and plenty of space for a backpack.';
+String get mediumShieldStory => isRussian ? 'Стандартный щит, который блокирует среднюю часть входящего урона при умеренной цене мобильности.' : 'A standard shield that blocks the middle of incoming damage at a moderate cost of mobility.';
+String get tact1Story => isRussian ? 'Базовое тактическое усиление. Больше слотов быстрого использования для тактического выбора, но ограниченная выживаемость и чуть меньший потенциал добычи.' : 'Basic tactical enhancement. More quick-use slots for tactical selection, but limited survivability and slightly lower loot potential.';
+String get tact2Story => isRussian ? 'Добавляет больше места для рюкзака и слот для утилитарных предметов.' : 'Adds more backpack space and a slot for utility items.';
+String get tact3DefStory => isRussian ? 'Аугмент, ориентированный на защиту, чтобы поддерживать Щиты в запасе.' : 'A defensive-oriented Augment to keep your Shields in reserve.';
+String get tact3HealStory => isRussian ? 'Аугмент, ориентированный на лечение, добавляющий дополнительные слоты для лечебных предметов.' : 'A treatment-focused augment that adds additional slots for healing items.';
+String get tact3RevStory => isRussian ? 'Восстанавливает 1 здоровье каждые 5 секунд. При получении урона эффект приостанавливается на 30 секунд.' : 'Restores 1 health every 5 seconds. When you take damage, the effect is paused for 30 seconds.';
+
+String get v1 => isRussian ? 'Восстанавливает 1 здоровье каждые 5 секунд. При получении урона эффект приостанавливается на 30 секунд.' : 'Restores 1 health every 5 seconds. When you take damage, the effect is paused for 30 seconds.';
+String get v2 => isRussian ? 'Восстанавливает 2 здоровья каждые 5 секунд. При получении урона эффект приостанавливается на 30 секунд.' : 'Restores 2 health every 5 seconds. When you take damage, the effect is paused for 30 seconds.';
+String get v3 => isRussian ? 'Спрятанные или неэкипированные пистолеты и ручные пушки экипируются на 33% быстрее.' : 'Hidden or unequipped pistols and handguns are equipped 33% faster.';
+String get v4 => isRussian ? 'Автоматически сбрасывает клещей после 1 секунды.' : 'Automatically drops the ticks after 1 second.';
+String get v5 => isRussian ? 'При разрыве щита автоматически наносит слабый укол адреналина. Фиксированная перезарядка.' : 'When the shield is broken, it automatically delivers a mild adrenaline shot. Fixed cooldown.';
+String get v6 => isRussian ? 'Безопасный карман, позволяющий хранить любые предметы.' : 'A secure pocket for storing any items.';
+String get v7 => isRussian ? 'Когда Рейдер лежит и стоит на месте, он восстанавливает до 75% от максимального поваленного здоровья.' : 'When the Raider is lying down and stationary, it regains up to 75% of its maximum knocked-down health.';
+String get v8 => isRussian ? 'При прорыве Щита он запускает небольшую дымовую гранату. Фиксированная перезарядка.' : 'When the Shield breaks, it launches a small smoke grenade. Fixed reload.';
+String get v9 => isRussian ? 'Позволяет использовать зарядные устройства щита во время бега.' : 'Allows you to use shield chargers while running.';
+String get v10 => isRussian ? 'Когда Рейдера оживляют после падения, он выпускает облако исцеления, которое мгновенно восстанавливает 20 здоровья. Перезарядка - 30 секунд.' : 'When the Raider is revived after a fall, it releases a healing cloud that instantly restores 20 health. The cooldown is 30 seconds.';
+String get v11 => isRussian ? 'Слоты под аптечки' : 'Slots for first-aid kits';
+String get v12 => isRussian ? 'Тактическое усиление, ориентированное на полезность, а не на защиту и грабеж.' : 'A tactical boost focused on utility rather than defense and looting.';
+String get v15 => isRussian ? 'Слоты под гранаты' : 'Grenade Slots';
+String get v16 => isRussian ? 'Слоты под инструменты' : 'Slots for tools';
+String get v17 => isRussian ? 'Щит' : 'Shield';
+String get lightShield1 => isRussian ? 'Лёгкий щит' : 'Light shield';
+String get mediumShield1 => isRussian ? 'Средний щит' : 'Medium shield';
+String get heavyShield1 => isRussian ? 'Тяжёлый щит' : 'Heavy shield';
+String get v20 => isRussian ? 'Урон' : 'Damage';
+String get v21 => isRussian ? 'Снижение урона' : 'Damage reduction';
+String get v22 => isRussian ? 'Сниженная скорость передвижения' : 'Reduced movement speed';
+String get jewels => isRussian ? 'Слоты под драгоценности' : 'Jewelry Slots';
+String get v30 => isRussian ? 'Интегрированный инструмент' : 'Integrated tool';
+String get v31 => isRussian ? 'Бинокль' : 'Binoculars';
+String get v32 => isRussian ? 'Дефибриллятор' : 'Defibrillator';
+
+String get using => isRussian ? 'Быстрое использование' : 'Fast usage';
+String get adrenStory => isRussian ? 'Сыворотка, которая полностью восстанавливает выносливость и временно увеличивает её восстановление.' : 'A serum that fully restores stamina and temporarily increases its recovery.';
+String get bandStory => isRussian ? 'Медицинский продукт, который постепенно восстанавливает здоровье со временем.' : 'A medical product that gradually restores health over time.';
+String get defibStory => isRussian ? 'Инъекция, которая быстро оживляет поверженных рейдеров и восстанавливает часть здоровья.' : 'An injection that quickly revives fallen raiders and restores some of their health.';
+String get herbalStory => isRussian ? 'Импровизированный медицинский препарат, который постепенно восстанавливает здоровье со временем.' : 'An improvised medical product that gradually restores health over time.';
+String get recharStory => isRussian ? 'Портативный набор, который постепенно заряжает щит со временем.' : 'A portable set that gradually charges the shield over time.';
+String get sterilStory => isRussian ? 'Медицинский продукт, который со временем постепенно восстанавливает значительную часть здоровья.' : 'A medical product that gradually restores a significant portion of your health over time.';
+String get surgeStory => isRussian ? 'Портативный набор, который мгновенно заряжает щит при использовании.' : 'A portable set that instantly charges the shield when used.';
+String get vitaShotStory => isRussian ? 'Медицинское средство, которое мгновенно восстанавливает значительное количество здоровья.' : 'A medical product that instantly restores a significant amount of health.';
+String get vitaSprayStory => isRussian ? 'Медицинское средство, которое постоянно восстанавливает здоровье во время использования. Можно использовать на себе или союзниках.' : 'A medical item that constantly restores health while in use. Can be used on yourself or allies.';
+
+String get adren => isRussian ? 'Адреналин' : 'Adrenaline';
+String get band => isRussian ? 'Бинт' : 'Bandage';
+String get defib => isRussian ? 'Дефибриллятор' : 'Defibrillator';
+String get herbal=> isRussian ? 'Травяной бинт' : 'Herbal Bandage';
+String get rechar => isRussian ? 'Перезарядка щита' : 'Shield Recharge';
+String get steril => isRussian ? 'Стерилизованный бинт' : 'Sterilized bandage';
+String get surge => isRussian ? 'Быстрая зарядка щита' : 'Fast charging of the shield';
+String get vitaShot => isRussian ? 'Медицинский шприц' : 'Medical Syringe';
+String get vitaSpray => isRussian ? 'Спрей Vita' : 'Vita Spray';
+
+String get pup => isRussian ? 'Выносливость' : 'Endurance';
+String get pup1 => isRussian ? 'Исцеление' : 'Healing';
+String get pup2 => isRussian ? 'Перезарядка' : 'Recharge';
+
+String get prodol => isRussian ? 'Продолжительность' : 'Duration';
+String get vremya => isRussian ? 'Время использования' : 'Usage time';
+String get vremya123 => isRussian ? 'Исцеляющая способность' : 'Healing ability';
+
+String get secundi6_11 => isRussian ? '2/с' : '2/s';
+String get secundi101 => isRussian ? '3,5/с' : '3,5/s';
+String get secundi112 => isRussian ? '2 с' : '2 s';
+String get secundi111 => isRussian ? '4/с' : '4/s';
+String get secundi1142 => isRussian ? '5 с' : '5 s';
+String get secundi442 => isRussian ? '4 с' : '4 s';
+String get secundi510 => isRussian ? '10/с' : '10/s';
+
+
 
 
 

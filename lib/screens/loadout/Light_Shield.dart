@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class LightShieldScreen extends StatelessWidget {
   const LightShieldScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class LightShieldScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Щит"),
+                      _tag(s.v17),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Легкий щит",
+                  Text(
+                    s.lightShield1,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class LightShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Лёгкий щит, блокирующий небольшую часть входящего урона без нарушения мобильности.",
+                  Text(
+                    s.lightShieldStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,15 +69,14 @@ class LightShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Урон", "40"),
-                  _stat("Снижение урона", "40%"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.v20, "40"),
+                  _stat(s.v21, "40%"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                   s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -86,8 +87,8 @@ class LightShieldScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "5,0"),
-                  _stat("Продажа", "640"),
+                  _stat(s.ves, "5,0"),
+                  _stat(s.prodaja, "640"),
 
                   const SizedBox(height: 30),
                 ],

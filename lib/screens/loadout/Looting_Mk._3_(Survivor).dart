@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class LootingMk3SuScreen extends StatelessWidget {
   const LootingMk3SuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class LootingMk3SuScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Аугмент"),
+                      _tag(s.augmentt),
                       const SizedBox(width: 8),
-                      _tag("Эпическая"),
+                      _tag(s.epic),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Looting Mk. 3 (Выживший)",
+                  Text(
+                    "Looting Mk. 3 (Survivor)",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class LootingMk3SuScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Мощный аугмент для вьючных мулов. Большая грузоподъемность и большое место для рюкзака.",
+                  Text(
+                    s.loot3SurviveStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -78,7 +80,6 @@ class LootingMk3SuScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
                         Image.asset(
                         "assets/images/Looting_Mk3_Survivor_Ability_Icon.png",
                         width: 46,
@@ -89,7 +90,7 @@ class LootingMk3SuScreen extends StatelessWidget {
 
                       Expanded(
                         child: Text(
-                          "Когда Рейдер лежит и стоит на месте, он восстанавливает до 75% от максимального поваленного здоровья.",
+                          s.v7,
 
                           style: const TextStyle(
                             color: Colors.black87,
@@ -105,7 +106,7 @@ class LootingMk3SuScreen extends StatelessWidget {
 
                 const SizedBox(height: 16,),
 
-                  _stat("Максимальный вес снаряжения", "80.0"),
+                  _stat(s.auves, "80.0"),
 
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
@@ -113,22 +114,22 @@ class LootingMk3SuScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          "Совместимость со щитом",
+                        Text(
+                          s.shiti,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18,
                         ),
                       ),
                       RichText(
-                        text: const TextSpan(
+                        text: TextSpan(
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
                           children: [
                              TextSpan(
-                              text: "    Лёгкий",
+                              text: s.lightShield,
                               style: TextStyle(
                                 color: Colors.greenAccent,
                               ),
@@ -141,7 +142,7 @@ class LootingMk3SuScreen extends StatelessWidget {
                             ),
 
                             TextSpan(
-                              text: " Средний",
+                              text: s.mediumShield,
                               style: TextStyle(
                                 color: Colors.cyanAccent,
                               ),
@@ -153,17 +154,16 @@ class LootingMk3SuScreen extends StatelessWidget {
                   ),
                   ),
 
-                  _stat("Вместимость", "20"),
-                  _stat("Слоты быстрого использования", "5"),
-                  _stat("Слоты под инструменты", "1"),
-                  _stat("Потайных карманов", "3"),
-                  _stat("Переработка в", " -"),
+                  _stat(s.vmes, "20"),
+                  _stat(s.bistro, "5"),
+                  _stat(s.v16, "1"),
+                  _stat(s.karman, "3"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                     s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -174,8 +174,8 @@ class LootingMk3SuScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "4,0"),
-                  _stat("Продажа", "5000"),
+                  _stat(s.ves, "4,0"),
+                  _stat(s.prodaja, "5000"),
 
                   const SizedBox(height: 30),
                 ],

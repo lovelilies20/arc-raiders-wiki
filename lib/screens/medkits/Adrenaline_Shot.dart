@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class AdrenalineShotScreen extends StatelessWidget {
   const AdrenalineShotScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,19 +38,18 @@ class AdrenalineShotScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Быстрое использование"),
+                      _tag(s.using),
                       const SizedBox(width: 8),
-                      _tag("Обычное"),
+                      _tag(s.obich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
-                    "Адреналин",
+                  Text(
+                    s.adren,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
@@ -57,8 +59,8 @@ class AdrenalineShotScreen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Сыворотка, которая полностью восстанавливает выносливость и временно увеличивает её восстановление.",
+                  Text(
+                    s.adrenStory,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,16 +69,15 @@ class AdrenalineShotScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Выносливость", "5/с"),
-                  _stat("Продолжительность", "10 с"),
-                  _stat("Время использования", "1 с"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.pup, s.secundi5_1),
+                  _stat(s.prodol, s.secundi5),
+                  _stat(s.vremya, s.secundi11),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -87,9 +88,9 @@ class AdrenalineShotScreen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "0,2"),
-                  _stat("Продажа", "300"),
-                  _stat("Размер стопки", "5"),
+                  _stat(s.ves, "0,2"),
+                  _stat(s.prodaja, "300"),
+                  _stat(s.stat6, "5"),
 
                   const SizedBox(height: 30),
                 ],

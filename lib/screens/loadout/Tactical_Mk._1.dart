@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class TacticalMk1Screen extends StatelessWidget {
   const TacticalMk1Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(5),
@@ -35,18 +38,17 @@ class TacticalMk1Screen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Row(
                     children: [
-                      _tag("Аугмент"),
+                      _tag(s.augmentt),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
                   const SizedBox(height: 12),
 
-                  const Text(
+                  Text(
                     "Tactical Mk. 1",
                     style: TextStyle(
                       color: Colors.white,
@@ -57,8 +59,8 @@ class TacticalMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Базовое тактическое усиление. Больше слотов быстрого использования для тактического выбора, но ограниченная выживаемость и чуть меньший потенциал добычи.",
+                  Text(
+                    s.tact1Story,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -67,29 +69,29 @@ class TacticalMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Максимальный вес снаряжения", "40.0"),
+                  _stat(s.auves, "40.0"),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          "Совместимость со щитом",
+                        Text(
+                           s.shiti,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18,
                         ),
                       ),
                       RichText(
-                        text: const TextSpan(
+                        text: TextSpan(
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
                           children: [
                              TextSpan(
-                              text: "    Лёгкий",
+                              text: s.lightShield,
                               style: TextStyle(
                                 color: Colors.greenAccent,
                               ),
@@ -103,7 +105,7 @@ class TacticalMk1Screen extends StatelessWidget {
                             ),
 
                             TextSpan(
-                              text: " Средний",
+                              text: s.mediumShield,
                               style: TextStyle(
                                 color: Colors.cyanAccent,
                               ),
@@ -114,16 +116,15 @@ class TacticalMk1Screen extends StatelessWidget {
                     ],
                   ),
                   ),
-                  _stat("Вместимость", "15"),
-                  _stat("Слоты быстрого использования", "5"),
-                  _stat("Потайных карманов", "1"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.vmes, "15"),
+                  _stat(s.bistro,  "5"),
+                  _stat(s.karman, "1"),
 
                   const SizedBox(height: 20),
 
-                  const Center(
+                  Center(
                     child: Text(
-                    "Общие данные",
+                      s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -134,8 +135,8 @@ class TacticalMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "2,0"),
-                  _stat("Продажа", "640"),
+                  _stat(s.ves, "2,0"),
+                  _stat(s.prodaja, "640"),
 
                   const SizedBox(height: 30),
                 ],

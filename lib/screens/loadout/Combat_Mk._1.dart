@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class CombatMk1Screen extends StatelessWidget {
   const CombatMk1Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -36,9 +40,9 @@ class CombatMk1Screen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      _tag("Аугмент"),
+                      _tag(s.augmentt),
                       const SizedBox(width: 8),
-                      _tag("Необычное"),
+                      _tag(s.neobich),
                     ],
                   ),
 
@@ -56,7 +60,7 @@ class CombatMk1Screen extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   Text(
-                    "Базовое боевое усиление. Поддерживает более сильные щиты, но с ограниченной вместимостью рюкзака и слотами быстрого использования.",
+                    s.mk_1Story,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
@@ -65,7 +69,7 @@ class CombatMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  _stat("Максимальный вес снаряжения", "45.0"),
+                  _stat(s.auves, "45.0"),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: Row(
@@ -73,7 +77,7 @@ class CombatMk1Screen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Совместимость со щитом",
+                          s.shiti,
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18,
@@ -87,7 +91,7 @@ class CombatMk1Screen extends StatelessWidget {
                           ),
                           children: [
                              TextSpan(
-                              text: "    Лёгкий",
+                              text: s.lightShield,
                               style: TextStyle(
                                 color: Colors.greenAccent,
                               ),
@@ -101,7 +105,7 @@ class CombatMk1Screen extends StatelessWidget {
                             ),
 
                             TextSpan(
-                              text: " Средний",
+                              text: s.mediumShield,
                               style: TextStyle(
                                 color: Colors.cyanAccent,
                               ),
@@ -112,16 +116,15 @@ class CombatMk1Screen extends StatelessWidget {
                     ],
                   ),
                   ),
-                  _stat("Вместимость", "16"),
-                  _stat("Слоты быстрого использования", "4"),
-                  _stat("Потайных карманов", "1"),
-                  _stat("Переработка в", " - "),
+                  _stat(s.vmes, "16"),
+                  _stat(s.bistro, "4"),
+                  _stat(s.karman, "1"),
 
                   const SizedBox(height: 20),
 
                   Center(
                     child: Text(
-                    "Общие данные",
+                    s.obshie,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -132,8 +135,8 @@ class CombatMk1Screen extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  _stat("Вес", "2,0"),
-                  _stat("Продажа", "640"),
+                  _stat(s.ves, "2,0"),
+                  _stat(s.prodaja, "640"),
 
                   const SizedBox(height: 30),
                 ],
