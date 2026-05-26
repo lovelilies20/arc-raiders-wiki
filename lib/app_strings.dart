@@ -6,205 +6,180 @@ class AppStrings {
   final bool isRussian;
   const AppStrings(this.isRussian);
   factory AppStrings.of(AppLanguage lang) => AppStrings(lang.isRussian);
-  //Главное меню
-  String get history       => isRussian ? 'ИСТОРИЯ' : 'HISTORY';
-  String get speranza      => isRussian ? 'СПЕРАНЦА'           : 'SPERANZA';
-  String get arc           => isRussian ? 'ARC'                : 'ARC';
-  String get weapons       => isRussian ? 'ОРУЖИЕ / СНАРЯЖЕНИЕ': 'WEAPONS / GEAR';
-  String get workshop      => isRussian ? 'МАСТЕРСКАЯ'         : 'WORKSHOP';
-  String get maps          => isRussian ? 'КАРТЫ / СОБЫТИЯ'    : 'MAPS / EVENTS';
-  String get settings      => isRussian ? 'НАСТРОЙКИ'          : 'SETTINGS';
-  //Настройки
-  String get settingsTitle => isRussian ? 'Настройки'          : 'Settings';
-  String get language      => isRussian ? 'Язык'               : 'Language';
-  String get russian       => isRussian ? 'Русский'            : 'Russian';
-  String get english       => isRussian ? 'Английский'         : 'English';
+String get history => isRussian ? 'ИСТОРИЯ' : 'HISTORY';
+String get speranza => isRussian ? 'СПЕРАНЦА' : 'SPERANZA';
+String get arc => isRussian ? 'ARC' : 'ARC';
+String get weapons => isRussian ? 'ОРУЖИЕ / СНАРЯЖЕНИЕ': 'WEAPONS / GEAR';
+String get workshop => isRussian ? 'МАСТЕРСКАЯ' : 'WORKSHOP';
+String get maps => isRussian ? 'КАРТЫ / СОБЫТИЯ' : 'MAPS / EVENTS';
+String get settings => isRussian ? 'НАСТРОЙКИ' : 'SETTINGS';
+String get settingsTitle => isRussian ? 'Настройки' : 'Settings';
+String get language => isRussian ? 'Язык' : 'Language';
+String get russian => isRussian ? 'Русский' : 'Russian';
+String get english => isRussian ? 'Английский' : 'English';
 
-  // ── Мастерская — UI ──────────────────────────
-  String get workshopTitle  => isRussian ? 'Мастерская'        : 'Workshop';
-  String get requirements   => isRussian ? 'Требования'        : 'Requirements';
-  String get crafts         => isRussian ? 'Крафтится'         : 'Crafted here';
-  String get level          => isRussian ? 'УРОВЕНЬ'           : 'LEVEL';
+String get workshopTitle => isRussian ? 'Мастерская' : 'Workshop';
+String get requirements => isRussian ? 'Требования' : 'Requirements';
+String get crafts => isRussian ? 'Крафтится' : 'Crafted here';
+String get level => isRussian ? 'УРОВЕНЬ' : 'LEVEL';
+String get stationWorkbench => isRussian ? 'Верстак' : 'Workbench';
+String get stationGunsmith => isRussian ? 'Оружейник' : 'Gunsmith';
+String get stationGearBench => isRussian ? 'Стол снаряжения' : 'Gear Bench';
+String get stationMedlab => isRussian ? 'Медлаб' : 'Medical Lab';
+String get stationExplosives => isRussian ? 'Взрывчатка' : 'Explosives';
+String get stationUtility => isRussian ? 'Утилиты' : 'Utility';
+String get stationRefiner => isRussian ? 'Рафинер' : 'Refiner';
+String get req1round => isRussian ? '1 сыгранный раунд' : '1 completed round';
+String get reqMetalParts => isRussian ? '20× Металлические детали' : '20× Metal Parts';
+String get reqRubberParts => isRussian ? '30× Резиновые детали' : '30× Rubber Parts';
+String get reqRustedTools => isRussian ? '3× Ржавые инструменты' : '3× Rusted Tools';
+String get reqMechComp => isRussian ? '5× Механические компоненты' : '5× Mechanical Components';
+String get reqWaspDriver => isRussian ? '8× Драйвер осы' : '8× Wasp Driver';
+String get reqRustedGear => isRussian ? '3× Ржавые шестерни' : '3× Rusted Gear';
+String get reqAdvMech => isRussian ? '5× Продв. мех. компоненты' : '5× Adv. Mechanical Components';
+String get reqSentinel => isRussian ? '4× Ядро часового' : '4× Sentinel Firing Core';
 
-  // ── Мастерская — названия станций ────────────
-  String get stationWorkbench  => isRussian ? 'Верстак'         : 'Workbench';
-  String get stationGunsmith   => isRussian ? 'Оружейник'       : 'Gunsmith';
-  String get stationGearBench  => isRussian ? 'Стол снаряжения' : 'Gear Bench';
-  String get stationMedlab     => isRussian ? 'Медлаб'          : 'Medical Lab';
-  String get stationExplosives => isRussian ? 'Взрывчатка'      : 'Explosives';
-  String get stationUtility    => isRussian ? 'Утилиты'         : 'Utility';
-  String get stationRefiner    => isRussian ? 'Рафинер'         : 'Refiner';
+String get reqPlastic => isRussian ? '25× Пластиковые детали' : '25× Plastic Parts';
+String get reqFabric30 => isRussian ? '30× Ткань' : '30× Fabric';
+String get reqPowerCable => isRussian ? '3× Силовой кабель' : '3× Power Cable';
+String get reqElecComp => isRussian ? '5× Электрические компоненты' : '5× Electrical Components';
+String get reqHornet => isRussian ? '5× Шершней' : '5× Hornet Driver';
+String get reqBattery => isRussian ? '3× Промышленный аккумулятор' : '3× Industrial Battery';
+String get reqAdvElec => isRussian ? '5× Продв. эл. компоненты' : '5× Adv. Electrical Components';
+String get reqBastion => isRussian ? '6× Ячеек бастиона' : '6× Bastion Cell';
 
-  // ── Мастерская — требования ───────────────────
-  String get req1round      => isRussian ? '1 сыгранный раунд'           : '1 completed round';
+String get reqFabric50 => isRussian ? '50× Ткань' : '50× Fabric';
+String get reqArcAlloy => isRussian ? '6× Сплав ARC' : '6× ARC Alloy';
+String get reqBioscanner => isRussian ? '2× Треснутый биосканер' : '2× Cracked Bioscanner';
+String get reqDurableCloth=> isRussian ? '5× Прочная ткань' : '5× Durable Cloth';
+String get reqTickPod => isRussian ? '8× Ядер Клещей' : '8× Tick Pod';
+String get reqMedKit => isRussian ? '3× Ржавая аптечка' : '3× Rusted Shut Medical Kit';
+String get reqAntiseptic => isRussian ? '8× Антисептик' : '8× Antiseptic';
+String get reqSurveyor => isRussian ? '5× Наблюдателей' : '5× Surveyor Vault';
 
-  // Оружейник
-  String get reqMetalParts  => isRussian ? '20× Металлические детали'    : '20× Metal Parts';
-  String get reqRubberParts => isRussian ? '30× Резиновые детали'         : '30× Rubber Parts';
-  String get reqRustedTools => isRussian ? '3× Ржавые инструменты'        : '3× Rusted Tools';
-  String get reqMechComp    => isRussian ? '5× Механические компоненты'   : '5× Mechanical Components';
-  String get reqWaspDriver  => isRussian ? '8× Wasp Driver'               : '8× Wasp Driver';
-  String get reqRustedGear  => isRussian ? '3× Ржавые шестерни'           : '3× Rusted Gear';
-  String get reqAdvMech     => isRussian ? '5× Продв. мех. компоненты'    : '5× Adv. Mechanical Components';
-  String get reqSentinel    => isRussian ? '4× Sentinel Firing Core'      : '4× Sentinel Firing Core';
+String get reqChemicals => isRussian ? '50× Химикаты' : '50× Chemicals';
+String get reqSynthFuel => isRussian ? '3× Синтетическое топливо' : '3× Synthesized Fuel';
+String get reqCrudeExp => isRussian ? '5× Грубая взрывчатка' : '5× Crude Explosives';
+String get reqPopTrigger => isRussian ? '5× Взрывобота' : '5× Pop Trigger';
+String get reqLabReag => isRussian ? '3× Лабораторные реагенты' : '3× Laboratory Reagents';
+String get reqExpCompound => isRussian ? '5× Взрывное соединение' : '5× Explosive Compound';
+String get reqRocketeer => isRussian ? '3× Драйвер ракетчика' : '3× Rocketeer Driver';
 
-  // Стол снаряжения
-  String get reqPlastic     => isRussian ? '25× Пластиковые детали'       : '25× Plastic Parts';
-  String get reqFabric30    => isRussian ? '30× Ткань'                    : '30× Fabric';
-  String get reqPowerCable  => isRussian ? '3× Силовой кабель'            : '3× Power Cable';
-  String get reqElecComp    => isRussian ? '5× Электрические компоненты'  : '5× Electrical Components';
-  String get reqHornet      => isRussian ? '5× Hornet Driver'             : '5× Hornet Driver';
-  String get reqBattery     => isRussian ? '3× Промышленный аккумулятор'  : '3× Industrial Battery';
-  String get reqAdvElec     => isRussian ? '5× Продв. эл. компоненты'     : '5× Adv. Electrical Components';
-  String get reqBastion     => isRussian ? '6× Bastion Cell'              : '6× Bastion Cell';
+String get reqPlastic50 => isRussian ? '50× Пластиковые детали' : '50× Plastic Parts';
+String get reqHeatSink => isRussian ? '2× Повреждённый теплоотвод' : '2× Damaged Heat Sink';
+String get reqSnitchScan => isRussian ? '6× Стукачей' : '6× Snitch Scanner';
+String get reqMotherboard => isRussian ? '3× Сгоревшая материнская плата': '3× Fried Motherboard';
+String get reqLeaper => isRussian ? '4× Частей прыгуна' : '4× Leaper Pulse Unit';
 
-  // Медлаб
-  String get reqFabric50    => isRussian ? '50× Ткань'                    : '50× Fabric';
-  String get reqArcAlloy    => isRussian ? '6× Сплав ARC'                 : '6× ARC Alloy';
-  String get reqBioscanner  => isRussian ? '2× Треснутый биосканер'        : '2× Cracked Bioscanner';
-  String get reqDurableCloth=> isRussian ? '5× Прочная ткань'             : '5× Durable Cloth';
-  String get reqTickPod     => isRussian ? '8× Tick Pod'                  : '8× Tick Pod';
-  String get reqMedKit      => isRussian ? '3× Ржавая аптечка'            : '3× Rusted Shut Medical Kit';
-  String get reqAntiseptic  => isRussian ? '8× Антисептик'                : '8× Antiseptic';
-  String get reqSurveyor    => isRussian ? '5× Surveyor Vault'            : '5× Surveyor Vault';
+String get reqMetal60 => isRussian ? '60× Металлические детали' : '60× Metal Parts';
+String get reqArcPower => isRussian ? '5× Элемент питания ARC' : '5× ARC Powercell';
+String get reqToaster => isRussian ? '3× Тостер' : '3× Toaster';
+String get reqArcMotion => isRussian ? '5× Двигательное ядро ARC' : '5× ARC Motion Core';
+String get reqFireball => isRussian ? '8× Ядер огнешара' : '8× Fireball Burner';
+String get reqMotor => isRussian ? '3× Мотор' : '3× Motor';
+String get reqArcCircuit => isRussian ? '10× Схемы ARC' : '10× ARC Circuitry';
+String get reqBombardier => isRussian ? '6× Ячеек бомбардира' : '6× Bombardier Cell';
 
-  // Взрывчатка
-  String get reqChemicals   => isRussian ? '50× Химикаты'                 : '50× Chemicals';
-  String get reqSynthFuel   => isRussian ? '3× Синтетическое топливо'      : '3× Synthesized Fuel';
-  String get reqCrudeExp    => isRussian ? '5× Грубая взрывчатка'          : '5× Crude Explosives';
-  String get reqPopTrigger  => isRussian ? '5× Pop Trigger'               : '5× Pop Trigger';
-  String get reqLabReag     => isRussian ? '3× Лабораторные реагенты'      : '3× Laboratory Reagents';
-  String get reqExpCompound => isRussian ? '5× Взрывное соединение'        : '5× Explosive Compound';
-  String get reqRocketeer   => isRussian ? '3× Rocketeer Driver'          : '3× Rocketeer Driver';
+String get itLootingMk1 => isRussian ? 'Мародёрство Mk. 1' : 'Looting Mk. 1';
+String get itLightShield => isRussian ? 'Лёгкий щит' : 'Light Shield';
+String get itLauncherAmmo => isRussian ? 'Патроны для пусковой' : 'Launcher Ammo';
+String get itHeavyAmmo => isRussian ? 'Тяжёлые патроны' : 'Heavy Ammo';
+String get itLightAmmo => isRussian ? 'Лёгкие патроны' : 'Light Ammo';
+String get itMedAmmo => isRussian ? 'Средние патроны' : 'Medium Ammo';
+String get itShotgunAmmo => isRussian ? 'Дробовые патроны' : 'Shotgun Ammo';
+String get itShieldRech => isRussian ? 'Зарядник щита' : 'Shield Recharger';
+String get itBandage => isRussian ? 'Бинт' : 'Bandage';
+String get itLightImpact => isRussian ? 'Лёгкая ударная граната' : 'Light Impact Grenade';
 
-  // Утилиты
-  String get reqPlastic50   => isRussian ? '50× Пластиковые детали'        : '50× Plastic Parts';
-  String get reqHeatSink    => isRussian ? '2× Повреждённый теплоотвод'    : '2× Damaged Heat Sink';
-  String get reqSnitchScan  => isRussian ? '6× Snitch Scanner'            : '6× Snitch Scanner';
-  String get reqMotherboard => isRussian ? '3× Сгоревшая материнская плата': '3× Fried Motherboard';
-  String get reqLeaper      => isRussian ? '4× Leaper Pulse Unit'         : '4× Leaper Pulse Unit';
+String get itAngledGrip => isRussian ? 'Угловая рукоять I' : 'Angled Grip I';
+String get itCompensator => isRussian ? 'Компенсатор I' : 'Compensator I';
+String get itExtLightMag => isRussian ? 'Удлинённый магазин (лёгк.) I' : 'Extended Light Mag I';
+String get itExtMedMag => isRussian ? 'Удлинённый магазин (средн.) I': 'Extended Medium Mag I';
+String get itMuzzleBrake => isRussian ? 'Дульный тормоз I' : 'Muzzle Brake I';
+String get itStableStock => isRussian ? 'Устойчивый приклад I' : 'Stable Stock I';
+String get itVertGrip => isRussian ? 'Вертикальная рукоять I' : 'Vertical Grip I';
 
-  // Рафинер
-  String get reqMetal60     => isRussian ? '60× Металлические детали'      : '60× Metal Parts';
-  String get reqArcPower    => isRussian ? '5× Элемент питания ARC'        : '5× ARC Powercell';
-  String get reqToaster     => isRussian ? '3× Тостер'                    : '3× Toaster';
-  String get reqArcMotion   => isRussian ? '5× Двигательное ядро ARC'      : '5× ARC Motion Core';
-  String get reqFireball    => isRussian ? '8× Fireball Burner'           : '8× Fireball Burner';
-  String get reqMotor       => isRussian ? '3× Мотор'                     : '3× Motor';
-  String get reqArcCircuit  => isRussian ? '10× Схемы ARC'                : '10× ARC Circuitry';
-  String get reqBombardier  => isRussian ? '6× Bombardier Cell'           : '6× Bombardier Cell';
+String get itMedShield => isRussian ? 'Средний щит' : 'Medium Shield';
+String get itHeavyShield => isRussian ? 'Тяжёлый щит' : 'Heavy Shield';
+String get itCombatMk1 => isRussian ? 'Боевой Mk. 1' : 'Combat Mk. 1';
+String get itTactMk1 => isRussian ? 'Тактический Mk. 1' : 'Tactical Mk. 1';
+String get itCombatMk2 => isRussian ? 'Боевой Mk. 2' : 'Combat Mk. 2';
+String get itLootMk2 => isRussian ? 'Мародёрство Mk. 2'  : 'Looting Mk. 2';
+String get itTactMk2 => isRussian ? 'Тактический Mk. 2' : 'Tactical Mk. 2';
+String get itCombatAggr => isRussian ? 'Боевой Mk. 3 (Агрессивный)' : 'Combat Mk. 3 (Aggressive)';
+String get itCombatFlank => isRussian ? 'Боевой Mk. 3 (Фланговый)' : 'Combat Mk. 3 (Flanking)';
+String get itLootCautious => isRussian ? 'Мародёрство Mk. 3 (Осторожный)': 'Looting Mk. 3 (Cautious)';
+String get itLootSurvivor => isRussian ? 'Мародёрство Mk. 3 (Выживший)' : 'Looting Mk. 3 (Survivor)';
+String get itTactDefensive=> isRussian ? 'Тактический Mk. 3 (Защитный)' : 'Tactical Mk. 3 (Defensive)';
+String get itTactHealing => isRussian ? 'Тактический Mk. 3 (Лечебный)' : 'Tactical Mk. 3 (Healing)';
 
-  // ── Мастерская — предметы крафта ─────────────
+String get itHerbalBandage=> isRussian ? 'Травяной бинт' : 'Herbal Bandage';
+String get itAdrenaline => isRussian ? 'Укол адреналина' : 'Adrenaline Shot';
+String get itSterileBandg => isRussian ? 'Стерилизованный бинт'  : 'Sterilized Bandage';
+String get itSurgeShield => isRussian ? 'Быстрый зарядник щита' : 'Surge Shield Recharger';
+String get itVitaSpray => isRussian ? 'Спрей Vita' : 'Vita Spray';
+String get itVitaShot => isRussian ? 'Укол Vita' : 'Vita Shot';
 
-  // Верстак
-  String get itLootingMk1   => isRussian ? 'Мародёрство Mk. 1'            : 'Looting Mk. 1';
-  String get itLightShield  => isRussian ? 'Лёгкий щит'                   : 'Light Shield';
-  String get itLauncherAmmo => isRussian ? 'Патроны для пусковой'         : 'Launcher Ammo';
-  String get itHeavyAmmo    => isRussian ? 'Тяжёлые патроны'              : 'Heavy Ammo';
-  String get itLightAmmo    => isRussian ? 'Лёгкие патроны'               : 'Light Ammo';
-  String get itMedAmmo      => isRussian ? 'Средние патроны'              : 'Medium Ammo';
-  String get itShotgunAmmo  => isRussian ? 'Дробовые патроны'             : 'Shotgun Ammo';
-  String get itShieldRech   => isRussian ? 'Зарядник щита'                : 'Shield Recharger';
-  String get itBandage      => isRussian ? 'Бинт'                         : 'Bandage';
-  String get itLightImpact  => isRussian ? 'Лёгкая ударная граната'       : 'Light Impact Grenade';
+String get itGasGrenade => isRussian ? 'Газовая граната' : 'Gas Grenade';
+String get itBlazeGrenade => isRussian ? 'Огненная граната' : 'Blaze Grenade';
+String get itShrapnel => isRussian ? 'Осколочная граnade' : 'Shrapnel Grenade';
+String get itSnapBlast => isRussian ? 'Граната Snap Blast' : 'Snap Blast Grenade';
+String get itHeavyFuze => isRussian ? 'Тяжёлая граната Fuze' : 'Heavy Fuze Grenade';
+String get itExpMine => isRussian ? 'Взрывная мина' : 'Explosive Mine';
 
-  // Оружейник — моды
-  String get itAngledGrip   => isRussian ? 'Угловая рукоять I'            : 'Angled Grip I';
-  String get itCompensator  => isRussian ? 'Компенсатор I'                : 'Compensator I';
-  String get itExtLightMag  => isRussian ? 'Удлинённый магазин (лёгк.) I' : 'Extended Light Mag I';
-  String get itExtMedMag    => isRussian ? 'Удлинённый магазин (средн.) I': 'Extended Medium Mag I';
-  String get itMuzzleBrake  => isRussian ? 'Дульный тормоз I'             : 'Muzzle Brake I';
-  String get itStableStock  => isRussian ? 'Устойчивый приклад I'         : 'Stable Stock I';
-  String get itVertGrip     => isRussian ? 'Вертикальная рукоять I'       : 'Vertical Grip I';
+String get itBarricade => isRussian ? 'Комплект баррикады' : 'Barricade Kit';
+String get itBinoculars => isRussian ? 'Бинокль' : 'Binoculars';
+String get itDoorBlocker => isRussian ? 'Блокиратор дверей' : 'Door Blocker';
+String get itFirecracker => isRussian ? 'Фейерверкер' : 'Firecracker';
+String get itLilSmoke => isRussian ? 'Малая дымовая граната' : "Li'l Smoke Grenade";
+String get itRaiderFlare => isRussian ? 'Сигнальная ракета рейдера' : 'Remote Raider Flare';
+String get itSmokeGrenade => isRussian ? 'Дымовая граната' : 'Smoke Grenade';
+String get itLureGrenade => isRussian ? 'Приманочная граната' : 'Lure Grenade';
+String get itHatchKey => isRussian ? 'Ключ от люка рейдера' : 'Raider Hatch Key';
+String get itZipline => isRussian ? 'Трос' : 'Zipline';
+String get itCloak => isRussian ? 'Фотоэлектрический плащ' : 'Photoelectric Cloak';
+String get itTagGrenade => isRussian ? 'Маркировочная граната' : 'Tagging Grenade';
 
-  // Стол снаряжения
-  String get itMedShield    => isRussian ? 'Средний щит'                  : 'Medium Shield';
-  String get itHeavyShield  => isRussian ? 'Тяжёлый щит'                  : 'Heavy Shield';
-  String get itCombatMk1    => isRussian ? 'Боевой Mk. 1'                 : 'Combat Mk. 1';
-  String get itTactMk1      => isRussian ? 'Тактический Mk. 1'            : 'Tactical Mk. 1';
-  String get itCombatMk2    => isRussian ? 'Боевой Mk. 2'                 : 'Combat Mk. 2';
-  String get itLootMk2      => isRussian ? 'Мародёрство Mk. 2'            : 'Looting Mk. 2';
-  String get itTactMk2      => isRussian ? 'Тактический Mk. 2'            : 'Tactical Mk. 2';
-  String get itCombatAggr   => isRussian ? 'Боевой Mk. 3 (Агрессивный)'   : 'Combat Mk. 3 (Aggressive)';
-  String get itCombatFlank  => isRussian ? 'Боевой Mk. 3 (Фланговый)'     : 'Combat Mk. 3 (Flanking)';
-  String get itLootCautious => isRussian ? 'Мародёрство Mk. 3 (Осторожный)': 'Looting Mk. 3 (Cautious)';
-  String get itLootSurvivor => isRussian ? 'Мародёрство Mk. 3 (Выживший)' : 'Looting Mk. 3 (Survivor)';
-  String get itTactDefensive=> isRussian ? 'Тактический Mk. 3 (Защитный)' : 'Tactical Mk. 3 (Defensive)';
-  String get itTactHealing  => isRussian ? 'Тактический Mk. 3 (Лечебный)' : 'Tactical Mk. 3 (Healing)';
+String get itCrudeExp => isRussian ? 'Грубая взрывчатка' : 'Crude Explosives';
+String get itDurableCloth => isRussian ? 'Прочная ткань' : 'Durable Cloth';
+String get itElecComp => isRussian ? 'Электрические компоненты' : 'Electrical Components';
+String get itMechComp => isRussian ? 'Механические компоненты' : 'Mechanical Components';
+String get itAdvElec => isRussian ? 'Продв. электрические компоненты': 'Adv. Electrical Components';
+String get itAdvMech => isRussian ? 'Продв. механические компоненты': 'Adv. Mechanical Components';
+String get itAntiseptic => isRussian ? 'Антисептик' : 'Antiseptic';
+String get itArcCircuit => isRussian ? 'Схемы ARC' : 'ARC Circuitry';
+String get itExpCompound => isRussian ? 'Взрывное соединение' : 'Explosive Compound';
+String get itGunParts => isRussian ? 'Запчасти для оружия (тяж./лёгк./средн.)': 'Heavy/Light/Medium Gun Parts';
+String get itModComp => isRussian ? 'Компоненты модификаций' : 'Mod Components';
+String get itMagAccel => isRussian ? 'Магнитный ускоритель' : 'Magnetic Accelerator';
+String get itPowerRod => isRussian ? 'Силовой стержень' : 'Power Rod';
+String get itComplexParts => isRussian ? 'Сложные запчасти для оружия' : 'Complex Gun Parts';
 
-  // Медлаб
-  String get itHerbalBandage=> isRussian ? 'Травяной бинт'                : 'Herbal Bandage';
-  String get itAdrenaline   => isRussian ? 'Укол адреналина'              : 'Adrenaline Shot';
-  String get itSterileBandg => isRussian ? 'Стерилизованный бинт'         : 'Sterilized Bandage';
-  String get itSurgeShield  => isRussian ? 'Быстрый зарядник щита'        : 'Surge Shield Recharger';
-  String get itVitaSpray    => isRussian ? 'Спрей Vita'                   : 'Vita Spray';
-  String get itVitaShot     => isRussian ? 'Укол Vita'                    : 'Vita Shot';
+String get arcTitle => isRussian ? 'История' : 'ARC';
+String get arcHeader => isRussian ? 'ARC' : 'ARC';
+String get arcCatSec => isRussian ? 'СЛУЖБА БЕЗОПАСНОСТИ': 'SECURITY';
+String get arcCatInd => isRussian ? 'ПРОМЫШЛЕННЫЕ' : 'INDUSTRIAL';
 
-  // Взрывчатка
-  String get itGasGrenade   => isRussian ? 'Газовая граната'              : 'Gas Grenade';
-  String get itBlazeGrenade => isRussian ? 'Огненная граната'             : 'Blaze Grenade';
-  String get itShrapnel     => isRussian ? 'Осколочная граnade'           : 'Shrapnel Grenade';
-  String get itSnapBlast    => isRussian ? 'Граната Snap Blast'           : 'Snap Blast Grenade';
-  String get itHeavyFuze    => isRussian ? 'Тяжёлая граната Fuze'         : 'Heavy Fuze Grenade';
-  String get itExpMine      => isRussian ? 'Взрывная мина'                : 'Explosive Mine';
-
-  // Утилиты
-  String get itBarricade    => isRussian ? 'Комплект баррикады'           : 'Barricade Kit';
-  String get itBinoculars   => isRussian ? 'Бинокль'                      : 'Binoculars';
-  String get itDoorBlocker  => isRussian ? 'Блокиратор дверей'            : 'Door Blocker';
-  String get itFirecracker  => isRussian ? 'Фейерверкер'                  : 'Firecracker';
-  String get itLilSmoke     => isRussian ? 'Малая дымовая граната'         : "Li'l Smoke Grenade";
-  String get itRaiderFlare  => isRussian ? 'Сигнальная ракета рейдера'    : 'Remote Raider Flare';
-  String get itSmokeGrenade => isRussian ? 'Дымовая граната'              : 'Smoke Grenade';
-  String get itLureGrenade  => isRussian ? 'Приманочная граната'          : 'Lure Grenade';
-  String get itHatchKey     => isRussian ? 'Ключ от люка рейдера'         : 'Raider Hatch Key';
-  String get itZipline      => isRussian ? 'Трос'                         : 'Zipline';
-  String get itCloak        => isRussian ? 'Фотоэлектрический плащ'       : 'Photoelectric Cloak';
-  String get itTagGrenade   => isRussian ? 'Маркировочная граната'         : 'Tagging Grenade';
-
-  // Рафинер
-  String get itCrudeExp     => isRussian ? 'Грубая взрывчатка'            : 'Crude Explosives';
-  String get itDurableCloth => isRussian ? 'Прочная ткань'                : 'Durable Cloth';
-  String get itElecComp     => isRussian ? 'Электрические компоненты'     : 'Electrical Components';
-  String get itMechComp     => isRussian ? 'Механические компоненты'      : 'Mechanical Components';
-  String get itAdvElec      => isRussian ? 'Продв. электрические компоненты': 'Adv. Electrical Components';
-  String get itAdvMech      => isRussian ? 'Продв. механические компоненты': 'Adv. Mechanical Components';
-  String get itAntiseptic   => isRussian ? 'Антисептик'                   : 'Antiseptic';
-  String get itArcCircuit   => isRussian ? 'Схемы ARC'                    : 'ARC Circuitry';
-  String get itExpCompound  => isRussian ? 'Взрывное соединение'           : 'Explosive Compound';
-  String get itGunParts     => isRussian ? 'Запчасти для оружия (тяж./лёгк./средн.)': 'Heavy/Light/Medium Gun Parts';
-  String get itModComp      => isRussian ? 'Компоненты модификаций'       : 'Mod Components';
-  String get itMagAccel     => isRussian ? 'Магнитный ускоритель'          : 'Magnetic Accelerator';
-  String get itPowerRod     => isRussian ? 'Силовой стержень'             : 'Power Rod';
-  String get itComplexParts => isRussian ? 'Сложные запчасти для оружия'  : 'Complex Gun Parts';
-
-//Экран ARC
-String get arcTitle      => isRussian ? 'История'            : 'ARC';
-String get arcHeader     => isRussian ? 'ARC'                : 'ARC';
-String get arcCatSec     => isRussian ? 'СЛУЖБА БЕЗОПАСНОСТИ': 'SECURITY';
-String get arcCatInd     => isRussian ? 'ПРОМЫШЛЕННЫЕ'       : 'INDUSTRIAL';
-
-//Названия врагов
-String get arcWasp       => isRussian ? 'Оса'                : 'Wasp';
-String get arcHornet     => isRussian ? 'Шершень'            : 'Hornet';
-String get arcSnitch     => isRussian ? 'Стукач'             : 'Snitch';
-String get arcPop        => isRussian ? 'Взрывобот'          : 'Pop';
-String get arcFireball   => isRussian ? 'Огнешар'            : 'Fireball';
-String get arcTick       => isRussian ? 'Клещ'               : 'Tick';
-String get arcTurret     => isRussian ? 'Турель'             : 'Turret';
-String get arcRocketeer  => isRussian ? 'Ракетчик'           : 'Rocketeer';
-String get arcLeaper     => isRussian ? 'Прыгун'             : 'Leaper';
-String get arcBastion    => isRussian ? 'Бастион'            : 'Bastion';
-String get arcBombardier => isRussian ? 'Бомбардир'          : 'Bombardier';
-String get arcSpotter    => isRussian ? 'Наводчик'           : 'Spotter';
-String get arcSentinel   => isRussian ? 'Часовой'            : 'Sentinel';
-String get arcShredder   => isRussian ? 'Шредер'             : 'Shredder';
-String get arcMatriarch  => isRussian ? 'Матриарх'           : 'Matriarch';
-String get arcQueen      => isRussian ? 'Королева'           : 'The Queen';
-String get arcProbe      => isRussian ? 'Зонд ARC'           : 'ARC Probe';
-String get arcCourier    => isRussian ? 'Доставщик ARC'      : 'ARC Courier';
-String get arcSurveyor   => isRussian ? 'Наблюдатель'        : 'Surveyor';
-String get arcHarvester  => isRussian ? 'Сборщик ARC'        : 'ARC Harvester';
+String get arcWasp => isRussian ? 'Оса' : 'Wasp';
+String get arcHornet => isRussian ? 'Шершень' : 'Hornet';
+String get arcSnitch => isRussian ? 'Стукач' : 'Snitch';
+String get arcPop => isRussian ? 'Взрывобот' : 'Pop';
+String get arcFireball => isRussian ? 'Огнешар' : 'Fireball';
+String get arcTick => isRussian ? 'Клещ' : 'Tick';
+String get arcTurret => isRussian ? 'Турель' : 'Turret';
+String get arcRocketeer => isRussian ? 'Ракетчик' : 'Rocketeer';
+String get arcLeaper => isRussian ? 'Прыгун' : 'Leaper';
+String get arcBastion => isRussian ? 'Бастион' : 'Bastion';
+String get arcBombardier => isRussian ? 'Бомбардир' : 'Bombardier';
+String get arcSpotter => isRussian ? 'Наводчик' : 'Spotter';
+String get arcSentinel => isRussian ? 'Часовой' : 'Sentinel';
+String get arcShredder => isRussian ? 'Шредер': 'Shredder';
+String get arcMatriarch => isRussian ? 'Матриарх' : 'Matriarch';
+String get arcQueen => isRussian ? 'Королева' : 'The Queen';
+String get arcProbe => isRussian ? 'Зонд ARC' : 'ARC Probe';
+String get arcCourier => isRussian ? 'Доставщик ARC' : 'ARC Courier';
+String get arcSurveyor => isRussian ? 'Наблюдатель' : 'Surveyor';
+String get arcHarvester => isRussian ? 'Сборщик ARC' : 'ARC Harvester';
 
 String get arcLore => isRussian
   ? 'Всё время, пока машины падали с небес, жители Поверхности называли их только одним именем: ARC. '
@@ -1088,6 +1063,9 @@ String get secundi1142 => isRussian ? '5 с' : '5 s';
 String get secundi442 => isRussian ? '4 с' : '4 s';
 String get secundi510 => isRussian ? '10/с' : '10/s';
 
+String get dud => isRussian ? 'АУГМЕНТ' : 'AUGMENT';
+String get dud1 => isRussian ? 'ЩИТЫ' : 'SHIELDS';
+String get dud2 => isRussian ? 'ЛЕЧЕНИЕ' : 'HEALING';  
 
 
 

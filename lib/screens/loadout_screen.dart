@@ -34,6 +34,9 @@ import 'package:arc_raiders/screens/medkits/Vita_Spray.dart';
 import 'package:flutter/material.dart';
 import 'package:arc_raiders/main.dart';
 import 'package:arc_raiders/widgets/granade_button.dart';
+import 'package:provider/provider.dart';
+import 'package:arc_raiders/app_language.dart';
+import 'package:arc_raiders/app_strings.dart';
 
 class LoadoutScreen extends StatefulWidget {
   const LoadoutScreen({super.key});
@@ -45,18 +48,18 @@ class LoadoutScreen extends StatefulWidget {
 class _LoadoutScreenState extends State<LoadoutScreen> {
   int selectedIndex = 0;
 
-  final rarities = [
-    "АУГМЕНТ",
-    "ЩИТЫ",
-    "ЛЕЧЕНИЕ",
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final s = AppStrings.of(context.watch<AppLanguage>());
+    final rarities = [
+    s.dud,
+    s.dud1,
+    s.dud2,
+  ];
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 4, 17, 43),
       appBar: AppBar(
-        title: const Text("Снаряжение"),
+        title: Text(s.gears),
         backgroundColor: Colors.yellow,
       ),
       body: SingleChildScrollView(
@@ -64,7 +67,6 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-
               SizedBox(
                 height: 50,
                 child: ListView.builder(
@@ -194,7 +196,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Combat Mk. 3 (Агрессивный)",
+                  title: "Combat Mk. 3 (Aggressive)",
                   imagePath: "assets/images/Combat_Mk._3_(Aggressive) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -207,7 +209,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Combat Mk. 3 (фланг)",
+                  title: "Combat Mk. 3 (Flanking)",
                   imagePath: "assets/images/Combat_Mk._3_(Flanking) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -220,7 +222,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Looting Mk. 3 (Осторожно)",
+                  title: "Looting Mk. 3 (Cautious)",
                   imagePath: "assets/images/Looting_Mk._3_(Cautious) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -233,7 +235,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Looting Mk. 3 (Безопасноть)",
+                  title: "Looting Mk. 3 (Safekeeper)",
                   imagePath: "assets/images/Looting_Mk._3_(Safekeeper) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -246,7 +248,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Looting Mk. 3 (Выживший)",
+                  title: "Looting Mk. 3 (Survivor)",
                   imagePath: "assets/images/Looting_Mk._3_(Survivor) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -259,7 +261,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Tactical Mk. 3 (Защитный)",
+                  title: "Tactical Mk. 3 (Defensive)",
                   imagePath: "assets/images/Tactical_Mk._3_(Defensive) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -272,7 +274,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Tactical Mk. 3 (Лечение)",
+                  title: "Tactical Mk. 3 (Healing)",
                   imagePath: "assets/images/Tactical_Mk._3_(Healing) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -285,7 +287,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Tactical Mk. 3 (Возрождение)",
+                  title: "Tactical Mk. 3 (Revival)",
                   imagePath: "assets/images/Tactical_Mk._3_(Revival) copy.png",
                   onTap: () {
                     Navigator.push(
@@ -300,7 +302,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
               if (selectedIndex == 1) ...[
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Легкий щит",
+                  title: s.lightShield1,
                   imagePath: "assets/images/Light_Shield.png",
                   onTap: () {
                     Navigator.push(
@@ -313,7 +315,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Средний щит",
+                  title: s.mediumShield1,
                   imagePath: "assets/images/Medium_Shield.png",
                   onTap: () {
                     Navigator.push(
@@ -326,7 +328,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Тяжелый щит",
+                  title: s.heavyShield1,
                   imagePath: "assets/images/Heavy_Shield.png",
                   onTap: () {
                     Navigator.push(
@@ -340,7 +342,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
               ],
               if (selectedIndex == 2) ...[
                 GranadeButton(
-                  title: "Бинт",
+                  title: s.band,
                   imagePath: "assets/images/Bandage copy.png",
                   onTap: () {
                     Navigator.push(
@@ -353,7 +355,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Адреналин",
+                  title: s.adrentt,
                   imagePath: "assets/images/Adrenaline_Shot copy.png",
                   onTap: () {
                     Navigator.push(
@@ -366,7 +368,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Травяной бинт",
+                  title: s.herbal,
                   imagePath: "assets/images/Herbal_Bandage copy.png",
                   onTap: () {
                     Navigator.push(
@@ -379,7 +381,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Перезарядка щита",
+                  title: s.rechar,
                   imagePath: "assets/images/Shield_Recharger copy.png",
                   onTap: () {
                     Navigator.push(
@@ -392,7 +394,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Стерилизованный бинт",
+                  title: s.steril,
                   imagePath: "assets/images/Sterilized_Bandage copy.png",
                   onTap: () {
                     Navigator.push(
@@ -405,7 +407,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Дефибриллятор",
+                  title: s.defib,
                   imagePath: "assets/images/Defibrillator copy.png",
                   onTap: () {
                     Navigator.push(
@@ -418,7 +420,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Быстрая перезарядка щита",
+                  title: s.surge,
                   imagePath: "assets/images/Surge_Shield_Recharger copy.png",
                   onTap: () {
                     Navigator.push(
@@ -431,7 +433,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Медицинский шприц",
+                  title: s.vitaShot,
                   imagePath: "assets/images/Vita_Shot copy.png",
                   onTap: () {
                     Navigator.push(
@@ -444,7 +446,7 @@ class _LoadoutScreenState extends State<LoadoutScreen> {
                 ),
                 const SizedBox(height: 12),
                 GranadeButton(
-                  title: "Спрей Vita",
+                  title: s.vitaSpray,
                   imagePath: "assets/images/Vita_Spray copy.png",
                   onTap: () {
                     Navigator.push(

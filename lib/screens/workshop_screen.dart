@@ -19,19 +19,19 @@ class _Station {
 final _stations = [
   _Station((s) => s.stationWorkbench, [
     _Level(1, (s) => [s.req1round], (s) => [
-      s.itLootingMk1, s.itLightShield, 'Ferro', 'Hairpin', 'Kettle',
-      'Stitcher', s.itLauncherAmmo, s.itHeavyAmmo, s.itLightAmmo,
+      s.itLootingMk1, s.itLightShield, s.ferro, s.rattler, s.kettle,
+      s.stitcher, s.itLauncherAmmo, s.itHeavyAmmo, s.itLightAmmo,
       s.itMedAmmo, s.itShotgunAmmo, s.itShieldRech, s.itBandage, s.itLightImpact,
     ]),
   ]),
   _Station((s) => s.stationGunsmith, [
     _Level(1, (s) => [s.reqMetalParts, s.reqRubberParts], (s) => [
-      'Ferro', 'Hairpin', 'Kettle', 'Rattler', 'Stitcher',
+      s.ferro, s.rattler, s.kettle, s.stitcher,
       s.itAngledGrip, s.itCompensator, s.itExtLightMag,
       s.itExtMedMag, s.itMuzzleBrake, s.itStableStock, s.itVertGrip,
     ]),
-    _Level(2, (s) => [s.reqRustedTools, s.reqMechComp, s.reqWaspDriver], (s) => ['Arpeggio']),
-    _Level(3, (s) => [s.reqRustedGear, s.reqAdvMech, s.reqSentinel], (s) => ['Bettina', 'Renegade', 'Hullcracker']),
+    _Level(2, (s) => [s.reqRustedTools, s.reqMechComp, s.reqWaspDriver], (s) => [s.arped]),
+    _Level(3, (s) => [s.reqRustedGear, s.reqAdvMech, s.reqSentinel], (s) => [s.bettina, s.buntar, s.hullcracker]),
   ]),
   _Station((s) => s.stationGearBench, [
     _Level(1, (s) => [s.reqPlastic, s.reqFabric30], (s) => [
@@ -62,7 +62,7 @@ final _stations = [
       s.itBlazeGrenade, s.itShrapnel, s.itSnapBlast,
     ]),
     _Level(3, (s) => [s.reqLabReag, s.reqExpCompound, s.reqRocketeer], (s) => [
-      s.itHeavyFuze, s.itExpMine, 'Wolfpack',
+      s.itHeavyFuze, s.itExpMine, s.granade18,
     ]),
   ]),
   _Station((s) => s.stationUtility, [
@@ -74,7 +74,7 @@ final _stations = [
       s.itLureGrenade, s.itHatchKey, s.itZipline,
     ]),
     _Level(3, (s) => [s.reqMotherboard, s.reqAdvElec, s.reqLeaper], (s) => [
-      s.itCloak, 'Snap Hook', s.itTagGrenade,
+      s.itCloak, s.itTagGrenade,
     ]),
   ]),
   _Station((s) => s.stationRefiner, [
