@@ -49,7 +49,7 @@ class AdrenalineShotScreen extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   Text(
-                    s.adren,
+                    s.adrentt,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 26,
