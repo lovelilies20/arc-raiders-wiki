@@ -113,7 +113,6 @@ class EqualizerScreen extends StatelessWidget {
   }
 }
 
-// ТЕГ (зелёная кнопка)
 Widget _tag(String text) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -130,7 +129,6 @@ Widget _tag(String text) {
     ),
   );
 }
-// СТРОКА ХАРАКТЕРИСТИК
 Widget _stat(String title, String value) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 6),

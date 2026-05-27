@@ -32,7 +32,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-            // Две кнопки RU / EN
             Row(
               children: [
                 _LangButton(
