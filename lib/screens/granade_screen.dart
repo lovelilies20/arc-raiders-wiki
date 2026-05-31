@@ -20,6 +20,7 @@ import 'package:arc_raiders/widgets/granade_button.dart';
 import 'package:provider/provider.dart';
 import 'package:arc_raiders/app_language.dart';
 import 'package:arc_raiders/app_strings.dart';
+import 'package:arc_raiders/screens/granades/grenade_detail_screen.dart';
 
 class GranadeScreen extends StatefulWidget {
   const GranadeScreen({super.key});
@@ -110,7 +111,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const LeleScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[5]),
                       ),
                     );
                   },
@@ -123,7 +124,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const FirecrackerScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[4]),
                       ),
                     );
                   },
@@ -136,7 +137,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const GasgranadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[3]),
                       ),
                     );
                   },
@@ -150,7 +151,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const LureGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[7]),
                       ),
                     );
                   },
@@ -163,7 +164,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const SeekerGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[8]),
                       ),
                     );
                   },
@@ -176,7 +177,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const SnapBlastGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[11]),
                       ),
                     );
                   },
@@ -192,7 +193,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const BlazeGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[0]),
                       ),
                     );
                   },
@@ -205,7 +206,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const HeavyFuzeGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[6]),
                       ),
                     );
                   },
@@ -218,7 +219,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const ShowstopperScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[9]),
                       ),
                     );
                   },
@@ -231,7 +232,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const SmokeGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[10]),
                       ),
                     );
                   },
@@ -244,7 +245,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const TaggingGrenadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[12]),
                       ),
                     );
                   },
@@ -257,7 +258,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const TrailblazerScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[13]),
                       ),
                     );
                   },
@@ -270,7 +271,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const TriggernadeScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[14]),
                       ),
                     );
                   },
@@ -285,7 +286,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const DeadlineScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[2]),
                       ),
                     );
                   },
@@ -298,7 +299,7 @@ class _GranadeScreenState extends State<GranadeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const WolfpackScreen(),
+                        builder: (_) => GrenadeDetailScreen(grenade: kGrenades[1]),
                       ),
                     );
                   },
